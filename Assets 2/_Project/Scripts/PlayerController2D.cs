@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[AddComponentMenu("Controllers/Player Controller 2D")]
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class PlayerController2D : MonoBehaviour
 {
@@ -10,6 +9,7 @@ public class PlayerController2D : MonoBehaviour
 
     [Header("Grounding")]
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] Transform feet;  // optional child transform for precise checks
 
     Rigidbody2D rb;
     BoxCollider2D col;
@@ -23,28 +23,30 @@ public class PlayerController2D : MonoBehaviour
     void Update()
     {
         float x = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(x * moveSpeed, rb.linearVelocity.y);
+        rb.velocity = new Vector2(x * moveSpeed, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+            rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 
     bool IsGrounded()
     {
-        Vector2 c = new Vector2(col.bounds.center.x, col.bounds.min.y - 0.02f);
+        Vector2 checkCenter = feet ? (Vector2)feet.position
+                                   : new Vector2(col.bounds.center.x, col.bounds.min.y - 0.02f);
         Vector2 size = new Vector2(col.bounds.size.x * 0.9f, 0.05f);
-        return Physics2D.OverlapBox(c, size, 0f, groundLayer) != null;
+        return Physics2D.OverlapBox(checkCenter, size, 0f, groundLayer) != null;
     }
 
     void OnDrawGizmosSelected()
     {
         if (col == null) col = GetComponent<BoxCollider2D>();
-        Gizmos.color = Color.green;
-        Vector2 c = new Vector2(col.bounds.center.x, col.bounds.min.y - 0.02f);
+        Vector2 checkCenter = feet ? (Vector2)feet.position
+                                   : new Vector2(col.bounds.center.x, col.bounds.min.y - 0.02f);
         Vector2 size = new Vector2(col.bounds.size.x * 0.9f, 0.05f);
-        Gizmos.DrawWireCube(c, size);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(checkCenter, size);
     }
 }
