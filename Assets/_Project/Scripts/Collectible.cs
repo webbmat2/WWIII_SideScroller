@@ -1,26 +1,13 @@
 using UnityEngine;
 
-namespace WWIII
+public class Collectible : MonoBehaviour
 {
-    public class Collectible : MonoBehaviour
-    {
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (!other.CompareTag("Player")) return;
-            Score.Add(1);
-            Destroy(gameObject);
-        }
-    }
+    public int value = 1;
 
-    // Minimal in-file score tracker
-    internal static class Score
+    void OnTriggerEnter2D(Collider2D other)
     {
-        static int _value;
-        public static int Value => _value;
-        public static void Add(int v)
-        {
-            _value += v;
-            Debug.Log("Score: " + _value);
-        }
+        if (!other.CompareTag("Player")) return;
+        CoinManager.Add(value);
+        Destroy(gameObject);
     }
 }
