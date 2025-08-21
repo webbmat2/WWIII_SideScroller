@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [AddComponentMenu("Controllers/Player Controller 2D")]
@@ -135,5 +136,10 @@ public class PlayerController2D : MonoBehaviour
         string text = $"FPS: {fps:0}\nGrounded: {IsGrounded()}\nVel: {vel}";
         GUI.Box(rect, GUIContent.none);
         GUI.Label(new Rect(rect.x + 6, rect.y + 4, rect.width - 12, rect.height - 8), text);
+    }
+
+    internal void SetRespawnPoint(Vector3 position)
+    {
+        throw new NotImplementedException();
     }
 }
