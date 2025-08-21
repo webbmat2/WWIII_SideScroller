@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7256829278228114767}
   - component: {fileID: 1869701705584233472}
   - component: {fileID: 4777968707281307306}
-  - component: {fileID: 8089563162018675985}
+  - component: {fileID: 664737981423897744}
   m_Layer: 0
-  m_Name: Collectible
+  m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &8089563162018675985
+--- !u!114 &664737981423897744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,6 +134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3337588249306093701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e52a2e7fe8354f33b170025af095f21, type: 3}
+  m_Script: {fileID: 11500000, guid: 176f3ecfe63294eb1b17ff6f0299e95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amount: 1

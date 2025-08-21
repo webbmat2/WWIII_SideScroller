@@ -1,32 +1,74 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelBootstrap : MonoBehaviour
 {
-    [Header("Optional Prefabs (drag in if/when you make them)")]
-    [Tooltip("Manager object that tracks coins. Can be an empty GameObject with a CoinManager component, or a prefab.")]
-    [SerializeField] GameObject coinManagerPrefab;
-    [Tooltip("UI prefab that shows the coin count (e.g., a Canvas child with a CoinUI component).")]
-    [SerializeField] GameObject coinUIPrefab;
+    [Header("UI Prefabs (optional, will be spawned if missing)")]
+    [SerializeField] CoinUI coinUIPrefab;
+    [SerializeField] CollectibleUI collectibleUIPrefab;
+
+    [Header("Collectibles")]
+    [SerializeField, Min(1)] int collectibleTarget = 5;
+
+    [Header("Canvas Settings")] 
+    [SerializeField] Vector2 referenceResolution = new Vector2(1920, 1080);
+    [SerializeField, Range(0,1)] float matchWidthOrHeight = 0.5f;
 
     void Awake()
     {
-        // If you assign prefabs in the Inspector, we instantiate them once at startup.
-        // This version avoids hard references to script types so it compiles even if those scripts don't exist yet.
-
-        if (coinManagerPrefab != null && GameObject.Find(coinManagerPrefab.name) == null)
+        // 1) Ensure Canvas exists and is scaled correctly
+        var canvas = FindFirstObjectByType<Canvas>();
+        if (!canvas)
         {
-            var mgr = Instantiate(coinManagerPrefab);
-            mgr.name = coinManagerPrefab.name; // avoid "(Clone)"
+            var go = new GameObject("Canvas", typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+            canvas = go.GetComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         }
+        var scaler = canvas.GetComponent<CanvasScaler>();
+        if (!scaler) scaler = canvas.gameObject.AddComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = referenceResolution;
+        scaler.matchWidthOrHeight = matchWidthOrHeight;
 
-        if (coinUIPrefab != null && GameObject.Find(coinUIPrefab.name) == null)
+        // 2) Reset collectible target at level start
+        CollectibleManager.Reset(collectibleTarget);
+
+        // 3) Spawn UI if missing
+        EnsureCoinUI(canvas.transform);
+        EnsureCollectibleUI(canvas.transform);
+    }
+
+    void EnsureCoinUI(Transform parent)
+    {
+        var existing = FindFirstObjectByType<CoinUI>(FindObjectsInactive.Include);
+        if (existing) return;
+        if (!coinUIPrefab) return;
+        var ui = Instantiate(coinUIPrefab, parent);
+        // anchor top-left
+        var rt = ui.GetComponent<RectTransform>();
+        if (rt)
         {
-            var ui = Instantiate(coinUIPrefab);
-            ui.name = coinUIPrefab.name;
-            // If there is a Canvas in the scene and this UI isn't already parented, parent it for convenience.
-            var canvas = FindObjectOfType<Canvas>();
-            if (canvas != null && ui.transform.parent == null)
-                ui.transform.SetParent(canvas.transform, worldPositionStays: false);
+            rt.anchorMin = new Vector2(0, 1);
+            rt.anchorMax = new Vector2(0, 1);
+            rt.pivot     = new Vector2(0, 1);
+            rt.anchoredPosition = new Vector2(20, -20);
+        }
+    }
+
+    void EnsureCollectibleUI(Transform parent)
+    {
+        var existing = FindFirstObjectByType<CollectibleUI>(FindObjectsInactive.Include);
+        if (existing) return;
+        if (!collectibleUIPrefab) return;
+        var ui = Instantiate(collectibleUIPrefab, parent);
+        // anchor top-right
+        var rt = ui.GetComponent<RectTransform>();
+        if (rt)
+        {
+            rt.anchorMin = new Vector2(1, 1);
+            rt.anchorMax = new Vector2(1, 1);
+            rt.pivot     = new Vector2(1, 1);
+            rt.anchoredPosition = new Vector2(-20, -20);
         }
     }
 }

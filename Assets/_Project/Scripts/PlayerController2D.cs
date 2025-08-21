@@ -1,60 +1,102 @@
 using UnityEngine;
+using System.Collections;
 
 [AddComponentMenu("Controllers/Player Controller 2D")]
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class PlayerController2D : MonoBehaviour
 {
-    [Header("Movement")] public float moveSpeed = 8f; 
-    public float jumpForce = 12f;
+    [Header("Movement")]
+    [SerializeField] float moveSpeed = 8f;
+    [SerializeField] float jumpForce = 12f;
 
-    [Header("Jump Tuning")] public float coyoteTime = 0.12f; 
-    public float jumpBuffer = 0.12f; 
-    public bool variableJump = true; 
-    [Range(0.1f,1f)] public float jumpCutMultiplier = 0.5f;
+    [Header("Jump Tuning")]
+    [SerializeField] float coyoteTime = 0.12f;
+    [SerializeField] float jumpBuffer = 0.12f;
+    [SerializeField] bool  variableJump = true;
+    [SerializeField, Range(0.1f, 1f)] float jumpCutMultiplier = 0.5f;
 
-    [Header("Grounding")] public LayerMask groundLayer;
+    [Header("Grounding")]
+    [SerializeField] LayerMask groundLayer;
 
-    [Header("Damage/Health")] public int maxLives = 3; 
-    public float invulnSeconds = 0.6f; 
-    public float controlLockSeconds = 0.25f;
+    [Header("Startup")]
+    [SerializeField] bool  snapToGroundOnStart = true;
+    [SerializeField] float snapMaxDistance    = 5f;
 
-    [Header("Debug")] public bool showDebugOverlay = false;
+    [Header("Debug")]
+    [SerializeField] bool showDebugOverlay = true;
 
-    [Header("Visuals")]
-    [SerializeField] SpriteRenderer body;
-    [SerializeField] float hitFlashSeconds = 0.12f;
+    [Header("Health")]
+    [SerializeField, Min(1)] int maxLives = 3;
 
-    Rigidbody2D rb; BoxCollider2D col;
+    [Header("Damage / I-Frames")]
+    [SerializeField, Min(0f)] float invulnSeconds     = 0.5f;
+    [SerializeField, Min(0f)] float controlLockSeconds = 0.35f;
+
+    [Header("Damage FX")]
+    [SerializeField] Color hurtColor   = new Color(1f, 0.3f, 0.3f, 1f);
+    [SerializeField] float flashSeconds = 0.2f;
+
+    float invulnUntil;
+    float controlUnlockAt;
+
+    Rigidbody2D rb;
+    BoxCollider2D col;
+    SpriteRenderer sr;
+
     float coyoteCounter, jumpBufferCounter;
-    int lives; float invulnUntil; float controlUnlockAt;
+    int frames; float fpsTimer; float fps;
+
     Vector3 respawnPoint;
+    int lives;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb  = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
+        sr  = GetComponentInChildren<SpriteRenderer>();  // <- ensures flash works even if SR is on a child
+
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         rb.freezeRotation = true;
-        if (body == null) body = GetComponent<SpriteRenderer>();
-        lives = Mathf.Max(1, maxLives);
+    }
+
+    void Start()
+    {
+        if (snapToGroundOnStart)
+        {
+            ResolveInitialOverlap();
+            SnapToGround();
+        }
         respawnPoint = transform.position;
+        lives = Mathf.Max(1, maxLives);
+    }
+
+    void ResolveInitialOverlap()
+    {
+        var filter = new ContactFilter2D { useTriggers = false };
+        filter.SetLayerMask(groundLayer);
+        Collider2D[] hits = new Collider2D[1];
+        int steps = 0;
+        while (col != null && col.Overlap(filter, hits) > 0 && steps++ < 60)
+            transform.position += Vector3.up * 0.02f;
     }
 
     void Update()
     {
-        // lock input briefly after damage
-        bool locked = Time.time < controlUnlockAt;
+        float dt = Time.deltaTime;
 
-        if (!locked)
+        bool controlsLocked = Time.time < controlUnlockAt;
+
+        // horizontal move — DO NOT overwrite during control lock (preserves knockback)
+        if (!controlsLocked)
         {
             float x = Input.GetAxisRaw("Horizontal");
-            rb.linearVelocity = new Vector2(x * moveSpeed, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(x * moveSpeed, rb.linearVelocity.y);   // <- use velocity (not linearVelocity)
         }
 
         // timers
-        if (IsGrounded()) coyoteCounter = coyoteTime; else coyoteCounter -= Time.deltaTime;
-        if (!locked && Input.GetButtonDown("Jump")) jumpBufferCounter = jumpBuffer; else jumpBufferCounter -= Time.deltaTime;
+        if (IsGrounded()) coyoteCounter = coyoteTime; else coyoteCounter -= dt;
+        if (!controlsLocked && Input.GetButtonDown("Jump")) jumpBufferCounter = jumpBuffer; else jumpBufferCounter -= dt;
 
         // jump
         if (jumpBufferCounter > 0f && coyoteCounter > 0f)
@@ -64,39 +106,94 @@ public class PlayerController2D : MonoBehaviour
             jumpBufferCounter = 0f; coyoteCounter = 0f;
         }
 
-        // variable jump
+        // variable jump cut
         if (variableJump && Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
+
+        // fps
+        frames++; fpsTimer += dt; if (fpsTimer >= 0.5f) { fps = frames / fpsTimer; frames = 0; fpsTimer = 0f; }
+    }
+
+    void SnapToGround()
+    {
+        const float skin = 0.01f;
+        float halfHeight = col.bounds.extents.y;
+        Vector2 origin = new Vector2(transform.position.x, col.bounds.center.y + 10f);
+        float rayDistance = Mathf.Max(snapMaxDistance, 0.1f) + 10f;
+        RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, rayDistance, groundLayer);
+        if (hit.collider != null)
+        {
+            float targetY = hit.point.y + halfHeight + skin;
+            var p = transform.position; p.y = targetY; transform.position = p;
+        }
     }
 
     bool IsGrounded()
     {
-        Bounds b = col.bounds;
-        Vector2 size = new Vector2(b.size.x * 0.95f, 0.05f);
-        Vector2 center = new Vector2(b.center.x, b.min.y + size.y * 0.5f);
-        return Physics2D.OverlapBox(center, size, 0f, groundLayer) != null;
+        Vector2 c = new Vector2(col.bounds.center.x, col.bounds.min.y - 0.02f);
+        Vector2 size = new Vector2(col.bounds.size.x * 0.9f, 0.05f);
+        return Physics2D.OverlapBox(c, size, 0f, groundLayer) != null;
     }
 
-    // API used by other scripts
-    public void SetRespawnPoint(Vector3 position) { respawnPoint = position; }
+    void OnDrawGizmosSelected()
+    {
+        if (col == null) col = GetComponent<BoxCollider2D>();
+        Gizmos.color = Color.green;
+        Vector2 c = new Vector2(col.bounds.center.x, col.bounds.min.y - 0.02f);
+        Vector2 size = new Vector2(col.bounds.size.x * 0.9f, 0.05f);
+        Gizmos.DrawWireCube(c, size);
+    }
+
+    void OnGUI()
+    {
+        if (!showDebugOverlay) return;
+        var rect = new Rect(8, 8, 320, 84);
+        string vel = (rb != null) ? $"{rb.linearVelocity.x:F2}, {rb.linearVelocity.y:F2}" : "n/a";
+        string text = $"FPS: {fps:0}\nGrounded: {IsGrounded()}\nVel: {vel}\nLives: {lives}/{Mathf.Max(1, maxLives)}";
+        GUI.Box(rect, GUIContent.none);
+        GUI.Label(new Rect(rect.x + 6, rect.y + 4, rect.width - 12, rect.height - 8), text);
+    }
+
+    // --- Respawn & Damage API ---
+    public void SetRespawnPoint(Vector3 position) => respawnPoint = position;
 
     public void Respawn()
     {
         transform.position = respawnPoint;
-        rb.linearVelocity = Vector2.zero;
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+    }
+
+    IEnumerator Flash()
+    {
+        if (sr == null) yield break;
+        var original = sr.color;
+        sr.color = hurtColor;
+        yield return new WaitForSeconds(flashSeconds);
+        sr.color = original;
+    }
+
+    public void ApplyKnockback(Vector2 kb)
+    {
+        if (rb == null) return;
+        rb.linearVelocity = Vector2.zero;                           // clear current motion
+        rb.AddForce(kb, ForceMode2D.Impulse);                 // immediate kick
+        controlUnlockAt = Time.time + controlLockSeconds;     // pause inputs so Update() won't overwrite
     }
 
     public void ApplyDamage(Vector2 knockback)
     {
+        // Always deliver the physical shove
+        ApplyKnockback(knockback);
+
+        // During i-frames: no second life loss or flash
         if (Time.time < invulnUntil) return;
+
         if (lives > 1)
         {
             lives--;
-            rb.linearVelocity = Vector2.zero;
-            rb.AddForce(knockback, ForceMode2D.Impulse);
-            StartCoroutine(HitFlash());
+            if (gameObject.activeInHierarchy && sr != null)
+                StartCoroutine(Flash());
             invulnUntil = Time.time + invulnSeconds;
-            controlUnlockAt = Time.time + controlLockSeconds;
             Debug.Log($"Damage taken. Lives remaining: {lives}");
         }
         else
@@ -104,27 +201,7 @@ public class PlayerController2D : MonoBehaviour
             Debug.Log("No lives remaining. Respawning.");
             lives = Mathf.Max(1, maxLives);
             Respawn();
-            StartCoroutine(HitFlash());
             invulnUntil = Time.time + 0.1f;
         }
-    }
-
-    System.Collections.IEnumerator HitFlash()
-    {
-        if (body == null) yield break;
-        var original = body.color;
-        body.color = Color.red;
-        yield return new WaitForSeconds(hitFlashSeconds);
-        body.color = original;
-    }
-
-    void OnGUI()
-    {
-        if (!showDebugOverlay) return;
-        int fps = (int)(1f / Time.unscaledDeltaTime);
-        var rect = new Rect(8, 8, 320, 84);
-        string vel = (rb != null) ? $"{rb.linearVelocity.x:F2}, {rb.linearVelocity.y:F2}" : "n/a";
-        string text = $"FPS: {fps:0}\nGrounded: {IsGrounded()}\nVel: {vel}\nLives: {lives}/{Mathf.Max(1, maxLives)}";
-        GUI.Box(rect, text);
     }
 }

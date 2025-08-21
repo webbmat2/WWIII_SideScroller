@@ -1,30 +1,47 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public class DamageOnTouch : MonoBehaviour
 {
     [Header("Knockback")]
-    [Tooltip("Horizontal push applied to the player on contact")]
-    public float horizontalForce = 7f;
+    [SerializeField] float horizontalForce = 24f;
+    [SerializeField, Tooltip("Small upward pop so the player doesn't stick inside colliders")]
+    float verticalBoost = 8f;
 
-    [Tooltip("Small upward pop so the player doesn't stick inside colliders")]
-    public float verticalBoost = 2f;
+    void OnCollisionEnter2D(Collision2D c) => TryHurtFromCollision(c);
+    void OnCollisionStay2D(Collision2D c)  => TryHurtFromCollision(c);
+    void OnTriggerEnter2D(Collider2D o)    => TryHurtFromTrigger(o);
+    void OnTriggerStay2D(Collider2D o)     => TryHurtFromTrigger(o);
 
-    [Header("Debug")]
-    public string logMessage = "DamageOnTouch triggered";
-
-    private void OnTriggerEnter2D(Collider2D other)
+    void TryHurtFromCollision(Collision2D collision)
     {
-        if (!other.CompareTag("Player")) return;
+        if (collision == null) return;
+        var other = collision.collider;
+        if (!other || !other.CompareTag("Player")) return;
+        if (!other.TryGetComponent(out PlayerController2D pc)) return;
 
-        var pc = other.GetComponent<PlayerController2D>();
-        if (!pc) return;
+        // robust direction from the contact
+        Vector2 normal = collision.GetContact(0).normal; // from spikes toward player
+        Vector2 kb = new Vector2(-normal.x * horizontalForce, verticalBoost);
 
-        // Knock the player away from the hazard
-        float dir = Mathf.Sign(other.transform.position.x - transform.position.x);
-        if (dir == 0f) dir = -1f;            // default left if perfectly aligned
+        // perfectly-on-top case gets a fallback horizontal push
+        if (Mathf.Abs(kb.x) < 0.01f)
+        {
+            float dir = Mathf.Sign(other.transform.position.x - transform.position.x);
+            if (Mathf.Approximately(dir, 0f)) dir = -1f;
+            kb.x = dir * horizontalForce;
+        }
+        pc.ApplyDamage(kb);
+    }
+
+    void TryHurtFromTrigger(Collider2D col)
+    {
+        if (!col || !col.CompareTag("Player")) return;
+        if (!col.TryGetComponent(out PlayerController2D pc)) return;
+
+        float dir = Mathf.Sign(col.transform.position.x - transform.position.x);
+        if (Mathf.Approximately(dir, 0f)) dir = -1f;
         Vector2 kb = new Vector2(dir * horizontalForce, verticalBoost);
-
-        Debug.Log(logMessage);
         pc.ApplyDamage(kb);
     }
 }
