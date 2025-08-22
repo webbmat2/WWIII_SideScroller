@@ -1,47 +1,47 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
-public class DamageOnTouch : MonoBehaviour
+[DisallowMultipleComponent]
+public sealed class DamageOnTouch : MonoBehaviour
 {
     [Header("Knockback")]
-    [SerializeField] float horizontalForce = 24f;
-    [SerializeField, Tooltip("Small upward pop so the player doesn't stick inside colliders")]
-    float verticalBoost = 8f;
+    [SerializeField] float knockbackX = 6f;
+    [SerializeField] float knockbackY = 6f;
+    [SerializeField] bool fromAttackerDirection = true;
 
-    void OnCollisionEnter2D(Collision2D c) => TryHurtFromCollision(c);
-    void OnCollisionStay2D(Collision2D c)  => TryHurtFromCollision(c);
-    void OnTriggerEnter2D(Collider2D o)    => TryHurtFromTrigger(o);
-    void OnTriggerStay2D(Collider2D o)     => TryHurtFromTrigger(o);
+    [Header("Filter")]
+    [SerializeField] string targetTag = "Player";
+    [SerializeField] float hitCooldown = 0.25f;
 
-    void TryHurtFromCollision(Collision2D collision)
+    float nextHitTime;
+
+    void TryHit(Collider2D other, Vector2 contactNormal)
     {
-        if (collision == null) return;
-        var other = collision.collider;
-        if (!other || !other.CompareTag("Player")) return;
-        if (!other.TryGetComponent(out PlayerController2D pc)) return;
+        if (Time.time < nextHitTime) return;
+        if (!other) return;
+        if (!string.IsNullOrEmpty(targetTag) && !other.CompareTag(targetTag)) return;
 
-        // robust direction from the contact
-        Vector2 normal = collision.GetContact(0).normal; // from spikes toward player
-        Vector2 kb = new Vector2(-normal.x * horizontalForce, verticalBoost);
+        var player = other.GetComponentInParent<PlayerController2D>();
+        if (!player) return;
 
-        // perfectly-on-top case gets a fallback horizontal push
-        if (Mathf.Abs(kb.x) < 0.01f)
-        {
-            float dir = Mathf.Sign(other.transform.position.x - transform.position.x);
-            if (Mathf.Approximately(dir, 0f)) dir = -1f;
-            kb.x = dir * horizontalForce;
-        }
-        pc.ApplyDamage(kb);
+        float dir = fromAttackerDirection
+            ? Mathf.Sign(other.bounds.center.x - transform.position.x)
+            : -Mathf.Sign(contactNormal.x);
+        if (dir == 0f) dir = 1f;
+
+        Vector2 kb = new Vector2(knockbackX * dir, knockbackY);
+        player.ApplyDamage(kb);
+
+        nextHitTime = Time.time + hitCooldown;
     }
 
-    void TryHurtFromTrigger(Collider2D col)
+    void OnCollisionEnter2D(Collision2D c)
     {
-        if (!col || !col.CompareTag("Player")) return;
-        if (!col.TryGetComponent(out PlayerController2D pc)) return;
+        Vector2 n = c.contacts.Length > 0 ? c.contacts[0].normal : Vector2.zero;
+        TryHit(c.collider, n);
+    }
 
-        float dir = Mathf.Sign(col.transform.position.x - transform.position.x);
-        if (Mathf.Approximately(dir, 0f)) dir = -1f;
-        Vector2 kb = new Vector2(dir * horizontalForce, verticalBoost);
-        pc.ApplyDamage(kb);
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        TryHit(other, Vector2.left);
     }
 }

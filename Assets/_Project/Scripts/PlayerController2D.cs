@@ -1,207 +1,88 @@
+// Assets/_Project/Scripts/PlayerController2D.cs
 using UnityEngine;
-using System.Collections;
 
 [AddComponentMenu("Controllers/Player Controller 2D")]
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class PlayerController2D : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] float moveSpeed = 8f;
-    [SerializeField] float jumpForce = 12f;
+    [Header("Movement")] public float moveSpeed = 8f; public float jumpForce = 12f; public float jumpCutMultiplier = 0.5f;
+    [Header("Grounding")] public LayerMask groundLayer; public float coyoteTime = 0.12f; public float jumpBuffer = 0.12f;
+    [Header("Debug")] public bool showDebug = true;
 
-    [Header("Jump Tuning")]
-    [SerializeField] float coyoteTime = 0.12f;
-    [SerializeField] float jumpBuffer = 0.12f;
-    [SerializeField] bool  variableJump = true;
-    [SerializeField, Range(0.1f, 1f)] float jumpCutMultiplier = 0.5f;
-
-    [Header("Grounding")]
-    [SerializeField] LayerMask groundLayer;
-
-    [Header("Startup")]
-    [SerializeField] bool  snapToGroundOnStart = true;
-    [SerializeField] float snapMaxDistance    = 5f;
-
-    [Header("Debug")]
-    [SerializeField] bool showDebugOverlay = true;
-
-    [Header("Health")]
-    [SerializeField, Min(1)] int maxLives = 3;
-
-    [Header("Damage / I-Frames")]
-    [SerializeField, Min(0f)] float invulnSeconds     = 0.5f;
-    [SerializeField, Min(0f)] float controlLockSeconds = 0.35f;
-
-    [Header("Damage FX")]
-    [SerializeField] Color hurtColor   = new Color(1f, 0.3f, 0.3f, 1f);
-    [SerializeField] float flashSeconds = 0.2f;
-
-    float invulnUntil;
-    float controlUnlockAt;
-
-    Rigidbody2D rb;
-    BoxCollider2D col;
-    SpriteRenderer sr;
-
-    float coyoteCounter, jumpBufferCounter;
-    int frames; float fpsTimer; float fps;
-
-    Vector3 respawnPoint;
-    int lives;
+    Rigidbody2D rb; BoxCollider2D col; SpriteRenderer sr;
+    float coyoteUntil; float jumpBufferedUntil; bool grounded; Vector3 respawnPoint;
 
     void Awake()
     {
-        rb  = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
-        sr  = GetComponentInChildren<SpriteRenderer>();  // <- ensures flash works even if SR is on a child
-
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
-        rb.freezeRotation = true;
-    }
-
-    void Start()
-    {
-        if (snapToGroundOnStart)
-        {
-            ResolveInitialOverlap();
-            SnapToGround();
-        }
+        sr = GetComponent<SpriteRenderer>();
         respawnPoint = transform.position;
-        lives = Mathf.Max(1, maxLives);
-    }
-
-    void ResolveInitialOverlap()
-    {
-        var filter = new ContactFilter2D { useTriggers = false };
-        filter.SetLayerMask(groundLayer);
-        Collider2D[] hits = new Collider2D[1];
-        int steps = 0;
-        while (col != null && col.Overlap(filter, hits) > 0 && steps++ < 60)
-            transform.position += Vector3.up * 0.02f;
+#if UNITY_6000_0_OR_NEWER
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+#endif
     }
 
     void Update()
     {
-        float dt = Time.deltaTime;
+        float x = Input.GetAxisRaw("Horizontal");
+#if UNITY_6000_0_OR_NEWER
+        var v = rb.linearVelocity; v.x = x * moveSpeed; rb.linearVelocity = v;
+#else
+        var v = rb.velocity; v.x = x * moveSpeed; rb.velocity = v;
+#endif
 
-        bool controlsLocked = Time.time < controlUnlockAt;
+        grounded = IsGrounded(); if (grounded) coyoteUntil = Time.time + coyoteTime;
 
-        // horizontal move — DO NOT overwrite during control lock (preserves knockback)
-        if (!controlsLocked)
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)) jumpBufferedUntil = Time.time + jumpBuffer;
+
+        if (jumpBufferedUntil > Time.time && coyoteUntil > Time.time)
         {
-            float x = Input.GetAxisRaw("Horizontal");
-            rb.linearVelocity = new Vector2(x * moveSpeed, rb.linearVelocity.y);   // <- use velocity (not linearVelocity)
+            DoJump(); jumpBufferedUntil = 0f;
         }
 
-        // timers
-        if (IsGrounded()) coyoteCounter = coyoteTime; else coyoteCounter -= dt;
-        if (!controlsLocked && Input.GetButtonDown("Jump")) jumpBufferCounter = jumpBuffer; else jumpBufferCounter -= dt;
-
-        // jump
-        if (jumpBufferCounter > 0f && coyoteCounter > 0f)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            jumpBufferCounter = 0f; coyoteCounter = 0f;
-        }
-
-        // variable jump cut
-        if (variableJump && Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
-
-        // fps
-        frames++; fpsTimer += dt; if (fpsTimer >= 0.5f) { fps = frames / fpsTimer; frames = 0; fpsTimer = 0f; }
+        bool jumpReleased = Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Space);
+#if UNITY_6000_0_OR_NEWER
+        if (jumpReleased && rb.linearVelocity.y > 0f) { var vv = rb.linearVelocity; vv.y *= jumpCutMultiplier; rb.linearVelocity = vv; }
+#else
+        if (jumpReleased && rb.velocity.y > 0f) { var vv = rb.velocity; vv.y *= jumpCutMultiplier; rb.velocity = vv; }
+#endif
     }
 
-    void SnapToGround()
+    void DoJump()
     {
-        const float skin = 0.01f;
-        float halfHeight = col.bounds.extents.y;
-        Vector2 origin = new Vector2(transform.position.x, col.bounds.center.y + 10f);
-        float rayDistance = Mathf.Max(snapMaxDistance, 0.1f) + 10f;
-        RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, rayDistance, groundLayer);
-        if (hit.collider != null)
-        {
-            float targetY = hit.point.y + halfHeight + skin;
-            var p = transform.position; p.y = targetY; transform.position = p;
-        }
+#if UNITY_6000_0_OR_NEWER
+        var v = rb.linearVelocity; v.y = jumpForce; rb.linearVelocity = v;
+#else
+        var v = rb.velocity; v.y = jumpForce; rb.velocity = v;
+#endif
     }
 
     bool IsGrounded()
     {
-        Vector2 c = new Vector2(col.bounds.center.x, col.bounds.min.y - 0.02f);
-        Vector2 size = new Vector2(col.bounds.size.x * 0.9f, 0.05f);
-        return Physics2D.OverlapBox(c, size, 0f, groundLayer) != null;
+        var b = col.bounds; float extra = 0.05f;
+        RaycastHit2D hit = Physics2D.BoxCast(b.center, b.size - new Vector3(0.02f, 0.02f, 0f), 0f, Vector2.down, extra, groundLayer);
+        return hit.collider != null;
     }
 
-    void OnDrawGizmosSelected()
-    {
-        if (col == null) col = GetComponent<BoxCollider2D>();
-        Gizmos.color = Color.green;
-        Vector2 c = new Vector2(col.bounds.center.x, col.bounds.min.y - 0.02f);
-        Vector2 size = new Vector2(col.bounds.size.x * 0.9f, 0.05f);
-        Gizmos.DrawWireCube(c, size);
-    }
-
-    void OnGUI()
-    {
-        if (!showDebugOverlay) return;
-        var rect = new Rect(8, 8, 320, 84);
-        string vel = (rb != null) ? $"{rb.linearVelocity.x:F2}, {rb.linearVelocity.y:F2}" : "n/a";
-        string text = $"FPS: {fps:0}\nGrounded: {IsGrounded()}\nVel: {vel}\nLives: {lives}/{Mathf.Max(1, maxLives)}";
-        GUI.Box(rect, GUIContent.none);
-        GUI.Label(new Rect(rect.x + 6, rect.y + 4, rect.width - 12, rect.height - 8), text);
-    }
-
-    // --- Respawn & Damage API ---
-    public void SetRespawnPoint(Vector3 position) => respawnPoint = position;
-
-    public void Respawn()
-    {
-        transform.position = respawnPoint;
-        if (rb != null) rb.linearVelocity = Vector2.zero;
-    }
-
-    IEnumerator Flash()
-    {
-        if (sr == null) yield break;
-        var original = sr.color;
-        sr.color = hurtColor;
-        yield return new WaitForSeconds(flashSeconds);
-        sr.color = original;
-    }
-
-    public void ApplyKnockback(Vector2 kb)
-    {
-        if (rb == null) return;
-        rb.linearVelocity = Vector2.zero;                           // clear current motion
-        rb.AddForce(kb, ForceMode2D.Impulse);                 // immediate kick
-        controlUnlockAt = Time.time + controlLockSeconds;     // pause inputs so Update() won't overwrite
-    }
+    public void SetRespawnPoint(Vector3 p) { respawnPoint = p; }
+    public void Respawn() { transform.position = respawnPoint; }
 
     public void ApplyDamage(Vector2 knockback)
     {
-        // Always deliver the physical shove
-        ApplyKnockback(knockback);
-
-        // During i-frames: no second life loss or flash
-        if (Time.time < invulnUntil) return;
-
-        if (lives > 1)
-        {
-            lives--;
-            if (gameObject.activeInHierarchy && sr != null)
-                StartCoroutine(Flash());
-            invulnUntil = Time.time + invulnSeconds;
-            Debug.Log($"Damage taken. Lives remaining: {lives}");
-        }
-        else
-        {
-            Debug.Log("No lives remaining. Respawning.");
-            lives = Mathf.Max(1, maxLives);
-            Respawn();
-            invulnUntil = Time.time + 0.1f;
-        }
+#if UNITY_6000_0_OR_NEWER
+        rb.linearVelocity = Vector2.zero; rb.AddForce(knockback, ForceMode2D.Impulse);
+#else
+        rb.velocity = Vector2.zero; rb.AddForce(knockback, ForceMode2D.Impulse);
+#endif
     }
+
+#if UNITY_EDITOR
+    void OnDrawGizmosSelected()
+    {
+        if (!col) col = GetComponent<BoxCollider2D>(); if (!col) return; var b = col.bounds; float extra = 0.05f;
+        Gizmos.color = Color.green; Gizmos.DrawWireCube(b.center + Vector3.down * extra, b.size - new Vector3(0.02f, 0.02f, 0f));
+    }
+    void OnGUI() { if (!showDebug) return; GUI.Label(new Rect(8, 24, 200, 20), $"Grounded: {grounded}"); }
+#endif
 }
