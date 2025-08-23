@@ -1,16 +1,13 @@
+# Unity
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
-[Bb]uild/
-[Bb]uilds/
+[Bb]uild*/
 [Ll]ogs/
-[Mm]emoryCaptures/
-UserSettings/
-.vscode/
+[Uu]ser[Ss]ettings/
+MemoryCaptures/
+CrashReports/
+.vs/
 .idea/
-*.csproj
-*.sln
-*.userprefs
-.DS_Store
-/*.zip
-/CHECKSUMS.txt
+RiderInfo/
+# Keep only these in VCS: Assets/, Packages/, ProjectSettings/
