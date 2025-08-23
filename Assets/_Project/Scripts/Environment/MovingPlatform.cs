@@ -6,38 +6,38 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public sealed class MovingPlatform : MonoBehaviour
 {
-    [Header("Path")] 
-    [SerializeField] private Transform[] points; 
-    [SerializeField, Min(0.01f)] private float speed = 3f; 
-    [SerializeField, Min(0f)] private float waitAtPoint = 0.15f; 
-    [SerializeField] private bool pingPong = true;
+    [Header("Path")]
+    [SerializeField] Transform[] points;
+    [SerializeField, Min(0.01f)] float speed = 3f;
+    [SerializeField, Min(0f)] float waitAtPoint = 0.1f;
+    [SerializeField] bool pingPong = true;
 
-    [Header("Carry")]
-    [Tooltip("Parents the rider while they are on top. Turn off to disable parenting carry.")]
-    [SerializeField] private bool useParentingCarry = true;
-    [Tooltip("Minimum upward normal to count as 'on top'. Lower if slide persists.")]
-    [Range(0f, 1f)] [SerializeField] private float topNormalMinY = 0.02f;
-    [Tooltip("Geometric fallback: if rider bottom is above platform top by this tolerance, treat as on top.")]
-    [Min(0f)] [SerializeField] private float topYTolerance = 0.05f;
+    [Header("Carry via Top Sensor (recommended)")]
+    [SerializeField] bool useTopTrigger = true;
+    [Tooltip("Assign a thin BoxCollider2D on a child named 'TopSensor' set IsTrigger=ON, hovering ~0.06 above deck.")]
+    [SerializeField] Collider2D topTrigger;
+    [SerializeField] string playerTag = "Player";
+    [SerializeField] Transform carryRoot; // optional; defaults to this.transform
 
-    private Rigidbody2D rb;
-    private Collider2D col;
-    private int idx = 0;
-    private int dir = 1;
-    private float waitTimer = 0f;
-    private Vector2 lastPos;
+    Rigidbody2D rb; Collider2D col;
+    int idx; int dir = 1; float waitTimer;
+    Vector2 lastPos;
 
-    private readonly HashSet<Rigidbody2D> riders = new HashSet<Rigidbody2D>();
-    private readonly Dictionary<Transform, Transform> originalParents = new Dictionary<Transform, Transform>();
+    readonly HashSet<Rigidbody2D> riders = new HashSet<Rigidbody2D>();
+    readonly Dictionary<Transform, Transform> originalParents = new Dictionary<Transform, Transform>();
 
-    /// <summary>Delta world position moved since last FixedUpdate.</summary>
     public Vector2 GetDeltaPosition() => rb ? (Vector2)rb.position - lastPos : Vector2.zero;
 
-    private void Reset()
+    void OnValidate()
+    {
+        if (topTrigger) topTrigger.isTrigger = true;
+    }
+
+    void Reset()
     {
         var r = GetComponent<Rigidbody2D>();
         r.bodyType = RigidbodyType2D.Kinematic;
-        r.useFullKinematicContacts = true;
+        r.useFullKinematicContacts = true;               // callbacks for kinematic pairs
         r.interpolation = RigidbodyInterpolation2D.Interpolate;
         r.constraints = RigidbodyConstraints2D.FreezeRotation;
 
@@ -47,21 +47,21 @@ public sealed class MovingPlatform : MonoBehaviour
         col.usedByEffector = false;
     }
 
-    private void Awake()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        if (!carryRoot) carryRoot = transform;
         lastPos = rb.position;
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
         lastPos = rb.position;
-        if (points == null || points.Length == 0) return;
-        idx = NearestIndex();
+        if (points != null && points.Length > 0) idx = NearestIndex();
     }
 
-    private int NearestIndex()
+    int NearestIndex()
     {
         if (points == null || points.Length == 0) return 0;
         Vector2 p = rb.position; int best = 0; float bestD = float.PositiveInfinity;
@@ -74,16 +74,12 @@ public sealed class MovingPlatform : MonoBehaviour
         return best;
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         if (points == null || points.Length < 2) { lastPos = rb.position; return; }
 
         if (waitTimer > 0f)
-        {
-            waitTimer -= Time.fixedDeltaTime;
-            lastPos = rb.position;
-            return;
-        }
+        { waitTimer -= Time.fixedDeltaTime; lastPos = rb.position; return; }
 
         Vector2 target = points[idx].position;
         Vector2 next = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
@@ -92,78 +88,63 @@ public sealed class MovingPlatform : MonoBehaviour
         if ((rb.position - target).sqrMagnitude <= 0.0001f)
         {
             waitTimer = waitAtPoint;
-            if (pingPong)
-            {
-                if (idx == points.Length - 1) dir = -1; else if (idx == 0) dir = 1; idx += dir;
-            }
-            else idx = (idx + 1) % points.Length;
+            if (pingPong) { if (idx == points.Length - 1) dir = -1; else if (idx == 0) dir = 1; idx += dir; }
+            else { idx = (idx + 1) % points.Length; }
         }
 
         lastPos = rb.position;
     }
 
-    private void OnCollisionEnter2D(Collision2D c)
+    // Trigger-based parenting (robust)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (!useParentingCarry) return;
-        if (!IsOnTop(c)) return;
-        var otherRb = c.rigidbody; if (!otherRb) return;
-        if (riders.Add(otherRb))
+        if (!useTopTrigger) return;
+        if (topTrigger == null) return;                       // require explicit sensor
+        if (other == topTrigger) return;                      // ignore self
+        if (playerTag.Length > 0 && !other.CompareTag(playerTag)) return;
+
+        var rb2d = other.attachedRigidbody; if (!rb2d) return;
+        if (riders.Add(rb2d))
         {
-            var t = otherRb.transform;
+            var t = rb2d.transform;
             if (!originalParents.ContainsKey(t)) originalParents[t] = t.parent;
-            t.SetParent(transform, true);
+            t.SetParent(carryRoot, true);
         }
     }
 
-    private void OnCollisionStay2D(Collision2D c)
+    void OnTriggerExit2D(Collider2D other)
     {
-        if (!useParentingCarry) return;
-        var otherRb = c.rigidbody; if (!otherRb) return;
-        if (IsOnTop(c))
+        if (!useTopTrigger) return;
+        if (topTrigger == null) return;
+        if (playerTag.Length > 0 && !other.CompareTag(playerTag)) return;
+
+        var rb2d = other.attachedRigidbody; if (rb2d) Unparent(rb2d);
+    }
+
+    void OnDisable()
+    {
+        // Clean-up riders so we never strand a childed player
+        foreach (var rb2d in riders)
         {
-            if (riders.Add(otherRb))
-            {
-                var t = otherRb.transform;
-                if (!originalParents.ContainsKey(t)) originalParents[t] = t.parent;
-                t.SetParent(transform, true);
-            }
+            if (!rb2d) continue;
+            var t = rb2d.transform;
+            if (originalParents.TryGetValue(t, out var p)) t.SetParent(p, true);
+            else t.SetParent(null, true);
         }
-        else Unparent(otherRb);
+        riders.Clear(); originalParents.Clear();
     }
 
-    private void OnCollisionExit2D(Collision2D c)
-    {
-        if (!useParentingCarry) return;
-        if (c.rigidbody) Unparent(c.rigidbody);
-    }
-
-    private void Unparent(Rigidbody2D other)
+    void Unparent(Rigidbody2D other)
     {
         if (!riders.Remove(other)) return;
         var t = other.transform;
-        if (originalParents.TryGetValue(t, out var p)) t.SetParent(p, true); else t.SetParent(null, true);
+        if (originalParents.TryGetValue(t, out var p)) t.SetParent(p, true);
+        else t.SetParent(null, true);
         originalParents.Remove(t);
     }
 
-    private bool IsOnTop(Collision2D c)
-    {
-        // Normal-based check first
-        for (int i = 0; i < c.contactCount; i++)
-        {
-            var n = c.GetContact(i).normal; // normal from platform to other
-            if (n.y > topNormalMinY) return true;
-        }
-        // Geometric fallback
-        if (col && c.collider)
-        {
-            float platTop = col.bounds.max.y - topYTolerance;
-            if (c.collider.bounds.min.y >= platTop) return true;
-        }
-        return false;
-    }
-
 #if UNITY_EDITOR
-    private void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         if (points == null || points.Length < 2) return;
         Gizmos.color = Color.cyan;

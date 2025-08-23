@@ -31,15 +31,13 @@ public class PlayerController2D : MonoBehaviour
 #else
         var v = rb.velocity; v.x = x * moveSpeed; rb.velocity = v;
 #endif
-
         grounded = IsGrounded(); if (grounded) coyoteUntil = Time.time + coyoteTime;
 
-        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)) jumpBufferedUntil = Time.time + jumpBuffer;
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space))
+            jumpBufferedUntil = Time.time + jumpBuffer;
 
         if (jumpBufferedUntil > Time.time && coyoteUntil > Time.time)
-        {
-            DoJump(); jumpBufferedUntil = 0f;
-        }
+        { DoJump(); jumpBufferedUntil = 0f; }
 
         bool jumpReleased = Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Space);
 #if UNITY_6000_0_OR_NEWER
@@ -80,8 +78,10 @@ public class PlayerController2D : MonoBehaviour
 #if UNITY_EDITOR
     void OnDrawGizmosSelected()
     {
-        if (!col) col = GetComponent<BoxCollider2D>(); if (!col) return; var b = col.bounds; float extra = 0.05f;
-        Gizmos.color = Color.green; Gizmos.DrawWireCube(b.center + Vector3.down * extra, b.size - new Vector3(0.02f, 0.02f, 0f));
+        if (!col) col = GetComponent<BoxCollider2D>(); if (!col) return;
+        var b = col.bounds; float extra = 0.05f;
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(b.center + Vector3.down * extra, b.size - new Vector3(0.02f, 0.02f, 0f));
     }
     void OnGUI() { if (!showDebug) return; GUI.Label(new Rect(8, 24, 200, 20), $"Grounded: {grounded}"); }
 #endif
