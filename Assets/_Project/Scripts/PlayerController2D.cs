@@ -1,88 +1,131 @@
-// Assets/_Project/Scripts/PlayerController2D.cs
 using UnityEngine;
 
 [AddComponentMenu("Controllers/Player Controller 2D")]
-[RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public class PlayerController2D : MonoBehaviour
 {
-    [Header("Movement")] public float moveSpeed = 8f; public float jumpForce = 12f; public float jumpCutMultiplier = 0.5f;
-    [Header("Grounding")] public LayerMask groundLayer; public float coyoteTime = 0.12f; public float jumpBuffer = 0.12f;
-    [Header("Debug")] public bool showDebug = true;
+    [Header("Movement")]
+    [SerializeField] private float moveSpeed = 8f;
+    [SerializeField] private float jumpForce = 14f;
 
-    Rigidbody2D rb; BoxCollider2D col; SpriteRenderer sr;
-    float coyoteUntil; float jumpBufferedUntil; bool grounded; Vector3 respawnPoint;
+    [Header("Grounding")]
+    [SerializeField] private LayerMask groundMask;
+    [SerializeField, Min(0f)] private float groundCheckInset = 0.02f;   // shrink bounds
+    [SerializeField, Min(0f)] private float groundCheckDistance = 0.05f; // ray distance
+    [SerializeField, Min(0f)] private float coyoteTime = 0.1f;
+    [SerializeField, Min(0f)] private float jumpBuffer = 0.1f;
+
+    [Header("Respawn")]
+    [SerializeField] private Transform initialRespawnPoint;
+
+    private Rigidbody2D _rb;
+    private Collider2D _col;
+    private Vector3 _respawn;
+    private float _coyoteTimer;
+    private float _jumpBufferTimer;
+    private bool _grounded;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<BoxCollider2D>();
-        sr = GetComponent<SpriteRenderer>();
-        respawnPoint = transform.position;
-#if UNITY_6000_0_OR_NEWER
-        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
-#endif
+        _rb = GetComponent<Rigidbody2D>();
+        _col = GetComponent<Collider2D>();
+        _rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        _rb.freezeRotation = true;
+        if (initialRespawnPoint != null) _respawn = initialRespawnPoint.position;
+        else _respawn = transform.position;
     }
 
     void Update()
     {
+        // input
         float x = Input.GetAxisRaw("Horizontal");
-#if UNITY_6000_0_OR_NEWER
-        var v = rb.linearVelocity; v.x = x * moveSpeed; rb.linearVelocity = v;
-#else
-        var v = rb.velocity; v.x = x * moveSpeed; rb.velocity = v;
-#endif
-        grounded = IsGrounded(); if (grounded) coyoteUntil = Time.time + coyoteTime;
 
-        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space))
-            jumpBufferedUntil = Time.time + jumpBuffer;
+        // timers
+        _grounded = IsGrounded();
+        if (_grounded) _coyoteTimer = coyoteTime;
+        else _coyoteTimer -= Time.deltaTime;
 
-        if (jumpBufferedUntil > Time.time && coyoteUntil > Time.time)
-        { DoJump(); jumpBufferedUntil = 0f; }
+        if (Input.GetButtonDown("Jump"))
+            _jumpBufferTimer = jumpBuffer;
+        else
+            _jumpBufferTimer -= Time.deltaTime;
 
-        bool jumpReleased = Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.Space);
-#if UNITY_6000_0_OR_NEWER
-        if (jumpReleased && rb.linearVelocity.y > 0f) { var vv = rb.linearVelocity; vv.y *= jumpCutMultiplier; rb.linearVelocity = vv; }
-#else
-        if (jumpReleased && rb.velocity.y > 0f) { var vv = rb.velocity; vv.y *= jumpCutMultiplier; rb.velocity = vv; }
-#endif
+        // horizontal control
+        var v = GetVel();
+        v.x = x * moveSpeed;
+
+        // jump
+        if (_jumpBufferTimer > 0f && _coyoteTimer > 0f)
+        {
+            v.y = jumpForce;
+            _jumpBufferTimer = 0f;
+            _coyoteTimer = 0f;
+        }
+
+        SetVel(v);
     }
 
-    void DoJump()
+    public bool IsGrounded()
     {
-#if UNITY_6000_0_OR_NEWER
-        var v = rb.linearVelocity; v.y = jumpForce; rb.linearVelocity = v;
-#else
-        var v = rb.velocity; v.y = jumpForce; rb.velocity = v;
-#endif
-    }
-
-    bool IsGrounded()
-    {
-        var b = col.bounds; float extra = 0.05f;
-        RaycastHit2D hit = Physics2D.BoxCast(b.center, b.size - new Vector3(0.02f, 0.02f, 0f), 0f, Vector2.down, extra, groundLayer);
+        Bounds b = _col.bounds;
+        b.Expand(new Vector3(-groundCheckInset * 2f, -groundCheckInset * 2f, 0f));
+        Vector2 origin = new Vector2(b.center.x, b.min.y);
+        float dist = groundCheckDistance;
+        RaycastHit2D hit = Physics2D.BoxCast(origin, new Vector2(b.size.x, groundCheckInset * 2f), 0f, Vector2.down, dist, groundMask);
         return hit.collider != null;
     }
 
-    public void SetRespawnPoint(Vector3 p) { respawnPoint = p; }
-    public void Respawn() { transform.position = respawnPoint; }
+    public void SetRespawnPoint(Vector3 p) => _respawn = p;
+
+    public void Respawn()
+    {
+        transform.position = _respawn;
+        var v = GetVel();
+        v.y = 0f;
+        SetVel(v);
+    }
 
     public void ApplyDamage(Vector2 knockback)
     {
-#if UNITY_6000_0_OR_NEWER
-        rb.linearVelocity = Vector2.zero; rb.AddForce(knockback, ForceMode2D.Impulse);
-#else
-        rb.velocity = Vector2.zero; rb.AddForce(knockback, ForceMode2D.Impulse);
-#endif
+        var v = GetVel();
+        v = knockback;
+        SetVel(v);
     }
 
-#if UNITY_EDITOR
     void OnDrawGizmosSelected()
     {
-        if (!col) col = GetComponent<BoxCollider2D>(); if (!col) return;
-        var b = col.bounds; float extra = 0.05f;
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(b.center + Vector3.down * extra, b.size - new Vector3(0.02f, 0.02f, 0f));
+        var col = GetComponent<Collider2D>();
+        if (!col) return;
+        Bounds b = col.bounds;
+        b.Expand(new Vector3(-groundCheckInset * 2f, -groundCheckInset * 2f, 0f));
+        Vector2 origin = new Vector2(b.center.x, b.min.y);
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(new Vector3(origin.x, origin.y - groundCheckDistance, transform.position.z),
+            new Vector3(b.size.x, groundCheckInset * 2f, 0f));
     }
-    void OnGUI() { if (!showDebug) return; GUI.Label(new Rect(8, 24, 200, 20), $"Grounded: {grounded}"); }
-#endif
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(10, 10, 220, 20), "Grounded: " + (_grounded ? "True" : "False"));
+    }
+
+    // Unity 6 vs older velocity API compatibility
+    Vector2 GetVel()
+    {
+    #if UNITY_6000_0_OR_NEWER
+        return _rb.linearVelocity;
+    #else
+        return _rb.velocity;
+    #endif
+    }
+
+    void SetVel(Vector2 v)
+    {
+    #if UNITY_6000_0_OR_NEWER
+        _rb.linearVelocity = v;
+    #else
+        _rb.velocity = v;
+    #endif
+    }
 }
