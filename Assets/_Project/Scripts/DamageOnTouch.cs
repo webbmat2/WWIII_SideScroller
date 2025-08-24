@@ -1,45 +1,52 @@
-// Assets/_Project/Scripts/DamageOnTouch.cs
 using UnityEngine;
 
-[AddComponentMenu("Combat/Damage On Touch")]
+[AddComponentMenu("Gameplay/Damage On Touch (AI Fix)")]
 public class DamageOnTouch : MonoBehaviour
 {
+    [Header("Damage")]
+    [SerializeField] private int damage = 1;
+    [SerializeField, Tooltip("Cooldown between consecutive hits on the same target (seconds)")] 
+    private float hitCooldown = 0.25f;
+
     [Header("Knockback")]
-    [SerializeField] private float knockbackX = 8f;
-    [SerializeField] private float knockbackY = 10f;
-    [Tooltip("If true, push the player away from this attacker based on relative position.")]
-    [SerializeField] private bool fromAttackerDirection = true;
+    [SerializeField] private float knockbackForce = 8f;
+    [SerializeField] private float knockbackUp = 4f;
 
-    [Header("Targeting")]
-    [SerializeField] private string targetTag = "Player";
-    [SerializeField, Min(0f)] private float hitCooldown = 0.2f;
+    private float _lastHitTime = -999f;
 
-    private float _nextHitTime = 0f;
-
-    void OnCollisionEnter2D(Collision2D c)
+    private void OnCollisionEnter2D(Collision2D c)
     {
-        if (c.collider) TryHit(c.collider);
+        if (c == null) return;
+        TryHit(c.collider);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other) TryHit(other);
+        TryHit(other);
     }
 
-    void TryHit(Collider2D other)
+    private void TryHit(Collider2D other)
     {
-        if (Time.time < _nextHitTime) return;
-        if (!other.CompareTag(targetTag)) return;
+        if (other == null) return;
+        if (Time.time - _lastHitTime < hitCooldown) return;
 
-        var player = other.GetComponentInParent<PlayerController2D>();
-        if (!player) return;
+        // Only affect the player
+        var pc = other.GetComponent<PlayerController2D>();
+        if (pc == null && !other.CompareTag("Player")) return;
+        if (pc == null) pc = other.GetComponentInParent<PlayerController2D>();
+        if (pc == null) return;
 
-        float dir = 1f;
-        if (fromAttackerDirection)
-            dir = Mathf.Sign(other.bounds.center.x - transform.position.x);
+        // Apply knockback if the player has a Rigidbody2D
+        var rb = other.attachedRigidbody ?? other.GetComponentInParent<Rigidbody2D>();
+        if (rb != null)
+        {
+            Vector2 dir = ((Vector2)(other.transform.position - transform.position)).normalized;
+            Vector2 impulse = new Vector2(dir.x * knockbackForce, Mathf.Abs(knockbackUp));
+            rb.AddForce(impulse, ForceMode2D.Impulse);
+        }
 
-        Vector2 kb = new Vector2(dir * knockbackX, knockbackY);
-        player.ApplyDamage(kb);
-        _nextHitTime = Time.time + hitCooldown;
+        // Apply damage as INT
+        pc.ApplyDamage(damage);
+        _lastHitTime = Time.time;
     }
 }

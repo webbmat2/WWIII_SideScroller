@@ -1,21 +1,12 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class CoinUI : MonoBehaviour
 {
-    [SerializeField] TMP_Text label;
+    [SerializeField] private TMP_Text label;
 
-    void Awake()
+    public void SetCoins(int amount)
     {
-        if (!label) label = GetComponentInChildren<TMP_Text>();
-        UpdateLabel(CoinManager.Count);
-    }
-
-    void OnEnable()  { CoinManager.OnCoinsChanged += UpdateLabel; }
-    void OnDisable() { CoinManager.OnCoinsChanged -= UpdateLabel; }
-
-    void UpdateLabel(int newCount)
-    {
-        if (label) label.text = $"Coins: {newCount}";
+        if (label != null) label.text = amount.ToString();
     }
 }

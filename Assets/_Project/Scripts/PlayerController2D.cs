@@ -1,131 +1,156 @@
 using UnityEngine;
 
-[AddComponentMenu("Controllers/Player Controller 2D")]
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
+[AddComponentMenu("Player/Player Controller 2D (AI Fix)")]
 public class PlayerController2D : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] private float moveSpeed = 8f;
-    [SerializeField] private float jumpForce = 14f;
+    [Header("Health")]
+    [SerializeField] private int maxHealth = 3;
 
     [Header("Grounding")]
     [SerializeField] private LayerMask groundMask;
-    [SerializeField, Min(0f)] private float groundCheckInset = 0.02f;   // shrink bounds
-    [SerializeField, Min(0f)] private float groundCheckDistance = 0.05f; // ray distance
-    [SerializeField, Min(0f)] private float coyoteTime = 0.1f;
-    [SerializeField, Min(0f)] private float jumpBuffer = 0.1f;
+    [SerializeField] private float groundCheckDistance = 0.1f;
 
-    [Header("Respawn")]
-    [SerializeField] private Transform initialRespawnPoint;
+    [Header("Movement")]
+    [SerializeField] private float moveSpeed = 8f;
+    [SerializeField] private float jumpForce = 12f;
+    [SerializeField] private bool flipSpriteByScaleX = true;
 
     private Rigidbody2D _rb;
     private Collider2D _col;
-    private Vector3 _respawn;
-    private float _coyoteTimer;
-    private float _jumpBufferTimer;
-    private bool _grounded;
+    private int _currentHealth;
+    private Vector3 _respawnPoint;
+    private Transform _currentPlatform;
+    private float _inputX;
+    private bool _jumpQueued;
+    private SpriteRenderer _sr;
 
-    void Awake()
+    private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _col = GetComponent<Collider2D>();
-        _rb.interpolation = RigidbodyInterpolation2D.Interpolate;
-        _rb.freezeRotation = true;
-        if (initialRespawnPoint != null) _respawn = initialRespawnPoint.position;
-        else _respawn = transform.position;
+        _currentHealth = Mathf.Max(1, maxHealth);
+        _respawnPoint = transform.position;
+        _sr = GetComponentInChildren<SpriteRenderer>();
     }
 
-    void Update()
+    private void Update()
     {
-        // input
-        float x = Input.GetAxisRaw("Horizontal");
-
-        // timers
-        _grounded = IsGrounded();
-        if (_grounded) _coyoteTimer = coyoteTime;
-        else _coyoteTimer -= Time.deltaTime;
-
-        if (Input.GetButtonDown("Jump"))
-            _jumpBufferTimer = jumpBuffer;
-        else
-            _jumpBufferTimer -= Time.deltaTime;
-
-        // horizontal control
-        var v = GetVel();
-        v.x = x * moveSpeed;
-
-        // jump
-        if (_jumpBufferTimer > 0f && _coyoteTimer > 0f)
+        // Horizontal input (axes + fallback keys)
+        float axis = Input.GetAxisRaw("Horizontal");
+        if (Mathf.Approximately(axis, 0f))
         {
-            v.y = jumpForce;
-            _jumpBufferTimer = 0f;
-            _coyoteTimer = 0f;
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) axis -= 1f;
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) axis += 1f;
+        }
+        _inputX = Mathf.Clamp(axis, -1f, 1f);
+
+        // Queue jump (space/W/Up or "Jump" button)
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            _jumpQueued = true;
         }
 
-        SetVel(v);
+        // Flip sprite by localScale.x
+        if (flipSpriteByScaleX && _sr != null && Mathf.Abs(_inputX) > 0.01f)
+        {
+            var s = _sr.transform.localScale;
+            s.x = Mathf.Abs(s.x) * (_inputX < 0 ? -1 : 1);
+            _sr.transform.localScale = s;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (_rb == null) return;
+
+        var v = _rb.linearVelocity;
+        // Horizontal movement
+        v.x = _inputX * moveSpeed;
+
+        // Jump (only when grounded)
+        if (_jumpQueued && IsGrounded())
+        {
+            if (v.y < 0f) v.y = 0f; // clean takeoff
+            v.y = jumpForce;
+        }
+
+        _rb.linearVelocity = v;
+        _jumpQueued = false; // consume jump
+    }
+
+    public void SetRespawnPoint(Vector3 p) { _respawnPoint = p; }
+
+    public void Respawn()
+    {
+        transform.position = _respawnPoint;
+        if (_rb != null)
+        {
+            _rb.linearVelocity = Vector2.zero;
+            _rb.angularVelocity = 0f;
+            _rb.position = (Vector2)_respawnPoint;
+        }
+    }
+
+    public void ApplyDamage(int amount)
+    {
+        int dmg = Mathf.Max(0, amount);
+        _currentHealth -= dmg;
+        if (_currentHealth <= 0)
+        {
+            _currentHealth = Mathf.Max(1, maxHealth);
+            Respawn();
+        }
     }
 
     public bool IsGrounded()
     {
+        if (_col == null) return false;
         Bounds b = _col.bounds;
-        b.Expand(new Vector3(-groundCheckInset * 2f, -groundCheckInset * 2f, 0f));
-        Vector2 origin = new Vector2(b.center.x, b.min.y);
-        float dist = groundCheckDistance;
-        RaycastHit2D hit = Physics2D.BoxCast(origin, new Vector2(b.size.x, groundCheckInset * 2f), 0f, Vector2.down, dist, groundMask);
+        Vector3 size = new Vector3(Mathf.Max(0.01f, b.size.x - 0.02f), Mathf.Max(0.01f, b.size.y - 0.02f), 1f);
+        RaycastHit2D hit = Physics2D.BoxCast(b.center, size, 0f, Vector2.down, groundCheckDistance, groundMask);
         return hit.collider != null;
     }
 
-    public void SetRespawnPoint(Vector3 p) => _respawn = p;
-
-    public void Respawn()
+    public void AttachToPlatform(Transform platform)
     {
-        transform.position = _respawn;
-        var v = GetVel();
-        v.y = 0f;
-        SetVel(v);
+        _currentPlatform = platform;
+        if (platform != null) transform.SetParent(platform);
     }
 
-    public void ApplyDamage(Vector2 knockback)
+    public void DetachFromPlatform()
     {
-        var v = GetVel();
-        v = knockback;
-        SetVel(v);
+        if (_currentPlatform != null)
+        {
+            transform.SetParent(null);
+            _currentPlatform = null;
+        }
     }
 
-    void OnDrawGizmosSelected()
+    // Overloads to satisfy callers that pass a platform reference
+    public void DetachFromPlatform(Transform platform)
     {
-        var col = GetComponent<Collider2D>();
-        if (!col) return;
-        Bounds b = col.bounds;
-        b.Expand(new Vector3(-groundCheckInset * 2f, -groundCheckInset * 2f, 0f));
-        Vector2 origin = new Vector2(b.center.x, b.min.y);
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireCube(new Vector3(origin.x, origin.y - groundCheckDistance, transform.position.z),
-            new Vector3(b.size.x, groundCheckInset * 2f, 0f));
+        if (platform == null || platform == _currentPlatform)
+        {
+            DetachFromPlatform();
+        }
     }
 
-    void OnGUI()
+    public void DetachFromPlatform(GameObject platformGO)
     {
-        GUI.Label(new Rect(10, 10, 220, 20), "Grounded: " + (_grounded ? "True" : "False"));
+        DetachFromPlatform(platformGO != null ? platformGO.transform : null);
     }
 
-    // Unity 6 vs older velocity API compatibility
-    Vector2 GetVel()
-    {
-    #if UNITY_6000_0_OR_NEWER
-        return _rb.linearVelocity;
-    #else
-        return _rb.velocity;
-    #endif
-    }
+    private void OnDisable() { DetachFromPlatform(); }
 
-    void SetVel(Vector2 v)
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
     {
-    #if UNITY_6000_0_OR_NEWER
-        _rb.linearVelocity = v;
-    #else
-        _rb.velocity = v;
-    #endif
+        var c = GetComponent<Collider2D>();
+        if (c == null) return;
+        Bounds b = c.bounds;
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(b.center + Vector3.down * groundCheckDistance, b.size);
     }
+#endif
 }
