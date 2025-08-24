@@ -17,14 +17,14 @@ public class CheckpointTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (consumed && oneShot) return;
-
+        
         var player = other.GetComponentInParent<PlayerController2D>();
         if (player == null) return;
-
+        
         Vector2 point = transform.position;
         if (alignYOnly)
             point = new Vector2(player.transform.position.x, point.y);
-
+        
         player.SetRespawnPoint(point);
         consumed = true;
     }

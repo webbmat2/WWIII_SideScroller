@@ -24,13 +24,23 @@ public sealed class MovingPlatform : MonoBehaviour
             rb.useFullKinematicContacts = true;
             rb.interpolation = RigidbodyInterpolation2D.Interpolate;
             rb.collisionDetectionMode = CollisionDetectionMode2D.Discrete;
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation; // Only freeze rotation, not position
         }
     }
 
     private void Awake()
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        // CRITICAL: Force constraints fix at runtime in case Inspector has wrong values
+        if (rb != null)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            Debug.Log($"MovingPlatform: Fixed constraints to: {rb.constraints}");
+        }
     }
 
     private void FixedUpdate()
