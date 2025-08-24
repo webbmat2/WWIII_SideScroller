@@ -1,51 +1,31 @@
 using UnityEngine;
 
-[AddComponentMenu("Gameplay/Damage On Touch (AI Fix)")]
-public class DamageOnTouch : MonoBehaviour
+[AddComponentMenu("Gameplay/Checkpoint Trigger")]
+[RequireComponent(typeof(Collider2D))]
+public class CheckpointTrigger : MonoBehaviour
 {
-    [Header("Damage")]
-    [SerializeField] private int damage = 1;
-    [SerializeField, Tooltip("Cooldown between consecutive hits on the same target (seconds)")] private float hitCooldown = 0.25f;
+    [SerializeField] private bool oneShot = true;
+    [SerializeField] private bool alignYOnly = false;
+    private bool consumed;
 
-    [Header("Knockback")]
-    [SerializeField] private float knockbackForce = 8f;
-    [SerializeField] private float knockbackUp = 4f;
-
-    private float _lastHitTime = -999f;
-
-    private void OnCollisionEnter2D(Collision2D c)
+    private void Reset()
     {
-        if (c == null) return;
-        TryHit(c.collider);
+        var col = GetComponent<Collider2D>();
+        if (col != null) col.isTrigger = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        TryHit(other);
-    }
+        if (consumed && oneShot) return;
 
-    private void TryHit(Collider2D other)
-    {
-        if (other == null) return;
-        if (Time.time - _lastHitTime < hitCooldown) return;
+        var player = other.GetComponentInParent<PlayerController2D>();
+        if (player == null) return;
 
-        // Only affect the player
-        var pc = other.GetComponent<PlayerController2D>();
-        if (pc == null && !other.CompareTag("Player")) return;
-        if (pc == null) pc = other.GetComponentInParent<PlayerController2D>();
-        if (pc == null) return;
+        Vector2 point = transform.position;
+        if (alignYOnly)
+            point = new Vector2(player.transform.position.x, point.y);
 
-        // Apply knockback if the player has a Rigidbody2D
-        var rb = other.attachedRigidbody ?? other.GetComponentInParent<Rigidbody2D>();
-        if (rb != null)
-        {
-            Vector2 dir = ((Vector2)(other.transform.position - transform.position)).normalized;
-            Vector2 impulse = new Vector2(dir.x * knockbackForce, Mathf.Abs(knockbackUp));
-            rb.AddForce(impulse, ForceMode2D.Impulse);
-        }
-
-        // Apply damage as INT (fixes earlier Vector2->int mistake)
-        pc.ApplyDamage(damage);
-        _lastHitTime = Time.time;
+        player.SetRespawnPoint(point);
+        consumed = true;
     }
 }

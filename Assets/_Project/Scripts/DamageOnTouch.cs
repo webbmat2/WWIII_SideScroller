@@ -1,11 +1,12 @@
 using UnityEngine;
 
-[AddComponentMenu("Gameplay/Damage On Touch (AI Fix)")]
+[AddComponentMenu("Gameplay/Damage On Touch")]
+[RequireComponent(typeof(Collider2D))]
 public class DamageOnTouch : MonoBehaviour
 {
     [Header("Damage")]
     [SerializeField] private int damage = 1;
-    [SerializeField, Tooltip("Cooldown between consecutive hits on the same target (seconds)")] 
+    [SerializeField, Tooltip("Cooldown between consecutive hits on the same target (seconds)")]
     private float hitCooldown = 0.25f;
 
     [Header("Knockback")]
@@ -13,6 +14,20 @@ public class DamageOnTouch : MonoBehaviour
     [SerializeField] private float knockbackUp = 4f;
 
     private float _lastHitTime = -999f;
+
+    private void Awake()
+    {
+        var col = GetComponent<Collider2D>();
+        if (col != null) col.isTrigger = true;
+
+        var rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            rb.gravityScale = 0f;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D c)
     {
@@ -30,13 +45,11 @@ public class DamageOnTouch : MonoBehaviour
         if (other == null) return;
         if (Time.time - _lastHitTime < hitCooldown) return;
 
-        // Only affect the player
         var pc = other.GetComponent<PlayerController2D>();
         if (pc == null && !other.CompareTag("Player")) return;
         if (pc == null) pc = other.GetComponentInParent<PlayerController2D>();
         if (pc == null) return;
 
-        // Apply knockback if the player has a Rigidbody2D
         var rb = other.attachedRigidbody ?? other.GetComponentInParent<Rigidbody2D>();
         if (rb != null)
         {
@@ -45,7 +58,6 @@ public class DamageOnTouch : MonoBehaviour
             rb.AddForce(impulse, ForceMode2D.Impulse);
         }
 
-        // Apply damage as INT
         pc.ApplyDamage(damage);
         _lastHitTime = Time.time;
     }
