@@ -112,7 +112,6 @@ namespace DG.DOTweenEditor
 #endif
         };
 
-//#if true // TK2D_MARKER
 #if false // TK2D_MARKER
         static readonly Dictionary<DOTweenAnimation.AnimationType, Type[]> _Tk2dAnimationTypeToComponent = new Dictionary<DOTweenAnimation.AnimationType, Type[]>() {
             { DOTweenAnimation.AnimationType.Scale, new[] { typeof(tk2dBaseSprite), typeof(tk2dTextMesh) } },
@@ -139,7 +138,6 @@ namespace DG.DOTweenEditor
             "FillAmount",
             "Text",
 #endif
-//#if true // TK2D_MARKER
 #if false // TK2D_MARKER
             "Text",
 #endif
