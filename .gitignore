@@ -11,3 +11,7 @@ CrashReports/
 .idea/
 RiderInfo/
 # Keep only these in VCS: Assets/, Packages/, ProjectSettings/
+
+# Unity auto-generated
+*.csproj
+*.sln
