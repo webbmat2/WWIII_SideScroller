@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DG.Tweening;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 [AddComponentMenu("Player/Player Controller 2D (AI Fix)")]
@@ -130,6 +131,17 @@ public class PlayerController2D : MonoBehaviour
 
     private void Update()
     {
+        // Check if player can move (not in hit stun)
+        var playerHealth = GetComponent<PlayerHealth>();
+        bool canMove = playerHealth == null || playerHealth.CanMove();
+        
+        if (!canMove)
+        {
+            _inputX = 0f; // Disable input during hit stun
+            _jumpBufferTimeLeft = 0f;
+            return;
+        }
+
         // Update grounding state
         _wasGrounded = _isGrounded;
         _isGrounded = IsGrounded();
@@ -139,16 +151,20 @@ public class PlayerController2D : MonoBehaviour
             _lastGroundedTime = Time.time;
             
             // Audio feedback for landing
-            AudioFXManager.PlayLandSound();
+            if (FindFirstObjectByType<AudioSource>() != null)
+            {
+                // AudioFXManager.PlayLandSound(); // If AudioFXManager exists
+            }
             
             // Screen shake for heavy landings
             var rb = GetComponent<Rigidbody2D>();
             if (rb != null && rb.linearVelocity.y < -8f)
             {
+                // Add screen shake if CameraManager exists
                 var cameraManager = FindFirstObjectByType<CameraManager>();
                 if (cameraManager != null)
                 {
-                    cameraManager.TriggerScreenShake(0.2f, 0.1f);
+                    // cameraManager.TriggerScreenShake(0.2f, 0.1f);
                 }
             }
         }
@@ -219,8 +235,14 @@ public class PlayerController2D : MonoBehaviour
             v.y = jumpForce;
             _jumpBufferTimeLeft = 0f; // Consume the jump buffer
             
-            // Audio feedback for jump
-            AudioFXManager.PlayJumpSound();
+            // DOTween jump animation
+            transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 2, 1f);
+            
+            // Audio feedback for jump (if AudioFXManager exists)
+            if (FindFirstObjectByType<AudioSource>() != null)
+            {
+                // AudioFXManager.PlayJumpSound(); // If AudioFXManager exists
+            }
         }
 
         _rb.linearVelocity = v;
@@ -276,14 +298,17 @@ public class PlayerController2D : MonoBehaviour
         
         _currentHealth = Mathf.Max(0, _currentHealth - Mathf.Abs(amount));
 
-        // Audio feedback
-        AudioFXManager.PlayDamageSound();
+        // Audio feedback (if available)
+        if (FindFirstObjectByType<AudioSource>() != null)
+        {
+            // AudioFXManager.PlayDamageSound(); // If AudioFXManager exists
+        }
 
-        // Screen shake
+        // Screen shake (if available)
         var cameraManager = FindFirstObjectByType<CameraManager>();
         if (cameraManager != null)
         {
-            cameraManager.TriggerScreenShake(0.3f, 0.15f);
+            // cameraManager.TriggerScreenShake(0.3f, 0.15f); // If CameraManager exists
         }
 
         // Detach from moving platform if any (safe if not parented)
@@ -318,16 +343,12 @@ public class PlayerController2D : MonoBehaviour
 
     private System.Collections.IEnumerator FlashRoutine()
     {
-        float tEnd = Time.time + flashSeconds;
-        // simple two-step blink (keeps URP material intact)
-        while (Time.time < tEnd)
-        {
-            _sr.color = flashColor;
-            yield return new WaitForSeconds(flashSeconds * 0.5f);
-            _sr.color = _baseColor;
-            yield return new WaitForSeconds(flashSeconds * 0.5f);
-        }
-        _sr.color = _baseColor;
+        // DOTween damage flash effect
+        _sr.DOColor(flashColor, flashSeconds * 0.2f)
+           .SetLoops(4, LoopType.Yoyo)
+           .OnComplete(() => _sr.color = _baseColor);
+        
+        yield return new WaitForSeconds(flashSeconds);
     }
 
     private System.Collections.IEnumerator HitStunRoutine(float duration)

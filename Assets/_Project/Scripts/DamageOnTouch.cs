@@ -38,19 +38,39 @@ public class DamageOnTouch : MonoBehaviour
     {
         Debug.Log($"DamageOnTouch: Trigger entered by {other.name}");
         
-        var player = other.GetComponentInParent<PlayerController2D>();
-        if (player == null) 
+        // Try PlayerHealth first (preferred), fallback to PlayerController2D
+        var playerHealth = other.GetComponentInParent<PlayerHealth>();
+        var playerController = other.GetComponentInParent<PlayerController2D>();
+        
+        if (playerHealth == null && playerController == null) 
         {
-            Debug.Log($"DamageOnTouch: No PlayerController2D found on {other.name}");
+            Debug.Log($"DamageOnTouch: No player component found on {other.name}");
             return;
         }
 
         // Direction: push player away from this hazard, always up a bit
-        float sign = Mathf.Sign(player.transform.position.x - transform.position.x);
+        Vector3 playerPos = playerHealth != null ? playerHealth.transform.position : playerController.transform.position;
+        float sign = Mathf.Sign(playerPos.x - transform.position.x);
         Vector2 kb = new Vector2(knockbackX * sign, knockbackY);
 
-        Debug.Log($"DamageOnTouch: Applying knockback {kb} to {player.name}");
-        player.ApplyDamage(damage, kb, hitStunSeconds, invulnSeconds);
+        Debug.Log($"DamageOnTouch: Applying knockback {kb} to player");
+        
+        // Apply damage to preferred component
+        if (playerHealth != null)
+        {
+            playerHealth.ApplyDamage(damage, kb, hitStunSeconds, invulnSeconds);
+            
+            // Notify abilities system that player took damage (removes Chiliguaro)
+            var playerAbilities = playerHealth.GetComponent<PlayerAbilities>();
+            if (playerAbilities != null)
+            {
+                playerAbilities.OnPlayerTookDamage();
+            }
+        }
+        else if (playerController != null)
+        {
+            playerController.ApplyDamage(damage, kb, hitStunSeconds, invulnSeconds);
+        }
 
         // Play sound effect
         if (damageSound != null)
@@ -61,7 +81,7 @@ public class DamageOnTouch : MonoBehaviour
         // Spawn hit effect
         if (hitEffect != null)
         {
-            var effect = Instantiate(hitEffect, player.transform.position, Quaternion.identity);
+            var effect = Instantiate(hitEffect, playerPos, Quaternion.identity);
             Destroy(effect, 2f); // Auto-cleanup after 2 seconds
         }
     }

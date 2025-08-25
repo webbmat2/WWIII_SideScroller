@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-[AddComponentMenu("UI/Health UI")]
-public class HealthUI : MonoBehaviour
+[AddComponentMenu("UI/Advanced Health UI")]
+public class AdvancedHealthUI : MonoBehaviour
 {
     [Header("Health Display")]
     [SerializeField] private GameObject heartPrefab;
@@ -17,48 +17,51 @@ public class HealthUI : MonoBehaviour
     [SerializeField] private AnimationCurve damageShakeCurve = AnimationCurve.EaseInOut(0, 1, 1, 0);
 
     private List<Image> _heartImages = new List<Image>();
-    private PlayerController2D _player;
+    private PlayerHealth _playerHealth;
     private int _lastKnownHealth;
 
     private void Start()
     {
-        _player = FindFirstObjectByType<PlayerController2D>();
-        if (_player == null)
+        _playerHealth = FindFirstObjectByType<PlayerHealth>();
+        if (_playerHealth == null)
         {
-            Debug.LogWarning("HealthUI: No PlayerController2D found in scene!");
+            Debug.LogWarning("AdvancedHealthUI: No PlayerHealth found in scene!");
             return;
         }
 
+        _playerHealth.OnHealthChanged += OnHealthChanged;
         InitializeHearts();
         UpdateHealthDisplay();
     }
 
-    private void Update()
+    private void OnDestroy()
     {
-        if (_player == null) return;
-
-        // Check for health changes
-        if (_player.CurrentHealth != _lastKnownHealth)
+        if (_playerHealth != null)
         {
-            bool tookDamage = _player.CurrentHealth < _lastKnownHealth;
-            UpdateHealthDisplay();
-            
-            if (tookDamage)
-            {
-                PlayDamageAnimation();
-            }
-            else
-            {
-                PlayHealAnimation();
-            }
-            
-            _lastKnownHealth = _player.CurrentHealth;
+            _playerHealth.OnHealthChanged -= OnHealthChanged;
         }
+    }
+
+    private void OnHealthChanged(int newHealth, int maxHealth)
+    {
+        bool tookDamage = newHealth < _lastKnownHealth;
+        UpdateHealthDisplay();
+        
+        if (tookDamage)
+        {
+            PlayDamageAnimation();
+        }
+        else if (newHealth > _lastKnownHealth)
+        {
+            PlayHealAnimation();
+        }
+        
+        _lastKnownHealth = newHealth;
     }
 
     private void InitializeHearts()
     {
-        if (_player == null) return;
+        if (_playerHealth == null) return;
 
         // Clear existing hearts
         foreach (Transform child in heartsContainer)
@@ -68,7 +71,7 @@ public class HealthUI : MonoBehaviour
         _heartImages.Clear();
 
         // Create heart images for max health
-        for (int i = 0; i < _player.MaxHealth; i++)
+        for (int i = 0; i < _playerHealth.MaxHP; i++)
         {
             GameObject heartObj;
             
@@ -92,16 +95,16 @@ public class HealthUI : MonoBehaviour
             }
         }
 
-        _lastKnownHealth = _player.MaxHealth;
+        _lastKnownHealth = _playerHealth.MaxHP;
     }
 
     private void UpdateHealthDisplay()
     {
-        if (_player == null) return;
+        if (_playerHealth == null) return;
 
         for (int i = 0; i < _heartImages.Count; i++)
         {
-            if (i < _player.CurrentHealth)
+            if (i < _playerHealth.CurrentHP)
             {
                 _heartImages[i].sprite = fullHeartSprite;
                 _heartImages[i].color = Color.white;
@@ -197,7 +200,7 @@ public class HealthUI : MonoBehaviour
 
     public void RefreshDisplay()
     {
-        if (_player != null)
+        if (_playerHealth != null)
         {
             InitializeHearts();
             UpdateHealthDisplay();
