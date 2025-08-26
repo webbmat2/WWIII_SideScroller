@@ -1,25 +1,12 @@
-# Unity
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild*/
-[Ll]ogs/
-[Uu]ser[Ss]ettings/
-MemoryCaptures/
-CrashReports/
-.vs/
-.idea/
-RiderInfo/
-# Keep only these in VCS: Assets/, Packages/, ProjectSettings/
+# Unity auto-generated files
+Library/
+Temp/
+Logs/
+UserSettings/
+obj/
+*.tmp
 
-# Unity auto-generated
-*.csproj
-*.sln
-
-# Unity auto-generated
-*.csproj
-*.sln
-
-# Unity auto-generated
-*.csproj
-*.sln
+# Build outputs
+Builds/
+*.apk
+*.ipa
