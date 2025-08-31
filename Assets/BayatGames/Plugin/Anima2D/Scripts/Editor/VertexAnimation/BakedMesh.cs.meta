@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6196ac54c59b94f108eecda9dd6f2559
+timeCreated: 1474978339
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexAnimation/BakedMesh.cs
+  uploadId: 432157

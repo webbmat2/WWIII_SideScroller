@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cde60765d375b4ed58de62a5855759c0
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Primitives.cs
+  uploadId: 432157

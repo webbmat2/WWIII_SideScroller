@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 327dce4e434c9404ebeeaa1b183cc89d
+timeCreated: 1438209852
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Plugin/Anima2D/Scripts/Ik2D.cs
+  uploadId: 432157

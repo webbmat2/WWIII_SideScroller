@@ -1,12 +1,24 @@
-# Unity auto-generated files
-Library/
-Temp/
-Logs/
-UserSettings/
-obj/
-*.tmp
-
-# Build outputs
-Builds/
-*.apk
-*.ipa
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild*/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+.vs/
+.idea/
+.vscode/*
+!/.vscode/settings.json
+!/.vscode/extensions.json
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.pdb
+*.mdb
+*.svd
+*.opendb
+*.VC.db
+.DS_Store

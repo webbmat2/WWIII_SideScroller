@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3af9604360df6489ab3fa31d079bcf72
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Geometry/Point.cs
+  uploadId: 432157

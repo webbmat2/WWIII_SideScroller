@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b64d5a1afe0a54002a310377fef073a0
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Data/Triangle.cs
+  uploadId: 432157

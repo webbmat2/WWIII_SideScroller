@@ -1,0 +1,16 @@
+ASSEMBLY DEFINITION CONFIGURATION FOR DATA.ASMDEF
+
+Create: Data.asmdef in this folder
+
+Configuration:
+- Name: Data
+- Root Namespace: WWIII.Data
+- References: NONE (pure data)
+- Auto Referenced: TRUE
+- Platform: Any Platform
+
+This assembly contains:
+- LevelDef.cs ✓
+- NarrativeDef.cs ✓
+- CollectibleSetDef.cs ✓
+- Other ScriptableObject definitions

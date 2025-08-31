@@ -1,0 +1,17 @@
+{
+    "name": "Systems",
+    "rootNamespace": "WWIII.Systems",
+    "references": [
+        "GUID:09092cab55eca4f12bea9a5b5e465ea4",
+        "GUID:680784fe2c92f41349cb0cfcdbdf6eb9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

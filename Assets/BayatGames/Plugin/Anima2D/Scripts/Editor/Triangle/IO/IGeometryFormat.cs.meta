@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a181574a098a74c91a4adf2cc3c6fbd6
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/IO/IGeometryFormat.cs
+  uploadId: 432157

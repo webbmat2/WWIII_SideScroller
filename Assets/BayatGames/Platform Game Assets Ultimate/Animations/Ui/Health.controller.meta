@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 253a66210ee554d48a318072d0da7d02
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Platform Game Assets Ultimate/Animations/Ui/Health.controller
+  uploadId: 432157

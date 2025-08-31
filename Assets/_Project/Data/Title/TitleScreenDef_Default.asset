@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829454806b369418596e4a0086448054, type: 3}
+  m_Name: TitleScreenDef_Default
+  m_EditorClassIdentifier: WWIII.Scripts::WWIII.Data.TitleScreenDef
+  coldOpenDuration: 2
+  jEntranceTime: 0.8
+  moodFlipDuration: 0.8
+  promptDelay: 1
+  coldOpenTitle: WWIII SideScroller
+  warmTitle: JWWIII SideScroller
+  continuePrompt: Press Any Button to Start
+  coldLightIntensity: 0.3
+  warmLightIntensity: 1
+  coldLightColor: {r: 0.7, g: 0.8, b: 1, a: 1}
+  warmLightColor: {r: 1, g: 0.95, b: 0.8, a: 1}
+  coldTitleColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.7}
+  warmTitleColor: {r: 1, g: 1, b: 1, a: 1}
+  jSpeed: 15
+  jImpactScale: 1.3
+  shakeStrength: 0.5
+  shakeDuration: 0.3
+  titleBounceScale: 1.2
+  parallaxSpeeds: {x: 0.5, y: 0.3}
+  windLoop: {fileID: 0}
+  titleMusic: {fileID: 0}
+  birdsLoop: {fileID: 0}
+  whooshSFX: {fileID: 0}
+  impactSFX: {fileID: 0}
+  dustSFX: {fileID: 0}
+  musicVolume: 0.7
+  ambienceVolume: 0.3
+  sfxVolume: 0.8
+  allowShakeDisable: 1
+  useHighContrast: 0
+  reduceMotion: 0

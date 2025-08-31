@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: L2_TorchLake_LevelDef
+  m_EditorClassIdentifier: WWIII.Core:WWIII.Core:L2_TorchLakeLevelDef
+  levelName: TorchLake Crossing
+  levelDescription: Navigate treacherous lake waters while avoiding amphibious enemies
+    and environmental hazards.
+  sceneName: 02_TorchLake
+  biome: Lake/Swamp
+  hazardBudget: 4
+  enemyArchetypes: 2
+  checkpointCount: 2
+  collectibleCount: 5
+  hasPowerUp: 1
+  hasSecret: 1
+  levelHazards:
+  - hazardType: 0
+    position: {x: 25, y: -1}
+    description: Deep water crossing - requires power-up
+  - hazardType: 2
+    position: {x: 45, y: 2}
+    description: Floating log platform
+  - hazardType: 1
+    position: {x: 65, y: 0}
+    description: Wooden stakes in shallow water
+  - hazardType: 3
+    position: {x: 85, y: 5}
+    description: Unstable cliff rocks
+  enemySpawns:
+  - enemyType: Scout
+    spawnPosition: {x: 30, y: 1}
+    behavior: Lake patrol guard - fast amphibious scout
+  - enemyType: Soldier
+    spawnPosition: {x: 55, y: 2}
+    behavior: Platform defender - basic infantry
+  - enemyType: Drone
+    spawnPosition: {x: 75, y: 4}
+    behavior: Aerial reconnaissance - flying drone
+  checkpoints:
+  - name: Lakeside Entry
+    position: {x: 10, y: 2}
+    description: Starting safe zone with tutorial
+  - name: Mid-Lake Platform
+    position: {x: 60, y: 3}
+    description: Central checkpoint after water crossing
+  collectibles:
+  - collectibleName: Bronze Star
+    position: {x: 15, y: 3}
+    hint: Easy pickup - above water
+  - collectibleName: Silver Medal
+    position: {x: 35, y: 0}
+    hint: Risk/reward - shallow water
+  - collectibleName: War Badge
+    position: {x: 50, y: 4}
+    hint: Skill required - high platform
+  - collectibleName: Honor Token
+    position: {x: 80, y: 1}
+    hint: Hidden behind rocks
+  - collectibleName: Victory Ribbon
+    position: {x: 90, y: -2}
+    hint: Secret area - underwater cave
+  powerUp:
+    powerUpType: DoubleJump
+    position: {x: 40, y: 3}
+    effect: Enables crossing deep water sections
+  secret:
+    secretName: Underwater Cave
+    position: {x: 88, y: -3}
+    hint: Hidden cave entrance below cliff

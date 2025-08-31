@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 8ee4d2b2ae0721f478a17561fb1d9058
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Asap Medium
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 06685457ac6680f4dafeea64e8d08a9d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Platform Game Assets Ultimate/Fonts/Asap-Medium.ttf
+  uploadId: 432157

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 9e715ea371f114f4a8d2584ad476634d
+timeCreated: 1454365279
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SpriteMeshData.cs
+  uploadId: 432157

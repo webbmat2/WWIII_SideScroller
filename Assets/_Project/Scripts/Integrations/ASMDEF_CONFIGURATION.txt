@@ -1,0 +1,16 @@
+ASSEMBLY DEFINITION CONFIGURATION FOR INTEGRATIONS.ASMDEF
+
+Create: Integrations.asmdef in this folder
+
+Configuration:
+- Name: Integrations
+- Root Namespace: WWIII.Integrations
+- References: DOTween, CorgiEngine (look for "DOTween.Modules", "MoreMountains.CorgiEngine")
+- Auto Referenced: TRUE
+- Platform: Any Platform
+
+This assembly will contain:
+- CorgiEngineAdapter
+- TexturePackerIntegration
+- DOTweenEffects
+- Third-party asset integrations

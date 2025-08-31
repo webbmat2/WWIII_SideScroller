@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: c7880a19c219b43e0ab0f053bf0ed52e
+timeCreated: 1454847199
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/BindInfo.cs
+  uploadId: 432157

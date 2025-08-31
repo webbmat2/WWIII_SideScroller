@@ -1,0 +1,567 @@
+fileFormatVersion: 2
+guid: 7523f7bdc6097bb49aeceacbc85f98ca
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Platform Game Assets Ultimate/Textures/Anima2D Textures&Mesh/Robin
+    Hood/Robin Hood-512X512-2x.png
+  uploadId: 432157
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7284315997123702160
+    second: Robin Hood-512X512-2x_0
+  - first:
+      213: 805868426518831817
+    second: Robin Hood-512X512-2x_1
+  - first:
+      213: 6773197745691576291
+    second: Robin Hood-512X512-2x_2
+  - first:
+      213: 9092171195639361338
+    second: Robin Hood-512X512-2x_3
+  - first:
+      213: -5789123641669116548
+    second: Robin Hood-512X512-2x_4
+  - first:
+      213: -1594596303307292798
+    second: Robin Hood-512X512-2x_5
+  - first:
+      213: -5477704289417729781
+    second: Robin Hood-512X512-2x_6
+  - first:
+      213: -6127152972675823076
+    second: Robin Hood-512X512-2x_7
+  - first:
+      213: 6151214586601132200
+    second: Robin Hood-512X512-2x_8
+  - first:
+      213: -9029877010974161461
+    second: Robin Hood-512X512-2x_9
+  - first:
+      213: -8607026976598280813
+    second: Robin Hood-512X512-2x_10
+  - first:
+      213: 1249711996216261565
+    second: Robin Hood-512X512-2x_11
+  - first:
+      213: -9142942512140052004
+    second: Robin Hood-512X512-2x_12
+  - first:
+      213: -4991305246499776038
+    second: Robin Hood-512X512-2x_13
+  - first:
+      213: 3001816016301226230
+    second: Robin Hood-512X512-2x_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 273
+        width: 237
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09de0403ec6171560800000000000000
+      internalID: 7284315997123702160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_1
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 332
+        width: 81
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2ab5270150f2b00800000000000000
+      internalID: 805868426518831817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_2
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 403
+        width: 76
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e74c69b67b3ffd50800000000000000
+      internalID: 6773197745691576291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_3
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 269
+        width: 37
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f6f11b781ed2e70800000000000000
+      internalID: 9092171195639361338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_4
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 271
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d1f7158b6e8afa0800000000000000
+      internalID: -5789123641669116548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_5
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 150
+        width: 57
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fb7355c1bded9e0800000000000000
+      internalID: -1594596303307292798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 150
+        width: 57
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b096f9c88f84bf3b0800000000000000
+      internalID: -5477704289417729781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_7
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 176
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1acd2b95daf7faa0800000000000000
+      internalID: -6127152972675823076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_8
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 178
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a0df8373118d5550800000000000000
+      internalID: 6151214586601132200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_9
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 108
+        width: 192
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc54b6b63be6fa280800000000000000
+      internalID: -9029877010974161461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 32
+        width: 48
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395b7a71192bd8880800000000000000
+      internalID: -8607026976598280813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 32
+        width: 48
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbb306707ed75110800000000000000
+      internalID: 1249711996216261565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_12
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 30
+        width: 48
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd913120a3ebd1180800000000000000
+      internalID: -9142942512140052004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_13
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 30
+        width: 48
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad956d8c2525bbab0800000000000000
+      internalID: -4991305246499776038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Hood-512X512-2x_14
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 30
+        width: 245
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f876b433c798a920800000000000000
+      internalID: 3001816016301226230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Robin Hood-512X512-2x_0: 7284315997123702160
+      Robin Hood-512X512-2x_1: 805868426518831817
+      Robin Hood-512X512-2x_10: -8607026976598280813
+      Robin Hood-512X512-2x_11: 1249711996216261565
+      Robin Hood-512X512-2x_12: -9142942512140052004
+      Robin Hood-512X512-2x_13: -4991305246499776038
+      Robin Hood-512X512-2x_14: 3001816016301226230
+      Robin Hood-512X512-2x_2: 6773197745691576291
+      Robin Hood-512X512-2x_3: 9092171195639361338
+      Robin Hood-512X512-2x_4: -5789123641669116548
+      Robin Hood-512X512-2x_5: -1594596303307292798
+      Robin Hood-512X512-2x_6: -5477704289417729781
+      Robin Hood-512X512-2x_7: -6127152972675823076
+      Robin Hood-512X512-2x_8: 6151214586601132200
+      Robin Hood-512X512-2x_9: -9029877010974161461
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 637544109148504617
+  assetBundleName: 
+  assetBundleVariant: 

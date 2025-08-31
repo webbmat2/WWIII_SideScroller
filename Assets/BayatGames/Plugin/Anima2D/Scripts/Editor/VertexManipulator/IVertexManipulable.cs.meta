@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: add18c76c7a1a4f90bf0372999963ae1
+timeCreated: 1477198671
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134039
+  packageName: Platform Game Assets Ultimate
+  packageVersion: 1.3.1
+  assetPath: Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexManipulator/IVertexManipulable.cs
+  uploadId: 432157

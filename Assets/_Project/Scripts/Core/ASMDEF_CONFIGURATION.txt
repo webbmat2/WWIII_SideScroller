@@ -1,0 +1,15 @@
+ASSEMBLY DEFINITION CONFIGURATION FOR CORE.ASMDEF
+
+Create: Core.asmdef in this folder
+
+Configuration:
+- Name: Core
+- Root Namespace: WWIII.Core
+- References: Unity.InputSystem
+- Auto Referenced: TRUE
+- Platform: Any Platform
+
+This assembly contains:
+- PlayerController.cs ✓
+- GameManager.cs ✓
+- Core gameplay systems
