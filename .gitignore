@@ -22,3 +22,5 @@
 *.opendb
 *.VC.db
 .DS_Store
+GeneratedAssets/
+Temp 2/
