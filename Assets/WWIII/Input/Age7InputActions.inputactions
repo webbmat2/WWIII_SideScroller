@@ -1,0 +1,113 @@
+{
+  "name": "Age7InputActions",
+  "maps": [
+    {
+      "name": "Player",
+      "id": "player-map-id",
+      "actions": [
+        {
+          "name": "Move",
+          "type": "Value",
+          "id": "move-action-id",
+          "expectedControlType": "Vector2",
+          "bindings": [
+            {
+              "name": "WASD",
+              "id": "wasd-composite",
+              "path": "2DVector",
+              "interactions": "",
+              "processors": "",
+              "groups": "",
+              "action": "Move",
+              "isComposite": true,
+              "isPartOfComposite": false
+            },
+            {
+              "name": "up",
+              "id": "wasd-up",
+              "path": "<Keyboard>/w",
+              "interactions": "",
+              "processors": "",
+              "groups": "",
+              "action": "Move",
+              "isComposite": false,
+              "isPartOfComposite": true
+            },
+            {
+              "name": "down",
+              "id": "wasd-down",
+              "path": "<Keyboard>/s",
+              "interactions": "",
+              "processors": "",
+              "groups": "",
+              "action": "Move",
+              "isComposite": false,
+              "isPartOfComposite": true
+            },
+            {
+              "name": "left",
+              "id": "wasd-left",
+              "path": "<Keyboard>/a",
+              "interactions": "",
+              "processors": "",
+              "groups": "",
+              "action": "Move",
+              "isComposite": false,
+              "isPartOfComposite": true
+            },
+            {
+              "name": "right",
+              "id": "wasd-right",
+              "path": "<Keyboard>/d",
+              "interactions": "",
+              "processors": "",
+              "groups": "",
+              "action": "Move",
+              "isComposite": false,
+              "isPartOfComposite": true
+            }
+          ]
+        },
+        {
+          "name": "Jump",
+          "type": "Button",
+          "id": "jump-action-id",
+          "expectedControlType": "Button",
+          "bindings": [
+            {
+              "name": "",
+              "id": "jump-space",
+              "path": "<Keyboard>/space",
+              "interactions": "",
+              "processors": "",
+              "groups": "",
+              "action": "Jump",
+              "isComposite": false,
+              "isPartOfComposite": false
+            }
+          ]
+        },
+        {
+          "name": "Run",
+          "type": "Button",
+          "id": "run-action-id",
+          "expectedControlType": "Button",
+          "bindings": [
+            {
+              "name": "",
+              "id": "run-shift",
+              "path": "<Keyboard>/leftShift",
+              "interactions": "",
+              "processors": "",
+              "groups": "",
+              "action": "Run",
+              "isComposite": false,
+              "isPartOfComposite": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
