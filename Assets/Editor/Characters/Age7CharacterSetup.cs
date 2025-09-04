@@ -1,100 +1,153 @@
-using System;
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
 using UnityEditor.SceneManagement;
+using MoreMountains.CorgiEngine;
+using WWIII.SideScroller.Aging;
 
 namespace WWIII.SideScroller.Editor.Characters
 {
     public static class Age7CharacterSetup
     {
         [MenuItem("WWIII/Characters/Setup Age7 Player (Corgi)")]
-        public static void SetupPlayer()
+        public static void SetupAge7Player()
         {
-            var ageMgrType = Type.GetType("WWIII.SideScroller.Aging.AgeManager, WWIII.SideScroller");
-            if (ageMgrType == null)
+            GameObject player = FindPlayerGameObject();
+            if (player == null)
             {
-                Debug.LogError("Age7CharacterSetup: AgeManager type not found.");
+                EditorUtility.DisplayDialog("Error", "Could not find Player GameObject. Please ensure /AgeSystem/Player exists or a GameObject with Player tag is present.", "OK");
                 return;
             }
 
-            var ageMgr = UnityEngine.Object.FindFirstObjectByType(ageMgrType);
-            Transform playerRoot = null;
-            GameObject playerGO = null;
-            if (ageMgr != null)
-            {
-                var so = new SerializedObject(ageMgr as UnityEngine.Object);
-                var currentPlayerProp = so.FindProperty("currentPlayer");
-                var rootProp = so.FindProperty("playerRoot");
-                playerGO = currentPlayerProp != null ? currentPlayerProp.objectReferenceValue as GameObject : null;
-                playerRoot = rootProp != null ? rootProp.objectReferenceValue as Transform : null;
-            }
+            AddCorgiComponents(player);
+            AddUnityPhysicsComponents(player);
+            AddAge7Components(player);
+            SetupTagsAndLayers(player);
 
-            if (playerGO == null)
-            {
-                // Fallbacks
-                var ageSystem = GameObject.Find("AgeSystem");
-                if (ageSystem != null)
-                {
-                    playerGO = ageSystem.transform.Find("Player")?.gameObject;
-                }
-                if (playerGO == null)
-                {
-                    playerGO = GameObject.FindGameObjectWithTag("Player") ?? GameObject.Find("Player");
-                }
-            }
+            EditorUtility.SetDirty(player);
+            EditorSceneManager.MarkSceneDirty(player.scene);
 
-            if (playerGO == null)
-            {
-                Debug.LogError("Age7CharacterSetup: Could not find Player GameObject. Ensure /AgeSystem/Player exists.");
-                return;
-            }
-
-            // Ensure required components via reflection to avoid hard editor asmdef refs
-            AddIfFound(playerGO, "MoreMountains.CorgiEngine.Character, MoreMountains.CorgiEngine");
-            AddIfFound(playerGO, "MoreMountains.CorgiEngine.CharacterHorizontalMovement, MoreMountains.CorgiEngine");
-            AddIfFound(playerGO, "MoreMountains.CorgiEngine.CharacterJump, MoreMountains.CorgiEngine");
-            AddIfFound(playerGO, "MoreMountains.CorgiEngine.InputManager, MoreMountains.CorgiEngine");
-
-            var rb2d = playerGO.GetComponent<Rigidbody2D>() ?? playerGO.AddComponent<Rigidbody2D>();
-            rb2d.bodyType = RigidbodyType2D.Dynamic;
-            rb2d.mass = 1f;
-            rb2d.drag = 0f;
-            rb2d.angularDrag = 0.05f;
-            rb2d.gravityScale = 3f;
-            rb2d.freezeRotation = true;
-
-            var capsule = playerGO.GetComponent<CapsuleCollider2D>() ?? playerGO.AddComponent<CapsuleCollider2D>();
-            capsule.isTrigger = false;
-            capsule.size = new Vector2(0.6f, 1.2f);
-            capsule.offset = new Vector2(0f, 0.6f);
-
-            // Tag/layer
-            playerGO.tag = "Player";
-            int playerLayer = LayerMask.NameToLayer("Player");
-            if (playerLayer < 0) playerLayer = 11; // default to 11
-            playerGO.layer = playerLayer;
-
-            // Ensure our Age7Character + input handler
-            if (playerGO.GetComponent<WWIII.SideScroller.Characters.Age7Character>() == null)
-                playerGO.AddComponent<WWIII.SideScroller.Characters.Age7Character>();
-
-            if (playerGO.GetComponent<WWIII.SideScroller.Characters.Age7InputHandler>() == null)
-                playerGO.AddComponent<WWIII.SideScroller.Characters.Age7InputHandler>();
-
-            // Save changes
-            EditorSceneManager.MarkSceneDirty(UnityEngine.SceneManagement.SceneManager.GetActiveScene());
-            EditorUtility.DisplayDialog("WWIII", "Age 7 Player setup complete (Corgi components + physics + colliders).", "OK");
+            Debug.Log($"[Age7CharacterSetup] Successfully set up Age 7 character on: {player.name}");
+            EditorUtility.DisplayDialog("Success", $"Age 7 character setup completed on: {player.name}", "OK");
         }
 
-        private static Component AddIfFound(GameObject go, string typeName)
+        private static GameObject FindPlayerGameObject()
         {
-            var type = Type.GetType(typeName);
-            if (type == null)
+            var ageManager = Object.FindFirstObjectByType<AgeManager>();
+            if (ageManager != null && ageManager.currentPlayer != null)
             {
-                Debug.LogWarning($"Age7CharacterSetup: Type not found: {typeName}");
-                return null;
+                return ageManager.currentPlayer;
             }
-            return go.GetComponent(type) ?? go.AddComponent(type);
+
+            var ageSystem = GameObject.Find("AgeSystem");
+            if (ageSystem != null)
+            {
+                var playerTransform = ageSystem.transform.Find("Player");
+                if (playerTransform != null)
+                {
+                    return playerTransform.gameObject;
+                }
+            }
+
+            return GameObject.FindWithTag("Player");
+        }
+
+        private static void AddCorgiComponents(GameObject player)
+        {
+            // Character
+            var character = player.GetComponent<Character>();
+            if (character == null)
+            {
+                character = player.AddComponent<Character>();
+                Debug.Log("[Age7CharacterSetup] Added Character component");
+            }
+            character.CharacterType = Character.CharacterTypes.Player;
+
+            // Walk movement
+            var movement = player.GetComponent<CharacterHorizontalMovement>();
+            if (movement == null)
+            {
+                movement = player.AddComponent<CharacterHorizontalMovement>();
+                Debug.Log("[Age7CharacterSetup] Added CharacterHorizontalMovement component");
+            }
+            movement.WalkSpeed = 8f;
+
+            // Jump ability
+            var jump = player.GetComponent<CharacterJump>();
+            if (jump == null)
+            {
+                jump = player.AddComponent<CharacterJump>();
+                Debug.Log("[Age7CharacterSetup] Added CharacterJump component");
+            }
+            jump.JumpHeight = 12f;
+            jump.CoyoteTime = 0.2f;
+            jump.NumberOfJumps = 1;
+
+            // Run ability
+            var run = player.GetComponent<CharacterRun>();
+            if (run == null)
+            {
+                run = player.AddComponent<CharacterRun>();
+                Debug.Log("[Age7CharacterSetup] Added CharacterRun component");
+            }
+            run.RunSpeed = 12f;
+
+            // InputManager singleton (create if missing)
+            if (InputManager.Instance == null)
+            {
+                player.AddComponent<InputManager>();
+                Debug.Log("[Age7CharacterSetup] Added InputManager component");
+            }
+        }
+
+        private static void AddUnityPhysicsComponents(GameObject player)
+        {
+            var rb = player.GetComponent<Rigidbody2D>();
+            if (rb == null)
+            {
+                rb = player.AddComponent<Rigidbody2D>();
+                Debug.Log("[Age7CharacterSetup] Added Rigidbody2D component");
+            }
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.mass = 1f;
+            rb.drag = 0f;
+            rb.angularDrag = 0.05f;
+            rb.gravityScale = 3f;
+            rb.freezeRotation = true;
+
+            var collider = player.GetComponent<CapsuleCollider2D>();
+            if (collider == null)
+            {
+                collider = player.AddComponent<CapsuleCollider2D>();
+                Debug.Log("[Age7CharacterSetup] Added CapsuleCollider2D component");
+            }
+            collider.size = new Vector2(0.6f, 1.2f);
+            collider.offset = new Vector2(0f, 0.6f);
+            collider.isTrigger = false;
+        }
+
+        private static void AddAge7Components(GameObject player)
+        {
+            if (player.GetComponent<WWIII.SideScroller.Characters.Age7Character>() == null)
+            {
+                player.AddComponent<WWIII.SideScroller.Characters.Age7Character>();
+                Debug.Log("[Age7CharacterSetup] Added Age7Character component");
+            }
+
+            if (player.GetComponent<WWIII.SideScroller.Characters.Age7InputHandler>() == null)
+            {
+                player.AddComponent<WWIII.SideScroller.Characters.Age7InputHandler>();
+                Debug.Log("[Age7CharacterSetup] Added Age7InputHandler component");
+            }
+        }
+
+        private static void SetupTagsAndLayers(GameObject player)
+        {
+            player.tag = "Player";
+            int playerLayer = LayerMask.NameToLayer("Player");
+            if (playerLayer == -1) playerLayer = 11;
+            player.layer = playerLayer;
+
+            Debug.Log($"[Age7CharacterSetup] Set tag to 'Player' and layer to {playerLayer}");
         }
     }
 }

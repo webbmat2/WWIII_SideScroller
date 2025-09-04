@@ -9,7 +9,9 @@ namespace WWIII.SideScroller.Characters
     public class Age7InputHandler : MonoBehaviour
     {
         [Header("Input Configuration")]
-        public InputActionAsset inputActions;
+        [SerializeField] private InputActionAsset inputActions;
+        [Header("Debug")]
+        [SerializeField] private bool debugInput = false;
         
         private InputAction moveAction;
         private InputAction jumpAction;
@@ -19,7 +21,13 @@ namespace WWIII.SideScroller.Characters
         private void Awake()
         {
             corgiInputManager = GetComponent<InputManager>();
-            
+
+            // Optional auto-load (assign manually if null)
+            if (inputActions == null)
+            {
+                inputActions = Resources.Load<InputActionAsset>("Age7InputActions");
+            }
+
             if (inputActions != null)
             {
                 moveAction = inputActions.FindAction("Move");
@@ -36,6 +44,7 @@ namespace WWIII.SideScroller.Characters
                 jumpAction.started += OnJumpPressed;
                 jumpAction.canceled += OnJumpReleased;
             }
+            if (debugInput) { Debug.Log("[Age7InputHandler] Input actions enabled"); }
         }
         
         private void OnDisable()
@@ -46,38 +55,32 @@ namespace WWIII.SideScroller.Characters
                 jumpAction.canceled -= OnJumpReleased;
             }
             inputActions?.Disable();
+            if (debugInput) { Debug.Log("[Age7InputHandler] Input actions disabled"); }
         }
         
         private void Update()
         {
             if (corgiInputManager == null) return;
-            
-            // Handle movement
-            if (moveAction != null)
-            {
-                Vector2 moveInput = moveAction.ReadValue<Vector2>();
-                corgiInputManager.PrimaryMovement = moveInput;
-            }
-            
-            // Handle run button
+
+            // Let Corgi's Input system handle movement (keyboard/gamepad). We only map run here.
             if (runAction != null)
             {
                 bool isRunning = runAction.IsPressed();
-                corgiInputManager.RunButton.State.ChangeState(
-                    isRunning ? MMInput.ButtonStates.ButtonPressed : MMInput.ButtonStates.ButtonUp
-                );
+                if (isRunning) { corgiInputManager.RunButtonPressed(); }
+                if (debugInput && isRunning) { Debug.Log("[Age7InputHandler] Run pressed"); }
             }
         }
         
         private void OnJumpPressed(InputAction.CallbackContext context)
         {
-            corgiInputManager?.JumpButton.State.ChangeState(MMInput.ButtonStates.ButtonDown);
+            corgiInputManager?.JumpButtonDown();
+            if (debugInput) { Debug.Log("[Age7InputHandler] Jump pressed"); }
         }
-        
+
         private void OnJumpReleased(InputAction.CallbackContext context)
         {
-            corgiInputManager?.JumpButton.State.ChangeState(MMInput.ButtonStates.ButtonUp);
+            corgiInputManager?.JumpButtonUp();
+            if (debugInput) { Debug.Log("[Age7InputHandler] Jump released"); }
         }
     }
 }
-

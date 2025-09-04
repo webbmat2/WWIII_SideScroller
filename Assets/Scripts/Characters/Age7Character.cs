@@ -7,14 +7,19 @@ namespace WWIII.SideScroller.Characters
     [RequireComponent(typeof(Character))]
     public class Age7Character : MonoBehaviour, IAgeAwareCharacter
     {
-        [Header("Age 7 Settings")]
-        [SerializeField] private float childScale = 0.7f;
-        [SerializeField] private float walkSpeed = 8f;
-        [SerializeField] private float runSpeed = 12f;
-        [SerializeField] private float jumpHeight = 12f;
-        
+        [Header("Age 7 Character Settings")]
+        [SerializeField, Range(0.5f, 1.0f)] private float childScale = 0.7f;
+        [SerializeField, Range(5f, 15f)] private float defaultWalkSpeed = 8f;
+        [SerializeField, Range(8f, 20f)] private float defaultRunSpeed = 12f;
+        [SerializeField, Range(8f, 25f)] private float defaultJumpHeight = 12f;
+
+        [Header("Child Development")]
+        [SerializeField] private bool enableAdvancedAbilities = false;
+
         private Character character;
         private CharacterHorizontalMovement movement;
+        private CharacterRun run;
+        private Animator animator;
         private CharacterJump jump;
         
         private void Awake()
@@ -22,7 +27,9 @@ namespace WWIII.SideScroller.Characters
             character = GetComponent<Character>();
             movement = GetComponent<CharacterHorizontalMovement>();
             jump = GetComponent<CharacterJump>();
-            
+            run = GetComponent<CharacterRun>();
+            animator = GetComponentInChildren<Animator>();
+
             InitializeAge7Character();
         }
         
@@ -32,16 +39,10 @@ namespace WWIII.SideScroller.Characters
             transform.localScale = Vector3.one * childScale;
             
             // Configure age-appropriate movement
-            if (movement != null)
-            {
-                movement.WalkSpeed = walkSpeed;
-                movement.RunSpeed = runSpeed;
-            }
-            
-            if (jump != null)
-            {
-                jump.JumpHeight = jumpHeight;
-            }
+            ApplyDefaultMovementSettings();
+
+            // disable/enable advanced abilities depending on flag
+            ConfigureChildAbilities();
             
             // Set correct layer and tag
             gameObject.layer = LayerMask.NameToLayer("Player");
@@ -49,20 +50,53 @@ namespace WWIII.SideScroller.Characters
             
             Debug.Log("[Age7Character] Initialized with child-appropriate settings");
         }
+
+        private void ApplyDefaultMovementSettings()
+        {
+            if (movement != null)
+            {
+                movement.WalkSpeed = defaultWalkSpeed;
+            }
+            if (run != null)
+            {
+                run.RunSpeed = defaultRunSpeed;
+            }
+            if (jump != null)
+            {
+                jump.JumpHeight = defaultJumpHeight;
+            }
+        }
+
+        private void ConfigureChildAbilities()
+        {
+            var doubleJump = GetComponent<CharacterDoubleJump>();
+            if (doubleJump != null) doubleJump.enabled = enableAdvancedAbilities;
+
+            var wallJump = GetComponent<CharacterWallJump>();
+            if (wallJump != null) wallJump.enabled = enableAdvancedAbilities;
+
+            var dash = GetComponent<CharacterDash>();
+            if (dash != null) dash.enabled = enableAdvancedAbilities;
+
+            var wallClinging = GetComponent<CharacterWallClinging>();
+            if (wallClinging != null) wallClinging.enabled = enableAdvancedAbilities;
+        }
         
         public void ApplyAgeMovement(AgeProfile.MovementConfig config)
         {
             // Map AgeProfile values to Corgi movement/jump (project uses maxRunSpeed/jumpForce)
             if (movement != null)
             {
-                // Use provided maxRunSpeed as the run speed, and derive walk speed
-                movement.RunSpeed = config.maxRunSpeed;
-                movement.WalkSpeed = Mathf.Max(1f, config.maxRunSpeed * 0.66f);
+                // Use max run speed and derive walk speed
+                movement.WalkSpeed = Mathf.Max(1f, config.maxRunSpeed * 0.67f);
             }
-            
+            if (run != null)
+            {
+                run.RunSpeed = config.maxRunSpeed;
+            }
             if (jump != null)
             {
-                // Convert jump force heuristically to height if needed (keep simple assignment)
+                // Map jumpForce directly to height for simplicity
                 jump.JumpHeight = config.jumpForce;
             }
         }
@@ -74,9 +108,11 @@ namespace WWIII.SideScroller.Characters
             // Scale character based on age (7-50 range)
             float ageScale = Mathf.Lerp(0.6f, 1.0f, (profile.ageYears - 7f) / 43f);
             transform.localScale = Vector3.one * ageScale;
-            
+            // enable more abilities after 12
+            enableAdvancedAbilities = profile.ageYears >= 12;
+            ConfigureChildAbilities();
+
             Debug.Log($"[Age7Character] Age changed to {profile.ageYears}: Scale={ageScale}");
         }
     }
 }
-
