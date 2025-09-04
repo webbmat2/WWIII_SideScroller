@@ -1,0 +1,11 @@
+{
+    "asset": "0aeb587bd0303478998061938d02a7f2",
+    "fileName": "0198ed35-972d-7a4e-8797-1f461bd60ebb.pose.json",
+    "prompt": "16-bit pixel art style jump sequence animation for Bezi character, 3-4 frames including jump start, mid-air, and landing, transparent background, consistent frame sizes, mobile optimized, suitable for Unity 2D Animation.",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 2125433442,
+    "w3CTraceId": "c8999704a16dbf1a7defa26d9a82e8b5",
+    "isTrimmed": false
+}

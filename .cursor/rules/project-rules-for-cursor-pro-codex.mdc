@@ -1,0 +1,1464 @@
+---
+alwaysApply: true
+---
+📦 Spine 2D Download & Import Guide for Unity 6000.2
+🎯 Required Downloads
+1. Spine Editor (Desktop Application)
+Source: Esoteric Software Official Site What to download:
+
+Spine Professional (recommended for skin mixing and advanced features)
+Version: Latest stable (4.2.x recommended for Unity 6000.2)
+License: Choose based on your revenue tier
+Essential: $69 (basic features)
+Professional: $299 (includes skin mixing, mesh deformation)
+Enterprise: Contact sales (for revenue >$500k/year)
+2. Spine Unity Runtime
+Source: Spine Unity Downloads What to download:
+
+spine-unity-4.2-2024-xx-xx.unitypackage (latest Unity 6000.2 compatible)
+OR use Package Manager Git URL: https://github.com/EsotericSoftw...ericsoftware.spine.unity-runtime
+3. URP Shaders for Spine
+Source: Included in spine-unity package Location: Spine/Runtime/spine-unity/Shaders/URP/
+
+🔧 Step-by-Step Installation
+Step 1: Install Spine Unity Runtime
+Option A: Unity Package (Recommended)
+
+Download spine-unity-4.2-xxxx-xx-xx.unitypackage
+Double-click the .unitypackage file
+Import all components when dialog appears
+Accept any dependency prompts
+Option B: Package Manager Git
+
+Window → Package Manager
++ (Plus) → Add package from git URL
+Paste: https://github.com/EsotericSoftw...ericsoftware.spine.unity-runtime
+Add and wait for import
+Step 2: URP Shader Setup
+After import, your Project should show:
+Assets/
+├── Spine/
+│   ├── Runtime/
+│   │   ├── spine-unity/
+│   │   │   ├── Shaders/
+│   │   │   │   ├── URP/              # ← URP Shaders here
+│   │   │   │   │   ├── Spine-Skeleton.shader
+│   │   │   │   │   ├── Spine-Skeleton-Lit.shader
+│   │   │   │   │   └── Spine-SkeletonGraphic.shader
+Step 3: Optional Addressables Support
+Source: Spine Addressables Module Download: spine-unity-addressables-4.2-xxxx.unitypackage When to use: For advanced Addressables integration and on-demand loading
+
+📱 Project Configuration
+1. URP Asset Configuration
+Project Settings → Graphics → Scriptable Render Pipeline Settings
+Open your URP Asset (should be configured for 2D)
+Verify 2D Renderer is enabled
+2. Spine URP Material Creation
+Create URP Materials:
+Assets/WWIII/Materials/Spine/
+├── Spine_URP_Default.mat      # Uses Spine-Skeleton shader
+├── Spine_URP_Lit.mat          # Uses Spine-Skeleton-Lit shader  
+└── Spine_URP_UI.mat           # Uses Spine-SkeletonGraphic shader
+Material Setup:
+
+Create → Material
+Shader → Spine → URP → Spine-Skeleton
+Configure texture and rendering settings
+3. Project Settings for Mobile
+Edit → Project Settings → Player
+
+✅ Color Space: Linear (for URP)
+✅ Auto Graphics API: Disabled
+✅ Graphics APIs: OpenGLES3, Metal (iOS)
+✅ Texture Compression: ASTC (mobile optimized)
+🎨 Asset Creation Workflow
+1. Spine Editor Setup (Desktop)
+Create three skeleton files:
+
+Jim_Character_Child.spine    # Ages 7-12, smaller proportions
+Jim_Character_Teen.spine     # Ages 13-17, medium proportions  
+Jim_Character_Adult.spine    # Ages 18-50, full adult proportions
+Each skeleton should have:
+
+Identical bone names across all three
+Age-appropriate proportions
+Skin categories: Hair, Outfit, Accessories
+Animations: Idle, Run, Jump (matching Corgi states)
+2. Unity Import Process
+Export from Spine Editor:
+JSON format for data
+Atlas format for textures
+PNG textures at appropriate resolution
+Import into Unity project:
+Assets/WWIII/Characters/Spine/
+├── Child/
+│   ├── Jim_Child_SkeletonData.asset
+│   ├── Jim_Child_Atlas.asset
+│   └── Jim_Child_Texture.png
+├── Teen/
+│   └── (similar structure)
+└── Adult/
+    └── (similar structure)
+🔧 Addressables Configuration
+1. Create Addressables Groups
+Window → Asset Management → Addressables → Groups
+
+Create groups:
+
+Characters_Player_Child     # Child skeleton + atlases
+Characters_Player_Teen      # Teen skeleton + atlases
+Characters_Player_Adult     # Adult skeleton + atlases
+2. Assign Assets to Groups
+Select Jim_Child_SkeletonData.asset
+Check "Addressable"
+Group: Characters_Player_Child
+Label: "age_child"
+Repeat for Teen and Adult
+✅ Verification Checklist
+After Installation:
+✅ Spine folder appears in Project window
+✅ URP shaders available in Material shader dropdown
+✅ No console errors during import
+✅ Spine → SkeletonAnimation component available
+URP Integration Test:
+Create empty GameObject
+Add Spine → SkeletonAnimation component
+Assign any Spine SkeletonDataAsset
+Material should show URP-compatible shader options
+Play mode should render correctly (no pink materials)
+💰 Licensing Considerations
+Development License:
+Essential: $69 - basic skeletal animation
+Professional: $299 - includes mesh deformation, skin mixing
+Enterprise: Contact sales - for commercial projects >$500k revenue
+For Your Project:
+Recommended: Professional License
+
+✅ Skin mixing for modular character parts
+✅ Mesh deformation for quality animations
+✅ Commercial use allowed
+✅ Future updates included
+🚀 Next Steps After Installation
+Create basic Spine skeleton in Spine Editor
+Import to Unity and test URP rendering
+Replace BiographicalCharacterEditorFixed component
+Implement AgeManager with Addressables loading
+Test with Corgi Engine integration
+Once installed, you'll have a professional, Unity 6000.2-native character system that's mobile-optimized and perfect for Jim's biographical progression! 🎮✨
+M
+I purchased spine professional for desktop and installed it. I download spine for unity and imported it. We need to unwind the items that we do not need and that do not work. Update Cursos Pro’s Project Rules and then write a prompt for Codex/s next step.
+
+---
+
+alwaysApply: true
+
+---
+
+# WWIII_SideScroller - Unity 6000.2 Biographical Game Development Rules
+
+## PROJECT CONTEXT
+
+- **Game**: Biographical side-scroller telling Jim's life story (age 7 to adult)
+
+- **Engine**: Unity 6000.2.1f1 with URP 17.2.0 (2D Renderer)
+
+- **Platforms**: iPhone 16+, macOS, tvOS, WebGL
+
+- **Performance Target**: 60 FPS sustained, <200MB memory
+
+- **Duration**: 45-minute nostalgic journey across 9 levels
+
+- **Audio Architecture**: Unity built-in Audio + DOTween Pro + Nice Vibrations haptics
+
+## TECHNICAL SPECIFICATIONS
+
+- **Render Pipeline**: Universal Render Pipeline (URP) 17.2.0 2D optimized
+
+- **Physics**: 19-layer collision system (Player=11, Enemies=12, Collectibles=18)
+
+- **Input**: Unity Input System 1.14.2 (both old/new for compatibility)
+
+- **Narrative**: Timeline 1.8.9 + Yarn Spinner 3.0.3 integration
+
+- **Asset Management**: Addressables 2.7.2 for age-specific content loading
+
+- **Save System**: Cross-platform progression with Easy Save integration
+
+- **Audio System**: Unity AudioSource + DOTween Pro crossfading + mobile optimization
+
+## PROFESSIONAL ASSET INVENTORY (USE THESE FIRST)
+
+**Core Systems (Leverage Before Creating New):**
+
+- ✅ Corgi Engine v9.3 - Complete 2D platformer framework with aging system integration
+
+- ✅ Platform Game Assets Ultimate v1.3.1 - Comprehensive 2D art library for biographical environments
+
+- ✅ Easy Save v3.5.24 - Cross-platform save system with biographical progression
+
+- ✅ Yarn Spinner v3.0.3 - Dialogue/narrative system with age-appropriate content delivery
+
+- ✅ DOTween Pro v1.0.380 - Professional animation/tweening with smooth audio crossfades
+
+- ✅ Nice Vibrations - Haptic feedback integration with audio triggers
+
+- ✅ Unity built-in Audio - Mobile-optimized AudioSource system with OGG Vorbis compression
+
+**Completed System Architecture:**
+
+- ✅ Aging system with Corgi Engine movement scaling by life stage
+
+- ✅ Cross-platform save/load with biographical milestone tracking
+
+- ✅ Professional UI framework with age-based navigation
+
+- ✅ Mobile-optimized performance monitoring and URP 2D rendering
+
+- ✅ Advanced editor tools for rapid biographical content assembly
+
+**Audio System (Clean Unity Implementation):**
+
+- ✅ BiographicalAudioManager - Unity AudioSource with DOTween crossfading
+
+- ✅ AgeMusicDriver - AgeManager event integration for music triggers
+
+- ✅ Mobile-optimized audio compression (OGG Vorbis) for iPhone 16+
+
+- ✅ Haptic feedback synchronization with audio events
+
+## CODE GENERATION RULES
+
+### C# Coding Standards
+
+```csharp
+
+// Always use explicit namespaces with WWIII prefix
+
+namespace WWIII.SideScroller.Core { }
+
+namespace WWIII.SideScroller.Characters { }
+
+namespace WWIII.SideScroller.Narrative { }
+
+namespace WWIII.SideScroller.Audio { }
+
+// Prefer ScriptableObjects for data systems
+
+[CreateAssetMenu(menuName = "WWIII/System")]
+
+public class SystemData : ScriptableObject
+
+// Use properties for public access
+
+public bool IsActive => isActive;
+
+// Include performance considerations for mobile
+
+[Header("Mobile Optimization")]
+
+[Range(0.5f, 1.0f)] public float renderScale = 0.8f;
+
+// Unity audio patterns with DOTween integration
+
+[System.Serializable]
+
+public class LifeStageAudio
+
+{
+
+public AudioClip musicTrack;
+
+public int minAge;
+
+public int maxAge;
+
+[Range(0f, 1f)] public float volume = 0.7f;
+
+}
+
+Unity 6000.2 Requirements
+
+Always use Unity 6000.2 compatible APIs and features
+
+Prioritize URP 2D renderer optimizations for mobile
+
+Include Addressables async/await patterns for loading
+
+Use Timeline Playable API for narrative integration
+
+Implement Unity Input System patterns (not legacy Input)
+
+Unity AudioSource with DOTween Pro for professional audio crossfading
+
+Performance Priorities
+
+Target iPhone 16+ hardware optimization
+
+Use object pooling for projectiles and enemies
+
+Implement LOD systems for biographical content
+
+Minimize GC allocation in Update/FixedUpdate loops
+
+Use Addressables for memory-efficient asset streaming
+
+Mobile audio optimization with compressed OGG Vorbis format
+
+Biographical Game Patterns
+
+// Character aging progression system
+
+public class BiographicalCharacter : MonoBehaviour
+
+{
+
+[Range(7, 50)] public int currentAge = 7;
+
+public CharacterAgeData[] lifeStages;
+
+// Integration with Unity audio system
+
+private void OnAgeChanged(int newAge)
+
+{
+
+BiographicalAudioManager.Instance?.SwitchMusicForAge(newAge);
+
+}
+
+}
+
+// Photo collection mechanic (Layer 18: Collectibles)
+
+[RequireComponent(typeof(Collider2D))]
+
+public class PhotoCollectible : MonoBehaviour
+
+{
+
+public PhotoData photographicMemory;
+
+public YarnProject associatedDialogue;
+
+// Unity audio integration for memory stingers
+
+private void OnCollected()
+
+{
+
+BiographicalAudioManager.Instance?.PlayMemoryStinger();
+
+// Nice Vibrations integration
+
+#if NICE_VIBRATIONS
+
+try { MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.Success); } catch { }
+
+#endif
+
+}
+
+}
+
+// Unity audio system with DOTween crossfading
+
+public class BiographicalAudioManager : MonoBehaviour
+
+{
+
+[Header("Life Stage Music")]
+
+public LifeStageAudio[] lifeStages;
+
+[Header("Audio Sources")]
+
+public AudioSource musicSource;
+
+public AudioSource effectsSource;
+
+[Header("Crossfade Settings")]
+
+public float crossfadeDuration = 2f;
+
+public void SwitchMusicForAge(int age)
+
+{
+
+var targetStage = GetLifeStageForAge(age);
+
+if (targetStage?.musicTrack != null)
+
+{
+
+CrossfadeToTrack(targetStage.musicTrack, targetStage.volume);
+
+}
+
+}
+
+private void CrossfadeToTrack(AudioClip newTrack, float targetVolume)
+
+{
+
+musicSource.DOFade(0f, crossfadeDuration * 0.5f).OnComplete(() =>
+
+{
+
+musicSource.clip = newTrack;
+
+musicSource.loop = true;
+
+musicSource.Play();
+
+musicSource.DOFade(targetVolume, crossfadeDuration * 0.5f);
+
+});
+
+}
+
+}
+
+INTEGRATION REQUIREMENTS
+
+Package Integration Patterns
+
+Timeline 1.8.9: Use for biographical life transition cutscenes
+
+Addressables 2.7.2: Age-specific content loading with memory management
+
+Cinemachine 3.1.4: Smooth camera transitions for narrative moments
+
+Yarn Spinner: Age-appropriate dialogue variations
+
+URP 2D: Mobile-optimized rendering with shader optimization
+
+DOTween Pro: Professional audio crossfading and smooth transitions
+
+Nice Vibrations: Haptic feedback synchronized with audio events
+
+Audio Integration Requirements
+
+// Required using statements
+
+using DG.Tweening;
+
+using UnityEngine;
+
+// Mobile-optimized audio settings
+
+// AudioClip Import Settings:
+
+// - Compression Format: Vorbis
+
+// - Quality: 70% (balance of size/quality)
+
+// - Load Type: Compressed In Memory (music), Decompress On Load (SFX)
+
+// - Preload Audio Data: True
+
+// Audio system architecture
+
+namespace WWIII.SideScroller.Audio
+
+{
+
+// Clean Unity implementation with DOTween integration
+
+// No external audio middleware dependencies
+
+// Mobile-first optimization approach
+
+}
+
+Layer System Usage (19 layers total)
+
+Layer 11 (Player): Jim character throughout life stages
+
+Layer 12 (Enemies): Biographical challenges and obstacles
+
+Layer 18 (Collectibles): Photo memories and nostalgic items
+
+Always consider layer collision matrix optimization for mobile performance
+
+ASSET-FIRST DEVELOPMENT METHODOLOGY
+
+Priority Order for Content Creation
+
+LEVERAGE EXISTING ASSETS FIRST - Use Platform Game Assets Ultimate, Corgi Engine components
+
+CONFIGURE, DON'T CREATE - Arrange and modify existing professional assets
+
+Unity AI Generators - Use for asset arrangement and configuration, not new asset creation
+
+DOTween Pro Integration - Leverage existing professional animation system for audio crossfades
+
+Targeted Asset Store Additions - Only when existing assets cannot achieve biographical goals
+
+Custom Development - Last resort for unique biographical mechanics
+
+Audio System Approach
+
+Unity Built-in Audio: Native AudioSource system for reliable cross-platform compatibility
+
+DOTween Pro: Professional crossfading and audio transitions leveraging existing asset
+
+OGG Vorbis: Mobile-optimized compression for iPhone 16+ performance targets
+
+Nice Vibrations: Haptic feedback synchronized with audio triggers
+
+Hybrid Benefits: Zero external dependencies + professional audio experience
+
+MOBILE OPTIMIZATION MANDATES
+
+Texture compression: ASTC 6x6 for iOS deployment
+
+Audio: OGG Vorbis compression for all clips, <2MB per music track
+
+Shaders: URP 2D compatible, mobile GPU optimized
+
+Memory: Addressables streaming for large biographical assets + audio clips
+
+Battery: 60 FPS target with thermal throttling considerations
+
+Audio: Compressed In Memory for music, Decompress On Load for short SFX
+
+OUTPUT PREFERENCES
+
+Provide complete, testable implementations leveraging existing professional assets
+
+Include mobile performance considerations
+
+Show Addressables integration for memory efficiency
+
+Demonstrate Timeline + narrative system connections
+
+Include Unity audio integration with DOTween Pro crossfading
+
+Add [Header] attributes for Inspector organization
+
+Consider cross-platform deployment (iOS/macOS/WebGL)
+
+Reference existing asset capabilities before suggesting new solutions
+
+AVOID
+
+Legacy Unity APIs (use Unity 6000.2 equivalents)
+
+Built-in render pipeline patterns (we use URP 2D)
+
+Synchronous asset loading (use Addressables async)
+
+Legacy Input Manager (use Input System 1.14.2)
+
+Memory-intensive patterns on mobile platforms
+
+Non-URP shader code or materials
+
+Creating new assets when professional alternatives exist in project
+
+External audio middleware when Unity built-in + DOTween Pro suffices
+
+Uncompressed audio formats for mobile deployment
+
+Complex audio solutions when simple biographical needs are met
+
+CURRENT DEVELOPMENT PRIORITIES
+
+Implement Unity audio system with DOTween Pro crossfading for biographical music progression
+
+Complete biographical level assembly using existing Platform Game Assets Ultimate
+
+Character progression setup using existing Corgi Engine with age scaling
+
+Photo collectible population with Yarn Spinner narrative integration and audio stingers
+
+Performance optimization for iPhone 16+ sustained 60 FPS target
+
+Audio compression optimization for mobile memory constraints (<200MB total)
+
+AUDIO SYSTEM IMPLEMENTATION NOTES
+
+Target Audio Experience:
+
+4 life stage music tracks with smooth DOTween crossfading
+
+Memory reveal stingers triggered by PhotoCollectible interactions
+
+Nice Vibrations haptic feedback synchronized with audio events
+
+Mobile-optimized OGG Vorbis compression for iPhone 16+
+
+Zero external dependencies beyond existing professional assets
+
+Quality Standards:
+
+Professional audio experience using Unity built-in + DOTween Pro
+
+Clean namespace organization (WWIII.SideScroller.Audio)
+
+Mobile-first optimization throughout
+
+Cross-platform deployment ready (iOS/macOS/WebGL)
+
+Comprehensive error handling and null safety
+
+**This updated rule set removes all FMOD references and establishes a clean Unity + DOTween Pro audio architecture that leverages your existing professional assets!** 📋🎵✅
+📋 Updated Project Rules - Cleaned & Focused Approach
+🎯 PRIORITY: WORKING SYSTEMS FIRST
+Immediate Focus: Remove broken integrations, leverage existing working assets, get basic gameplay functional.
+
+✅ CONFIRMED WORKING SYSTEMS (Keep & Leverage):
+Corgi Engine v9.3 - 2D platformer mechanics
+Platform Game Assets Ultimate v1.3.1 - Character sprites and animations
+Unity built-in Audio + DOTween Pro - Professional audio crossfading
+URP 17.2.0 2D Renderer - Mobile-optimized rendering
+Addressables 2.7.2 - Memory-efficient asset loading
+Easy Save v3.5.24 - Cross-platform save system
+❌ REMOVE/DISABLE BROKEN SYSTEMS:
+HeroEditor Character Editor - Causing console spam, missing script references
+Spine 2D integration attempts - Overcomplicated for current needs
+SpriteLibrary compilation errors - Unity 6000.2 compatibility issues
+BiographicalCharacterEditorFixed - Replace with simple sprite swapping
+🎮 SIMPLIFIED CHARACTER APPROACH:
+Use Platform Game Assets Ultimate sprites directly with simple SpriteRenderer swapping
+
+✅ No complex skeletal animation - use existing sprite animations
+✅ No skin mixing systems - direct sprite replacement per age
+✅ Corgi Engine Animator - leverage existing animation controller
+✅ Mobile-optimized - lightweight sprite-based approach
+🔧 Codex Implementation Prompt
+Codex, we need to clean up and simplify the character system. Please implement this step-by-step cleanup and replacement strategy:
+
+🚨 Phase 1: Remove Broken Systems
+1. Clean Up Player GameObject:
+Target: /AgeSystem/Player
+
+Remove these components:
+
+❌ BiographicalCharacterEditorFixed - causing issues
+❌ Any Spine-related components - if accidentally added
+❌ SpriteLibrary components - compilation errors
+Keep these components:
+
+✅ All Corgi Engine components - working movement system
+✅ PlayerPhysicsAutoFixer - for constraint management
+✅ Rigidbody2DConstraintGuard - physics protection
+✅ Existing Animator - Platform Game Assets Ultimate animations
+2. Fix Constraint Issue (Critical Priority):
+Current problem: "constraints": ["FreezeRotation", "FreezeAll"]
+
+Solution needed:
+
+Manually remove FreezeAll from Rigidbody2D
+Verify movement works (WASD + Space jumping)
+Test Player stands on ground (no falling through)
+3. Delete Failed Script Files:
+Remove these files if they exist:
+
+❌ Assets/Scripts/Characters/AgeAppearanceSet.cs
+❌ Assets/Scripts/Characters/CharacterAppearanceController.cs
+❌ Any other files causing compilation errors
+🎨 Phase 2: Simple Character System
+1. Create SimpleCharacterController:
+File: Assets/Scripts/Characters/SimpleCharacterController.cs
+
+Requirements:
+
+namespace WWIII.SideScroller.Characters
+{
+    using UnityEngine;
+    
+    public class SimpleCharacterController : MonoBehaviour
+    {
+        [Header("Age-Based Sprites")]
+        public Sprite[] childSprites;   // Age 7-12
+        public Sprite[] teenSprites;    // Age 13-17  
+        public Sprite[] adultSprites;   // Age 18-50
+        
+        [Header("Current Settings")]
+        public int currentAge = 7;
+        
+        private SpriteRenderer spriteRenderer;
+        private Animator animator;
+        
+        [ContextMenu("Apply Age Appearance")]
+        public void ApplyAgeAppearance()
+        {
+            // Simple sprite swapping based on age
+            // Use Platform Game Assets Ultimate sprites
+        }
+    }
+}
+2. Use Platform Game Assets Ultimate:
+Source sprites from:
+
+Assets/ThirdParty/BayatGames/.../Textures/Characters/
+Child sprites: Smaller, youthful character sprites
+Teen sprites: Medium-sized character sprites
+Adult sprites: Full-sized character sprites
+3. Enable Player SpriteRenderer:
+Current state: "enabled": false on Player SpriteRenderer Fix: Enable SpriteRenderer and assign appropriate sprite
+
+🔧 Phase 3: Age Progression Integration
+1. Connect to Existing AgeManager:
+Modify existing age system to work with simple sprite swapping:
+
+// In AgeManager, trigger sprite changes
+private void OnAgeChanged(int newAge)
+{
+    var characterController = Player.GetComponent<SimpleCharacterController>();
+    if (characterController != null)
+    {
+        characterController.currentAge = newAge;
+        characterController.ApplyAgeAppearance();
+    }
+}
+2. Maintain Audio Integration:
+Keep existing audio system working:
+
+✅ BiographicalAudioManager - Unity AudioSource + DOTween
+✅ AgeMusicDriver - age-based music transitions
+✅ Nice Vibrations - haptic feedback
+📱 Phase 4: Mobile Optimization
+1. Sprite Optimization:
+Compression: ASTC 6x6 for iOS
+Max Size: 1024x1024 for character sprites
+Mip Maps: Disabled for 2D sprites
+Read/Write: Disabled to save memory
+2. Addressables Setup (Simple):
+Create groups for character sprites:
+
+Characters_Child_Sprites     # Child age sprites
+Characters_Teen_Sprites      # Teen age sprites  
+Characters_Adult_Sprites     # Adult age sprites
+🎯 Success Criteria:
+After implementation:
+
+✅ Player moves with WASD/arrows (no falling through ground)
+✅ Player jumps with spacebar
+✅ Console is clean (no missing script errors)
+✅ Age progression works with simple sprite swapping
+✅ Audio system intact - music changes with age
+✅ Mobile performance maintained (60 FPS target)
+✅ Memory usage under 200MB
+🚀 Implementation Priority:
+Fix physics constraints - get movement working immediately
+Remove broken components - clean console and Player GameObject
+Implement simple sprite swapping - basic age progression
+Test complete system - movement + age changes + audio
+Optimize for mobile - compression and Addressables
+💡 Key Philosophy:
+"Simple, working systems beat complex, broken ones"
+
+✅ Use existing Platform Game Assets Ultimate sprites - no custom animation needed
+✅ Leverage Corgi Engine movement - proven 2D platformer mechanics
+✅ Keep Unity built-in audio - reliable cross-platform system
+✅ Focus on gameplay - get Jim moving and aging properly
+✅ Mobile-first approach - optimize for iPhone 16+ target
+This approach eliminates complexity, uses proven assets, and gets the core biographical gameplay working reliably on Unity 6000.2 + URP 17.2.0. 🎮✨
+M
+The project rules should still have more necessary detail for guidance. Tell it what software that we added, remove the software we will not use any more, and then tell me which domains to add to Codex’s environment so that it can read the manuals and versions of everything we have installed:
+
+---
+
+alwaysApply: true
+
+---
+
+# WWIII_SideScroller - Unity 6000.2 Biographical Game Development Rules
+
+## PROJECT CONTEXT
+
+- **Game**: Biographical side-scroller telling Jim's life story (age 7 to adult)
+
+- **Engine**: Unity 6000.2.1f1 with URP 17.2.0 (2D Renderer)
+
+- **Platforms**: iPhone 16+, macOS, tvOS, WebGL
+
+- **Performance Target**: 60 FPS sustained, <200MB memory
+
+- **Duration**: 45-minute nostalgic journey across 9 levels
+
+- **Audio Architecture**: Unity built-in Audio + DOTween Pro + Nice Vibrations haptics
+
+## TECHNICAL SPECIFICATIONS
+
+- **Render Pipeline**: Universal Render Pipeline (URP) 17.2.0 2D optimized
+
+- **Physics**: 19-layer collision system (Player=11, Enemies=12, Collectibles=18)
+
+- **Input**: Unity Input System 1.14.2 (both old/new for compatibility)
+
+- **Narrative**: Timeline 1.8.9 + Yarn Spinner 3.0.3 integration
+
+- **Asset Management**: Addressables 2.7.2 for age-specific content loading
+
+- **Save System**: Cross-platform progression with Easy Save integration
+
+- **Audio System**: Unity AudioSource + DOTween Pro crossfading + mobile optimization
+
+## PROFESSIONAL ASSET INVENTORY (USE THESE FIRST)
+
+**Core Systems (Leverage Before Creating New):**
+
+- ✅ Corgi Engine v9.3 - Complete 2D platformer framework with aging system integration
+
+- ✅ Platform Game Assets Ultimate v1.3.1 - Comprehensive 2D art library for biographical environments
+
+- ✅ Easy Save v3.5.24 - Cross-platform save system with biographical progression
+
+- ✅ Yarn Spinner v3.0.3 - Dialogue/narrative system with age-appropriate content delivery
+
+- ✅ DOTween Pro v1.0.380 - Professional animation/tweening with smooth audio crossfades
+
+- ✅ Nice Vibrations - Haptic feedback integration with audio triggers
+
+- ✅ Unity built-in Audio - Mobile-optimized AudioSource system with OGG Vorbis compression
+
+**Completed System Architecture:**
+
+- ✅ Aging system with Corgi Engine movement scaling by life stage
+
+- ✅ Cross-platform save/load with biographical milestone tracking
+
+- ✅ Professional UI framework with age-based navigation
+
+- ✅ Mobile-optimized performance monitoring and URP 2D rendering
+
+- ✅ Advanced editor tools for rapid biographical content assembly
+
+**Audio System (Clean Unity Implementation):**
+
+- ✅ BiographicalAudioManager - Unity AudioSource with DOTween crossfading
+
+- ✅ AgeMusicDriver - AgeManager event integration for music triggers
+
+- ✅ Mobile-optimized audio compression (OGG Vorbis) for iPhone 16+
+
+- ✅ Haptic feedback synchronization with audio events
+
+## CODE GENERATION RULES
+
+### C# Coding Standards
+
+```csharp
+
+// Always use explicit namespaces with WWIII prefix
+
+namespace WWIII.SideScroller.Core { }
+
+namespace WWIII.SideScroller.Characters { }
+
+namespace WWIII.SideScroller.Narrative { }
+
+namespace WWIII.SideScroller.Audio { }
+
+// Prefer ScriptableObjects for data systems
+
+[CreateAssetMenu(menuName = "WWIII/System")]
+
+public class SystemData : ScriptableObject
+
+// Use properties for public access
+
+public bool IsActive => isActive;
+
+// Include performance considerations for mobile
+
+[Header("Mobile Optimization")]
+
+[Range(0.5f, 1.0f)] public float renderScale = 0.8f;
+
+// Unity audio patterns with DOTween integration
+
+[System.Serializable]
+
+public class LifeStageAudio
+
+{
+
+public AudioClip musicTrack;
+
+public int minAge;
+
+public int maxAge;
+
+[Range(0f, 1f)] public float volume = 0.7f;
+
+}
+
+Unity 6000.2 Requirements
+
+Always use Unity 6000.2 compatible APIs and features
+
+Prioritize URP 2D renderer optimizations for mobile
+
+Include Addressables async/await patterns for loading
+
+Use Timeline Playable API for narrative integration
+
+Implement Unity Input System patterns (not legacy Input)
+
+Unity AudioSource with DOTween Pro for professional audio crossfading
+
+Performance Priorities
+
+Target iPhone 16+ hardware optimization
+
+Use object pooling for projectiles and enemies
+
+Implement LOD systems for biographical content
+
+Minimize GC allocation in Update/FixedUpdate loops
+
+Use Addressables for memory-efficient asset streaming
+
+Mobile audio optimization with compressed OGG Vorbis format
+
+Biographical Game Patterns
+
+// Character aging progression system
+
+public class BiographicalCharacter : MonoBehaviour
+
+{
+
+[Range(7, 50)] public int currentAge = 7;
+
+public CharacterAgeData[] lifeStages;
+
+// Integration with Unity audio system
+
+private void OnAgeChanged(int newAge)
+
+{
+
+BiographicalAudioManager.Instance?.SwitchMusicForAge(newAge);
+
+}
+
+}
+
+// Photo collection mechanic (Layer 18: Collectibles)
+
+[RequireComponent(typeof(Collider2D))]
+
+public class PhotoCollectible : MonoBehaviour
+
+{
+
+public PhotoData photographicMemory;
+
+public YarnProject associatedDialogue;
+
+// Unity audio integration for memory stingers
+
+private void OnCollected()
+
+{
+
+BiographicalAudioManager.Instance?.PlayMemoryStinger();
+
+// Nice Vibrations integration
+
+#if NICE_VIBRATIONS
+
+try { MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.Success); } catch { }
+
+#endif
+
+}
+
+}
+
+// Unity audio system with DOTween crossfading
+
+public class BiographicalAudioManager : MonoBehaviour
+
+{
+
+[Header("Life Stage Music")]
+
+public LifeStageAudio[] lifeStages;
+
+[Header("Audio Sources")]
+
+public AudioSource musicSource;
+
+public AudioSource effectsSource;
+
+[Header("Crossfade Settings")]
+
+public float crossfadeDuration = 2f;
+
+public void SwitchMusicForAge(int age)
+
+{
+
+var targetStage = GetLifeStageForAge(age);
+
+if (targetStage?.musicTrack != null)
+
+{
+
+CrossfadeToTrack(targetStage.musicTrack, targetStage.volume);
+
+}
+
+}
+
+private void CrossfadeToTrack(AudioClip newTrack, float targetVolume)
+
+{
+
+musicSource.DOFade(0f, crossfadeDuration * 0.5f).OnComplete(() =>
+
+{
+
+musicSource.clip = newTrack;
+
+musicSource.loop = true;
+
+musicSource.Play();
+
+musicSource.DOFade(targetVolume, crossfadeDuration * 0.5f);
+
+});
+
+}
+
+}
+
+INTEGRATION REQUIREMENTS
+
+Package Integration Patterns
+
+Timeline 1.8.9: Use for biographical life transition cutscenes
+
+Addressables 2.7.2: Age-specific content loading with memory management
+
+Cinemachine 3.1.4: Smooth camera transitions for narrative moments
+
+Yarn Spinner: Age-appropriate dialogue variations
+
+URP 2D: Mobile-optimized rendering with shader optimization
+
+DOTween Pro: Professional audio crossfading and smooth transitions
+
+Nice Vibrations: Haptic feedback synchronized with audio events
+
+Audio Integration Requirements
+
+// Required using statements
+
+using DG.Tweening;
+
+using UnityEngine;
+
+// Mobile-optimized audio settings
+
+// AudioClip Import Settings:
+
+// - Compression Format: Vorbis
+
+// - Quality: 70% (balance of size/quality)
+
+// - Load Type: Compressed In Memory (music), Decompress On Load (SFX)
+
+// - Preload Audio Data: True
+
+// Audio system architecture
+
+namespace WWIII.SideScroller.Audio
+
+{
+
+// Clean Unity implementation with DOTween integration
+
+// No external audio middleware dependencies
+
+// Mobile-first optimization approach
+
+}
+
+Layer System Usage (19 layers total)
+
+Layer 11 (Player): Jim character throughout life stages
+
+Layer 12 (Enemies): Biographical challenges and obstacles
+
+Layer 18 (Collectibles): Photo memories and nostalgic items
+
+Always consider layer collision matrix optimization for mobile performance
+
+ASSET-FIRST DEVELOPMENT METHODOLOGY
+
+Priority Order for Content Creation
+
+LEVERAGE EXISTING ASSETS FIRST - Use Platform Game Assets Ultimate, Corgi Engine components
+
+CONFIGURE, DON'T CREATE - Arrange and modify existing professional assets
+
+Unity AI Generators - Use for asset arrangement and configuration, not new asset creation
+
+DOTween Pro Integration - Leverage existing professional animation system for audio crossfades
+
+Targeted Asset Store Additions - Only when existing assets cannot achieve biographical goals
+
+Custom Development - Last resort for unique biographical mechanics
+
+Audio System Approach
+
+Unity Built-in Audio: Native AudioSource system for reliable cross-platform compatibility
+
+DOTween Pro: Professional crossfading and audio transitions leveraging existing asset
+
+OGG Vorbis: Mobile-optimized compression for iPhone 16+ performance targets
+
+Nice Vibrations: Haptic feedback synchronized with audio triggers
+
+Hybrid Benefits: Zero external dependencies + professional audio experience
+
+MOBILE OPTIMIZATION MANDATES
+
+Texture compression: ASTC 6x6 for iOS deployment
+
+Audio: OGG Vorbis compression for all clips, <2MB per music track
+
+Shaders: URP 2D compatible, mobile GPU optimized
+
+Memory: Addressables streaming for large biographical assets + audio clips
+
+Battery: 60 FPS target with thermal throttling considerations
+
+Audio: Compressed In Memory for music, Decompress On Load for short SFX
+
+OUTPUT PREFERENCES
+
+Provide complete, testable implementations leveraging existing professional assets
+
+Include mobile performance considerations
+
+Show Addressables integration for memory efficiency
+
+Demonstrate Timeline + narrative system connections
+
+Include Unity audio integration with DOTween Pro crossfading
+
+Add [Header] attributes for Inspector organization
+
+Consider cross-platform deployment (iOS/macOS/WebGL)
+
+Reference existing asset capabilities before suggesting new solutions
+
+AVOID
+
+Legacy Unity APIs (use Unity 6000.2 equivalents)
+
+Built-in render pipeline patterns (we use URP 2D)
+
+Synchronous asset loading (use Addressables async)
+
+Legacy Input Manager (use Input System 1.14.2)
+
+Memory-intensive patterns on mobile platforms
+
+Non-URP shader code or materials
+
+Creating new assets when professional alternatives exist in project
+
+External audio middleware when Unity built-in + DOTween Pro suffices
+
+Uncompressed audio formats for mobile deployment
+
+Complex audio solutions when simple biographical needs are met
+
+CURRENT DEVELOPMENT PRIORITIES
+
+Implement Unity audio system with DOTween Pro crossfading for biographical music progression
+
+Complete biographical level assembly using existing Platform Game Assets Ultimate
+
+Character progression setup using existing Corgi Engine with age scaling
+
+Photo collectible population with Yarn Spinner narrative integration and audio stingers
+
+Performance optimization for iPhone 16+ sustained 60 FPS target
+
+Audio compression optimization for mobile memory constraints (<200MB total)
+
+AUDIO SYSTEM IMPLEMENTATION NOTES
+
+Target Audio Experience:
+
+4 life stage music tracks with smooth DOTween crossfading
+
+Memory reveal stingers triggered by PhotoCollectible interactions
+
+Nice Vibrations haptic feedback synchronized with audio events
+
+Mobile-optimized OGG Vorbis compression for iPhone 16+
+
+Zero external dependencies beyond existing professional assets
+
+Quality Standards:
+
+Professional audio experience using Unity built-in + DOTween Pro
+
+Clean namespace organization (WWIII.SideScroller.Audio)
+
+Mobile-first optimization throughout
+
+Cross-platform deployment ready (iOS/macOS/WebGL)
+
+Comprehensive error handling and null safety
+
+**This updated rule set removes all FMOD references and establishes a clean Unity + DOTween Pro audio architecture that leverages your existing professional assets!** 📋🎵✅
+📋 Updated WWIII_SideScroller Project Rules
+alwaysApply: true
+
+WWIII_SideScroller - Unity 6000.2 Biographical Game Development Rules
+PROJECT CONTEXT
+Game: Biographical side-scroller telling Jim's life story (age 7 to adult)
+Engine: Unity 6000.2.1f1 with URP 17.2.0 (2D Renderer)
+Platforms: iPhone 16+, macOS, tvOS, WebGL
+Performance Target: 60 FPS sustained, <200MB memory
+Duration: 45-minute nostalgic journey across 9 levels
+Audio Architecture: Unity built-in Audio + DOTween Pro + Nice Vibrations haptics
+TECHNICAL SPECIFICATIONS
+Render Pipeline: Universal Render Pipeline (URP) 17.2.0 2D optimized
+Physics: 19-layer collision system (Player=11, Enemies=12, Collectibles=18)
+Input: Unity Input System 1.14.2 (both old/new for compatibility)
+Narrative: Timeline 1.8.9 + Yarn Spinner 3.0.3 integration
+Asset Management: Addressables 2.7.2 for age-specific content loading
+Save System: Cross-platform progression with Easy Save integration
+Audio System: Unity AudioSource + DOTween Pro crossfading + mobile optimization
+PROFESSIONAL SOFTWARE INVENTORY
+✅ CONFIRMED WORKING SYSTEMS (Use These):
+Core Engine & Animation:
+
+✅ Unity 6000.2.1f1 - Latest Unity 6 with URP 17.2.0 2D renderer
+✅ Spine Professional Desktop - Latest version for character rigging and animation
+✅ spine-unity runtime - Unity package for Spine integration with Unity 6000.2
+✅ Corgi Engine v9.3 - Complete 2D platformer framework with aging system integration
+✅ Platform Game Assets Ultimate v1.3.1 - Comprehensive 2D art library for environments and characters
+Audio & Effects:
+
+✅ Unity built-in Audio - Native AudioSource system with OGG Vorbis compression
+✅ DOTween Pro v1.0.380 - Professional animation/tweening with smooth audio crossfades
+✅ Nice Vibrations - Haptic feedback integration with audio triggers
+Development Tools:
+
+✅ Easy Save v3.5.24 - Cross-platform save system with biographical progression
+✅ Yarn Spinner v3.0.3 - Dialogue/narrative system with age-appropriate content delivery
+✅ Odin Inspector v3.3.1.13 - Enhanced editor tools for ScriptableObjects
+Unity 6000.2 Packages (Confirmed Installed):
+
+✅ URP 17.2.0 - Universal Render Pipeline 2D renderer
+✅ Timeline 1.8.9 - For narrative cutscenes and age transitions
+✅ Addressables 2.7.2 - Memory-efficient content streaming
+✅ Cinemachine 3.1.4 - Camera system for biographical storytelling
+✅ Input System 1.14.2 - Modern input handling
+✅ 2D Animation 12.0.2 - Unity's 2D skeletal animation system
+✅ 2D Sprite 1.0.0 - Sprite handling and optimization
+✅ 2D Tilemap 1.0.0 - Tilemap system for level environments
+❌ REMOVED/DEPRECATED SYSTEMS (Do Not Use):
+Broken Character Systems:
+
+❌ HeroEditor Character Editor [Megapack] - Causing console spam, missing script references
+❌ Unity 2D SpriteLibrary system - Compilation errors with Unity 6000.2
+❌ BiographicalCharacterEditorFixed - Replace with Spine-based system
+❌ SpriteResolver components - Incompatible with current setup
+Audio Middleware:
+
+❌ FMOD - Removed in favor of Unity built-in + DOTween Pro
+❌ Wwise - Not needed for biographical audio requirements
+CHARACTER SYSTEM ARCHITECTURE
+Primary Character Pipeline: Spine Professional + spine-unity
+Spine Professional (Desktop):
+
+Version: Latest stable (4.2.x recommended)
+License: Professional ($299) - includes skin mixing, mesh deformation
+Usage: Create three proportion families (Child 7-12, Teen 13-17, Adult 18-50)
+Export: JSON + Atlas format for Unity import
+spine-unity Runtime:
+
+Package: Latest Unity 6000.2 compatible version
+Integration: SkeletonMecanim component for Corgi Engine compatibility
+Features: Runtime skin mixing, URP shader support, Addressables integration
+Character Workflow:
+
+Spine Professional (Desktop) → Export JSON/Atlas → Unity spine-unity → SkeletonMecanim → Corgi Engine Animator
+Addressables Character Content Structure:
+Characters/Player/
+├── Child/              # Ages 7-12, smaller proportions
+│   ├── SkeletonDataAsset
+│   ├── Atlas textures
+│   └── URP materials
+├── Teen/               # Ages 13-17, medium proportions  
+│   └── (similar structure)
+└── Adult/              # Ages 18-50, full proportions
+    └── (similar structure)
+CODE GENERATION RULES
+C# Coding Standards
+// Always use explicit namespaces with WWIII prefix
+namespace WWIII.SideScroller.Core { }
+namespace WWIII.SideScroller.Characters { }
+namespace WWIII.SideScroller.Audio { }
+
+// Spine integration patterns
+using Spine.Unity;
+using Spine;
+
+// Biographical character with Spine integration
+public class BiographicalCharacter : MonoBehaviour
+{
+    [Header("Spine Animation")]
+    public SkeletonMecanim skeletonMecanim;
+    
+    [Header("Age Progression")]
+    [Range(7, 50)] public int currentAge = 7;
+    
+    // Addressables integration for age-specific content
+    public async Task LoadAgeContent(string ageKey)
+    {
+        var handle = Addressables.LoadAssetAsync<SkeletonDataAsset>($"Characters_Player_{ageKey}");
+        var skeletonData = await handle.Task;
+        skeletonMecanim.skeletonDataAsset = skeletonData;
+        skeletonMecanim.Initialize(overwrite: true);
+    }
+}
+Unity 6000.2 + Spine Requirements
+Always use Unity 6000.2 compatible APIs and Spine URP shaders
+Prioritize SkeletonMecanim for Corgi Engine Animator integration
+Include Addressables async/await patterns for character loading
+Use Spine skin mixing for modular character customization
+Implement mobile-optimized atlas textures and compression
+Performance Priorities
+Target iPhone 16+ hardware with Spine runtime optimization
+Use Addressables for per-age character content streaming
+Implement efficient Spine skin swapping without memory spikes
+Mobile atlas compression (ASTC 6x6) for iOS deployment
+Minimize GC allocation in Spine animation updates
+INTEGRATION REQUIREMENTS
+Package Integration Patterns
+Spine + Corgi Engine:
+
+SkeletonMecanim drives animations via Corgi's Animator states
+Map Corgi states (Idle/Run/Jump) to Spine animation names
+Maintain Corgi's raycast-based movement with Spine visuals
+Addressables + Spine:
+
+Per-age SkeletonDataAsset loading with memory management
+Efficient release of unused age content
+Mobile-optimized streaming for biographical progression
+URP + Spine:
+
+Use Spine URP shaders for proper 2D lighting integration
+Mobile GPU optimization with Spine rendering
+Avoid pink/blue materials with correct shader assignment
+Audio Integration (Unity + DOTween Pro)
+// Unity audio with DOTween crossfading
+namespace WWIII.SideScroller.Audio
+{
+    public class BiographicalAudioManager : MonoBehaviour
+    {
+        [Header("Life Stage Music")]
+        public LifeStageAudio[] lifeStages;
+        
+        [Header("Audio Sources")]
+        public AudioSource musicSource;
+        public AudioSource effectsSource;
+        
+        [Header("Crossfade Settings")]
+        public float crossfadeDuration = 2f;
+        
+        // DOTween integration for smooth crossfades
+        private void CrossfadeToTrack(AudioClip newTrack, float targetVolume)
+        {
+            musicSource.DOFade(0f, crossfadeDuration * 0.5f).OnComplete(() =>
+            {
+                musicSource.clip = newTrack;
+                musicSource.loop = true;
+                musicSource.Play();
+                musicSource.DOFade(targetVolume, crossfadeDuration * 0.5f);
+            });
+        }
+    }
+}
+MOBILE OPTIMIZATION MANDATES
+Spine Performance:
+
+Atlas texture compression: ASTC 6x6 for iOS
+Skeleton complexity: Optimize bone count for mobile performance
+Animation quality: Balance visual fidelity with 60 FPS target
+Memory management: Per-age content loading with Addressables
+Audio Optimization:
+
+OGG Vorbis compression for all clips, <2MB per music track
+Compressed In Memory for music, Decompress On Load for SFX
+Mobile-optimized crossfade durations for battery efficiency
+URP 2D Rendering:
+
+Mobile GPU optimized shaders (Spine URP variants)
+Efficient draw call batching with Spine + Unity sprites
+Proper 2D lighting setup for biographical atmosphere
+DEVELOPMENT PRIORITIES
+Phase 1: Character System Migration (Current)
+Remove HeroEditor components from Player GameObject
+Import Spine Professional content with three age proportion families
+Setup SkeletonMecanim with Corgi Engine Animator integration
+Configure Addressables for per-age character content
+Test Spine URP shaders for proper mobile rendering
+Phase 2: Content Implementation
+Character rigging in Spine Professional with modular skins
+Age-specific animations matching Corgi Engine states
+Biographical appearance progression using Spine skin mixing
+Audio integration with age-based music transitions
+Phase 3: Mobile Optimization
+Performance profiling on iPhone 16+ target hardware
+Memory optimization with efficient Addressables streaming
+Battery efficiency testing with Spine animations
+Cross-platform deployment validation
+AVOID
+Legacy Unity animation systems when Spine Professional is available
+HeroEditor or broken character editor integrations
+Non-URP Spine shaders (causes pink/blue materials)
+Synchronous character content loading (use Addressables async)
+Memory-intensive Spine setups on mobile platforms
+Complex skin mixing without performance considerations
+Creating custom animation tools when Spine Professional provides industry standard
+CURRENT STATUS
+Working Systems:
+
+✅ Unity 6000.2 + URP 17.2.0 foundation
+✅ Corgi Engine movement mechanics
+✅ Unity Audio + DOTween Pro crossfading
+✅ Addressables asset management
+✅ Mobile performance framework
+In Progress:
+
+🔧 Spine Professional character system integration
+🔧 HeroEditor system removal and cleanup
+🔧 Player physics constraint corruption fix
+🔧 Mobile-optimized character content pipeline
+📚 Codex Environment Domains for Documentation Access
+Unity Official Documentation:
+docs.unity3d.com - Unity 6000.2 API reference and manual
+docs.unity3d.com/6000.1/Documentation/ - Unity 6000.2 specific documentation
+docs.unity3d.com/Packages/ - Unity package documentation (URP, Addressables, etc.)
+Spine 2D Documentation:
+esotericsoftware.com - Official Spine 2D documentation and tutorials
+en.esotericsoftware.com - Spine runtime documentation
+github.com/EsotericSoftware/spine-runtimes - spine-unity runtime documentation
+Asset Store & Third-Party:
+corgi-engine-docs.moremountains.com - Corgi Engine v9.3 documentation
+dotween.demigiant.com - DOTween Pro documentation and API reference
+assetstore.unity.com - Asset Store package documentation
+Mobile Development:
+developer.apple.com/ios - iOS development guidelines for Unity games
+developer.unity.com/mobile - Unity mobile optimization guidelines
+Performance & Optimization:
+thegamedev.guru - Unity performance optimization guides
+unity.com/how-to - Unity official optimization tutorials
+These domains will provide Codex with access to the latest documentation for all installed software and packages, ensuring accurate implementation guidance for Unity 6000.2 + Spine Professional + mobile optimization. 📚✨

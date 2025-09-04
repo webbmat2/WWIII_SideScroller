@@ -1,0 +1,11 @@
+{
+    "asset": "b557c1d66b1b741c28ba54f0067d3ba8",
+    "fileName": "0198ed35-5f8d-7f5e-92c5-3f510246b4a9.pose.json",
+    "prompt": "16-bit pixel art style walk cycle animation for Bezi character, 6-8 frames of side-scrolling movement, transparent background, consistent frame sizes, mobile optimized, suitable for Unity 2D Animation.",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 1742183792,
+    "w3CTraceId": "84b5d03ff5c7a567e07b8fad2820bd1b",
+    "isTrimmed": false
+}

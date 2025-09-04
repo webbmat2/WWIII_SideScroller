@@ -1,0 +1,38 @@
+Unity Editor version:    6000.2.1f1 (55300504c302)
+Branch:                  6000.2/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 15.6.1 (Build 24G90)
+Darwin version:          24.6.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        32768 MB
+Date:                    2025-09-04T00:14:11Z
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-webbmat2" at "2025-09-04T00:14:11.879455Z"
+Launching external process: /Applications/Unity/Hub/Editor/6000.2.1f1/Unity.app/Contents/Resources/PackageManager/Server/UnityPackageManager
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/6000.2.1f1/Unity.app/Contents/MacOS/Unity
+-batchmode
+-nographics
+-quit
+-projectPath
+/Users/webbmat2/Desktop/WWIII/WWIII_SideScroller
+-executeMethod
+WWIII.SideScroller.Editor.Audio.CreateBiographicalAudioConfigMenu.CreatePrefab
+-logFile
+unity_batch_create_prefab.log
+Successfully changed project path to: /Users/webbmat2/Desktop/WWIII/WWIII_SideScroller
+/Users/webbmat2/Desktop/WWIII/WWIII_SideScroller
+It looks like another Unity instance is running with this project open.
+
+Multiple Unity instances cannot open the same project.
+
+Project: /Users/webbmat2/Desktop/WWIII/WWIII_SideScroller
+Fatal Error! It looks like another Unity instance is running with this project open.
+
+Multiple Unity instances cannot open the same project.
+
+Project: /Users/webbmat2/Desktop/WWIII/WWIII_SideScroller
+[Package Manager] Server process was shutdown

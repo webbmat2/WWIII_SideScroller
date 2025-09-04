@@ -1,0 +1,20 @@
+{
+    "asset": "20cf817b790b84f038a14763a05e52ec",
+    "fileName": "0198ed23-5a82-7cbc-a0ed-eaae99419787.png",
+    "prompt": "Create a 2D side-scroller character sprite for 'Bezi', a family member protagonist in a lakeside adventure game. The style should be pixel art or cartoon style suitable for a mobile 2D platformer. The setting is a Michigan lake cottage vacation theme. The character should feel friendly and approachable, ready for a fun lakeside adventure collecting VHS tapes and avoiding mosquitoes. Ensure the sprite is suitable for Unity 6 SpriteRenderer with a transparent background and optimized for mobile performance.",
+    "negativePrompt": "blurry, photorealistic, 3D render, low resolution, dark theme, weapons, scary, violent, realistic photo, noisy background, multiple characters, text, watermark",
+    "model": "242b56c1-2224-41c4-8949-2ba760bbfc69",
+    "modelName": "16-bit Pixel",
+    "customSeed": -1,
+    "w3CTraceId": "5cfb10c946f45c3beccd8868ac1d84cd",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

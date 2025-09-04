@@ -1,0 +1,23 @@
+{
+  "name": "WWIII.Tests.EditMode",
+  "rootNamespace": "",
+  "references": [
+    "WWIII.SideScroller",
+    "Unity.Addressables",
+    "Unity.InputSystem"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

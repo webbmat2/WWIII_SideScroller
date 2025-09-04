@@ -1,0 +1,20 @@
+{
+    "asset": "b6a1e7db1370a400d815e3fd173772b7",
+    "fileName": "0198faf2-09db-78c6-9e60-6ab1e038ecf6.png",
+    "prompt": "2D sidescroller character sprite of a 7-year-old boy, pixel art style, 32x32 pixels per unit, standing pose, brown hair, casual kid clothes, friendly expression, transparent background, game-ready sprite for Unity 2D",
+    "negativePrompt": "",
+    "model": "242b56c1-2224-41c4-8949-2ba760bbfc69",
+    "modelName": "16-bit Pixel",
+    "customSeed": -1,
+    "w3CTraceId": "cc1f10cbccff73a1d8070a8d278d563e",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

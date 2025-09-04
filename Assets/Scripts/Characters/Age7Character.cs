@@ -69,10 +69,13 @@ namespace WWIII.SideScroller.Characters
 
         private void ConfigureChildAbilities()
         {
-            var doubleJump = GetComponent<CharacterDoubleJump>();
-            if (doubleJump != null) doubleJump.enabled = enableAdvancedAbilities;
+            // Double jump in this Corgi version is controlled via CharacterJump.NumberOfJumps
+            if (jump != null)
+            {
+                jump.NumberOfJumps = enableAdvancedAbilities ? Mathf.Max(2, jump.NumberOfJumps) : 1;
+            }
 
-            var wallJump = GetComponent<CharacterWallJump>();
+            var wallJump = GetComponent<CharacterWalljump>();
             if (wallJump != null) wallJump.enabled = enableAdvancedAbilities;
 
             var dash = GetComponent<CharacterDash>();

@@ -3,67 +3,47 @@
   "maps": [
     {
       "name": "Player",
-      "id": "player-map-id",
+      "id": "00000000-0000-0000-0000-000000000001",
       "actions": [
         {
           "name": "Move",
           "type": "Value",
-          "id": "move-action-id",
+          "id": "00000000-0000-0000-0000-000000000002",
           "expectedControlType": "Vector2",
           "bindings": [
             {
               "name": "WASD",
-              "id": "wasd-composite",
+              "id": "00000000-0000-0000-0000-000000000003",
               "path": "2DVector",
-              "interactions": "",
-              "processors": "",
-              "groups": "",
               "action": "Move",
-              "isComposite": true,
-              "isPartOfComposite": false
+              "isComposite": true
             },
             {
               "name": "up",
-              "id": "wasd-up",
+              "id": "00000000-0000-0000-0000-000000000004",
               "path": "<Keyboard>/w",
-              "interactions": "",
-              "processors": "",
-              "groups": "",
               "action": "Move",
-              "isComposite": false,
               "isPartOfComposite": true
             },
             {
               "name": "down",
-              "id": "wasd-down",
+              "id": "00000000-0000-0000-0000-000000000005",
               "path": "<Keyboard>/s",
-              "interactions": "",
-              "processors": "",
-              "groups": "",
               "action": "Move",
-              "isComposite": false,
               "isPartOfComposite": true
             },
             {
               "name": "left",
-              "id": "wasd-left",
+              "id": "00000000-0000-0000-0000-000000000006",
               "path": "<Keyboard>/a",
-              "interactions": "",
-              "processors": "",
-              "groups": "",
               "action": "Move",
-              "isComposite": false,
               "isPartOfComposite": true
             },
             {
               "name": "right",
-              "id": "wasd-right",
+              "id": "00000000-0000-0000-0000-000000000007",
               "path": "<Keyboard>/d",
-              "interactions": "",
-              "processors": "",
-              "groups": "",
               "action": "Move",
-              "isComposite": false,
               "isPartOfComposite": true
             }
           ]
@@ -71,38 +51,26 @@
         {
           "name": "Jump",
           "type": "Button",
-          "id": "jump-action-id",
+          "id": "00000000-0000-0000-0000-000000000008",
           "expectedControlType": "Button",
           "bindings": [
             {
-              "name": "",
-              "id": "jump-space",
+              "id": "00000000-0000-0000-0000-000000000009",
               "path": "<Keyboard>/space",
-              "interactions": "",
-              "processors": "",
-              "groups": "",
-              "action": "Jump",
-              "isComposite": false,
-              "isPartOfComposite": false
+              "action": "Jump"
             }
           ]
         },
         {
           "name": "Run",
           "type": "Button",
-          "id": "run-action-id",
+          "id": "00000000-0000-0000-0000-00000000000a",
           "expectedControlType": "Button",
           "bindings": [
             {
-              "name": "",
-              "id": "run-shift",
+              "id": "00000000-0000-0000-0000-00000000000b",
               "path": "<Keyboard>/leftShift",
-              "interactions": "",
-              "processors": "",
-              "groups": "",
-              "action": "Run",
-              "isComposite": false,
-              "isPartOfComposite": false
+              "action": "Run"
             }
           ]
         }
@@ -110,4 +78,3 @@
     }
   ]
 }
-

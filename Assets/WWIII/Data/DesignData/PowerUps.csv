@@ -1,0 +1,8 @@
+designId,displayName,duration,invulnerable,speedMultiplier,healAmount
+CherryPie,Cherry Pie,8,FALSE,1,10
+RunningShoes,Running Shoes,12,FALSE,1.4,0
+SmartJim,Smart Jim!,10,FALSE,1,0
+BeefJerky,Beef Jerky,0,FALSE,1,25
+Chiliguaro,Chiliguaro,10,FALSE,1.1,0
+PuraVida,Pura Vida,8,TRUE,1,0
+IronmanMedal,Ironman Medal,12,TRUE,1.2,0

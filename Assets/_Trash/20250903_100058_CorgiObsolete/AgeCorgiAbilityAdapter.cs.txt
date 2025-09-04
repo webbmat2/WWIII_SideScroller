@@ -1,0 +1,88 @@
+using System;
+using System.Reflection;
+using UnityEngine;
+using WWIII.SideScroller.Aging;
+
+namespace WWIII.SideScroller.Integration.Corgi
+{
+    [DisallowMultipleComponent]
+    [System.Obsolete("AgeCorgiAbilityAdapter uses reflection. Prefer AgeCorgiAbilityBinder for type-safe ability mapping.")]
+    public class AgeCorgiAbilityAdapter : MonoBehaviour
+    {
+        [Tooltip("AgeManager providing the current AgeProfile.")]
+        public AgeManager ageManager;
+
+        [Header("Corgi Components (optional direct refs)")]
+        public Component horizontalMovement; // e.g., CharacterHorizontalMovement
+        public Component characterJump;      // e.g., CharacterJump
+        public Component characterGravity;   // if separate
+
+        [Header("Reflection Field/Property Names (fallback)")]
+        public string runSpeedField = "MovementSpeed";      // or "RunSpeed"
+        public string accelerationField = "Acceleration";   // if available
+        public string decelerationField = "Deceleration";   // if available
+        public string jumpForceField = "JumpForce";         // Corgi uses JumpForce
+        public string gravityScaleField = "Gravity";        // or set on Rigidbody2D
+
+        private Rigidbody2D _rb;
+
+        private void Awake()
+        {
+            _rb = GetComponent<Rigidbody2D>();
+            if (ageManager == null) ageManager = UnityEngine.Object.FindFirstObjectByType<AgeManager>();
+        }
+
+        private void OnEnable()
+        {
+            if (ageManager != null)
+            {
+                ageManager.OnAgeChanged += ApplyAge;
+                if (ageManager.CurrentAge != null) ApplyAge(ageManager.CurrentAge);
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (ageManager != null) ageManager.OnAgeChanged -= ApplyAge;
+        }
+
+        private void ApplyAge(AgeProfile profile)
+        {
+            if (profile == null) return;
+
+            TrySet(horizontalMovement, runSpeedField, profile.movement.maxRunSpeed);
+            TrySet(horizontalMovement, accelerationField, profile.movement.acceleration);
+            TrySet(horizontalMovement, decelerationField, profile.movement.deceleration);
+
+            TrySet(characterJump, jumpForceField, profile.movement.jumpForce);
+
+            // Gravity: prefer Rigidbody2D for accuracy with our system
+            if (_rb != null)
+                _rb.gravityScale = profile.movement.gravityScale;
+            else
+                TrySet(characterGravity, gravityScaleField, profile.movement.gravityScale);
+        }
+
+        private static void TrySet(Component target, string memberName, float value)
+        {
+            if (target == null || string.IsNullOrEmpty(memberName)) return;
+            var t = target.GetType();
+            try
+            {
+                var f = t.GetField(memberName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                if (f != null && f.FieldType == typeof(float))
+                {
+                    f.SetValue(target, value);
+                    return;
+                }
+                var p = t.GetProperty(memberName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                if (p != null && p.PropertyType == typeof(float) && p.CanWrite)
+                {
+                    p.SetValue(target, value);
+                    return;
+                }
+            }
+            catch { /* keep existing error handling silent */ }
+        }
+    }
+}

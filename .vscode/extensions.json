@@ -1,6 +1,12 @@
 {
     "recommendations": [
-      "visualstudiotoolsforunity.vstuc",
-      "openai.chatgpt"
+        "Unity.unity-debug",
+        "ms-dotnettools.csharp",
+        "redhat.vscode-yaml",
+        "slevesque.shader",
+        "ms-vscode.vscode-editorconfig",
+        "eamodio.gitlens",
+        "usernamehw.errorlens",
+        "visualstudiotoolsforunity.vstuc"
     ]
 }

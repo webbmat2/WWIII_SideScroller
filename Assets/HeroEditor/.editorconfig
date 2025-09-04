@@ -1,0 +1,6 @@
+# Scoped compiler warning suppression for HeroEditor vendor code
+# Only affects files under Assets/HeroEditor/
+
+[*.cs]
+# Suppress obsolete API warnings (CS0618) emitted by vendor scripts targeting legacy APIs
+dotnet_diagnostic.CS0618.severity = none

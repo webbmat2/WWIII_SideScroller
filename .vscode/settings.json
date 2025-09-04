@@ -66,5 +66,28 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
     },
-    "dotnet.defaultSolution": "WWIII_SideScroller.sln"
+    "dotnet.defaultSolution": "WWIII_SideScroller.sln",
+    "chatgpt.openOnStartup": true,
+    "csharp.semanticHighlighting.enabled": true,
+    "csharp.server.useOmnisharp": false,
+    "csharp.suppressDotnetRestoreNotification": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "files.watcherExclude": {
+        "**/Library/**": true,
+        "**/Temp/**": true,
+        "**/Logs/**": true,
+        "**/obj/**": true,
+        "**/UserSettings/**": true
+    },
+    "search.exclude": {
+        "**/Library": true,
+        "**/Temp": true,
+        "**/Logs": true
+    },
+    "unity.projectGeneration.includeBuiltInPackages": false,
+    "unity.enableAssetRefresh": true
 }

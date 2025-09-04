@@ -1,0 +1,3 @@
+Level: Costa Rica: Dominical → Casa Lumpusita
+Age: 50
+ID: age50

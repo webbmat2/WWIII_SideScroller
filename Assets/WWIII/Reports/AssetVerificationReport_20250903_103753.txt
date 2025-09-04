@@ -1,0 +1,12 @@
+Visual Asset Library Verification
+Generated: 9/3/2025 10:37:53 AM
+
+[OK] Assets/ThirdParty/BayatGames/Platform Game Assets Ultimate/Textures
+[OK] Assets/ThirdParty/BayatGames/Platform Game Assets Ultimate/Prefabs
+[OK] Assets/ThirdParty/BayatGames/Platform Game Assets Ultimate/Animations
+Bayat sprites: 3637, prefabs: 22, animations: 179
+[OK] Assets/ThirdParty/CorgiEngine/Common
+[OK] Assets/ThirdParty/CorgiEngine/ThirdParty
+[WARN] Corgi demos not present (can restore from _Trash as reference)
+EnemyDefinition assets: 5, Env props/particles: 6
+UI prefabs: 1

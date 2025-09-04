@@ -109,8 +109,8 @@ namespace WWIII.SideScroller.Editor.Characters
             }
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.mass = 1f;
-            rb.drag = 0f;
-            rb.angularDrag = 0.05f;
+            rb.linearDamping = 0f;
+            rb.angularDamping = 0.05f;
             rb.gravityScale = 3f;
             rb.freezeRotation = true;
 

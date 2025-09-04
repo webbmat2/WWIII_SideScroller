@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: iPhone Settings
   m_EditorClassIdentifier: Unity.AdaptivePerformance::UnityEngine.AdaptivePerformance.AdaptivePerformanceGeneralSettings
   m_LoaderManagerInstance: {fileID: -7321416386796490718}
-  m_InitManagerOnStart: 1
+  m_InitManagerOnStart: 0
 --- !u!114 &-7321416386796490718
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Name: tvOS Settings
   m_EditorClassIdentifier: Unity.AdaptivePerformance::UnityEngine.AdaptivePerformance.AdaptivePerformanceGeneralSettings
   m_LoaderManagerInstance: {fileID: 6821930376155916780}
-  m_InitManagerOnStart: 1
+  m_InitManagerOnStart: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -75,8 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.AdaptivePerformance::UnityEngine.AdaptivePerformance.AdaptivePerformanceManagerSettings
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
-  m_Loaders:
-  - {fileID: 11400000, guid: 09c5a79a7ed1d40d6915e3820e5d91f8, type: 2}
+  m_Loaders: []
 --- !u!114 &3914721509106498534
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -120,7 +119,7 @@ MonoBehaviour:
   m_Name: WebGL Settings
   m_EditorClassIdentifier: Unity.AdaptivePerformance::UnityEngine.AdaptivePerformance.AdaptivePerformanceGeneralSettings
   m_LoaderManagerInstance: {fileID: 3914721509106498534}
-  m_InitManagerOnStart: 1
+  m_InitManagerOnStart: 0
 --- !u!114 &8152006261201109811
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -134,4 +133,4 @@ MonoBehaviour:
   m_Name: Standalone Settings
   m_EditorClassIdentifier: Unity.AdaptivePerformance::UnityEngine.AdaptivePerformance.AdaptivePerformanceGeneralSettings
   m_LoaderManagerInstance: {fileID: 602056136484195037}
-  m_InitManagerOnStart: 1
+  m_InitManagerOnStart: 0

@@ -1,0 +1,25 @@
+{
+  "name": "WWIII.SideScroller.Editor",
+  "rootNamespace": "WWIII.SideScroller.Editor",
+  "references": [
+    "WWIII.SideScroller",
+    "Unity.Timeline",
+    "Unity.Addressables",
+    "Unity.ResourceManager",
+    "Unity.InputSystem",
+    "Unity.2D.Animation.Runtime",
+    "MoreMountains.CorgiEngine",
+    "MoreMountains.Tools"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

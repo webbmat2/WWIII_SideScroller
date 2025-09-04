@@ -1,0 +1,3 @@
+Files with namespace not starting with WWIII.SideScroller:
+
+Editor scripts outside Assets/Editor (using UnityEditor):

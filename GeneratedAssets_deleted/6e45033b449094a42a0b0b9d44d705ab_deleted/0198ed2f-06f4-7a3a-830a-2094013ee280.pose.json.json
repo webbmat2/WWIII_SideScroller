@@ -1,0 +1,11 @@
+{
+    "asset": "6e45033b449094a42a0b0b9d44d705ab",
+    "fileName": "0198ed2f-06f4-7a3a-830a-2094013ee280.pose.json",
+    "prompt": "Create animations for the character 'Bezi' in a 2D side-scroller lakeside adventure game. Include idle, walk cycle, and jump poses. The style should match a pixel art or cartoon aesthetic suitable for mobile 2D platformers. Ensure compatibility with Unity 6 SpriteRenderer and optimized for mobile performance.  Generate sprite sheet animations for Bezi character matching the 16-bit pixel art style. Include:\n- Idle: 4-6 frames of subtle breathing/standing\n- Walk: 6-8 frame walk cycle for side-scrolling movement  \n- Jump: 3-4 frames (jump start, mid-air, landing)\n- Style: Consistent with generated Bezi character sprite\n- Format: Sprite sheet or individual frames suitable for Unity 2D Animation\n- Mobile optimized for iPhone 16+ performance\n",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 825362558,
+    "w3CTraceId": "8ff659712cbb1d63dc2e2a7b684502b1",
+    "isTrimmed": false
+}

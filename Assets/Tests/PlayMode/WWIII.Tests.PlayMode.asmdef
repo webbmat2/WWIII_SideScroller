@@ -1,0 +1,24 @@
+{
+  "name": "WWIII.Tests.PlayMode",
+  "rootNamespace": "",
+  "references": [
+    "WWIII.SideScroller",
+    "Unity.Addressables",
+    "Unity.InputSystem",
+    "MoreMountains.CorgiEngine"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

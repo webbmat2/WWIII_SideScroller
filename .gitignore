@@ -5,6 +5,7 @@
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
 [Mm]emoryCaptures/
+Recordings/
 .vs/
 .idea/
 .vscode/*
@@ -24,3 +25,35 @@
 .DS_Store
 GeneratedAssets/
 Temp 2/
+
+# Unity project Git LFS rules (optional)
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.psb filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.otf filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.anim filter=lfs diff=lfs merge=lfs -text
+*.prefab filter=lfs diff=lfs merge=lfs -text
+*.unity filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+MemoryCaptures/** filter=lfs diff=lfs merge=lfs -text
+Recordings/** filter=lfs diff=lfs merge=lfs -text
+
+# FMOD: ignore generated banks and caches; keep project and integration
+Assets/StreamingAssets/FMOD/**/Build/*
+Assets/StreamingAssets/FMOD/**/Desktop/*
+Assets/StreamingAssets/FMOD/**/Mobile/*
+**/FMODStudioCache.meta
+**/FMODStudioCache
+**/fmod_editor.log
+**/Cache/*
+*.bank
+*.banks
+*.guid.txt
+*.cache

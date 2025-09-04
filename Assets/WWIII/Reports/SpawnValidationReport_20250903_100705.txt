@@ -1,0 +1,101 @@
+Spawn Spec Validation Report
+Generated: 9/3/2025 10:07:05 AM
+
+[OK] BioLevel_Age7: spawnSpec age7 entries=2
+  [ERR] Entry 1: Enemy prefab missing: Assets/WWIII/Prefabs/Enemies/GerbilSugar.prefab
+  [ERR] Entry 2: Enemy prefab missing: Assets/WWIII/Prefabs/Enemies/GerbilSpice.prefab
+[OK] BioLevel_Age13: spawnSpec age13 entries=7
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 6: Enemy prefab missing: Assets/WWIII/Prefabs/Enemies/MayflySwarm.prefab
+  [ERR] Entry 7: PowerUp prefab not found: Assets/WWIII/Prefabs/Powerups/RunningShoes.prefab
+[OK] BioLevel_Age16: spawnSpec age16 entries=5
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+[OK] BioLevel_Age18: spawnSpec age18 entries=1
+  [ERR] Entry 1: PowerUp prefab not found: Assets/WWIII/Prefabs/Powerups/SmartJim.prefab
+[OK] BioLevel_Age21: spawnSpec age21 entries=4
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+[OK] BioLevel_Age28: spawnSpec age28 entries=6
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 6: PowerUp prefab not found: Assets/WWIII/Prefabs/Powerups/Chiliguaro.prefab
+[OK] BioLevel_Age35: spawnSpec age35 entries=5
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+[OK] BioLevel_Age45: spawnSpec age45 entries=5
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+[OK] BioLevel_Age50: spawnSpec age50 entries=5
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+[OK] age7: spawnSpec age7 entries=2
+  [ERR] Entry 1: Enemy prefab missing: Assets/WWIII/Prefabs/Enemies/GerbilSugar.prefab
+  [ERR] Entry 2: Enemy prefab missing: Assets/WWIII/Prefabs/Enemies/GerbilSpice.prefab
+[OK] age13: spawnSpec age13 entries=7
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 6: Enemy prefab missing: Assets/WWIII/Prefabs/Enemies/MayflySwarm.prefab
+  [ERR] Entry 7: PowerUp prefab not found: Assets/WWIII/Prefabs/Powerups/RunningShoes.prefab
+[OK] age16: spawnSpec age16 entries=5
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+[OK] age18: spawnSpec age18 entries=1
+  [ERR] Entry 1: PowerUp prefab not found: Assets/WWIII/Prefabs/Powerups/SmartJim.prefab
+[OK] age21: spawnSpec age21 entries=4
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+[OK] age28: spawnSpec age28 entries=6
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 6: PowerUp prefab not found: Assets/WWIII/Prefabs/Powerups/Chiliguaro.prefab
+[OK] age35: spawnSpec age35 entries=5
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+[OK] age45: spawnSpec age45 entries=5
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+[OK] age50: spawnSpec age50 entries=5
+  [ERR] Entry 1: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 2: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 3: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 4: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab
+  [ERR] Entry 5: Collectible prefab missing: Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab

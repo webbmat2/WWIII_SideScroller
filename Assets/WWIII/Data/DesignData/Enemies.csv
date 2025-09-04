@@ -1,0 +1,6 @@
+designId,displayName,prefabKey,hp,damage,speed,aiType
+gerbil_sugar,Gerbil Sugar,Assets/WWIII/Prefabs/Enemies/GerbilSugar.prefab,6,1,2,patrol
+gerbil_spice,Gerbil Spice,Assets/WWIII/Prefabs/Enemies/GerbilSpice.prefab,6,1,2,patrol
+mayfly_swarm,Mayfly Swarm,Assets/WWIII/Prefabs/Enemies/MayflySwarm.prefab,5,1,2.5,swarm
+RA_Patrol,RA Patrol,Assets/WWIII/Prefabs/Enemies/RA_Patrol.prefab,12,1,1.5,stealth
+KristenPig,Kristen Purple Pig,Assets/WWIII/Prefabs/Enemies/KristenPig.prefab,40,1,1.2,boss

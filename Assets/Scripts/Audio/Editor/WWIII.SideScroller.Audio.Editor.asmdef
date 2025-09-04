@@ -1,0 +1,19 @@
+{
+  "name": "WWIII.SideScroller.Audio.Editor",
+  "rootNamespace": "WWIII.SideScroller.Audio.Editor",
+  "references": [
+    "WWIII.SideScroller"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
+

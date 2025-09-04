@@ -1,0 +1,95 @@
+{
+  "name": "CharacterEditorInputActions",
+  "maps": [
+    {
+      "name": "CharacterEditor",
+      "id": "00000000-0000-0000-0000-00000000ce01",
+      "actions": [
+        {
+          "name": "Navigate",
+          "type": "Value",
+          "id": "00000000-0000-0000-0000-00000000ce02",
+          "expectedControlType": "Vector2",
+          "bindings": [
+            {
+              "name": "Arrow Keys",
+              "id": "00000000-0000-0000-0000-00000000ce03",
+              "path": "2DVector",
+              "action": "Navigate",
+              "isComposite": true
+            },
+            {
+              "name": "up",
+              "id": "00000000-0000-0000-0000-00000000ce04",
+              "path": "<Keyboard>/upArrow",
+              "action": "Navigate",
+              "isPartOfComposite": true
+            },
+            {
+              "name": "down",
+              "id": "00000000-0000-0000-0000-00000000ce05",
+              "path": "<Keyboard>/downArrow",
+              "action": "Navigate",
+              "isPartOfComposite": true
+            },
+            {
+              "name": "left",
+              "id": "00000000-0000-0000-0000-00000000ce06",
+              "path": "<Keyboard>/leftArrow",
+              "action": "Navigate",
+              "isPartOfComposite": true
+            },
+            {
+              "name": "right",
+              "id": "00000000-0000-0000-0000-00000000ce07",
+              "path": "<Keyboard>/rightArrow",
+              "action": "Navigate",
+              "isPartOfComposite": true
+            }
+          ]
+        },
+        {
+          "name": "Select",
+          "type": "Button",
+          "id": "00000000-0000-0000-0000-00000000ce08",
+          "expectedControlType": "Button",
+          "bindings": [
+            {
+              "name": "",
+              "id": "00000000-0000-0000-0000-00000000ce09",
+              "path": "<Keyboard>/enter",
+              "action": "Select"
+            },
+            {
+              "name": "",
+              "id": "00000000-0000-0000-0000-00000000ce0a",
+              "path": "<Keyboard>/space",
+              "action": "Select"
+            }
+          ]
+        },
+        {
+          "name": "Customize",
+          "type": "Button",
+          "id": "00000000-0000-0000-0000-00000000ce0b",
+          "expectedControlType": "Button",
+          "bindings": [
+            {
+              "name": "",
+              "id": "00000000-0000-0000-0000-00000000ce0c",
+              "path": "<Keyboard>/c",
+              "action": "Customize"
+            },
+            {
+              "name": "",
+              "id": "00000000-0000-0000-0000-00000000ce0d",
+              "path": "<Keyboard>/tab",
+              "action": "Customize"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

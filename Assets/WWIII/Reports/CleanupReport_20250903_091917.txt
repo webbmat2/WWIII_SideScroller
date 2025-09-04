@@ -1,0 +1,210 @@
+WWIII Cleanup Report
+Generated: 9/3/2025 9:19:17 AM
+
+Root scenes considered:
+  - Assets/WWIII/Scenes/BioLevel_Age7.unity
+  - Assets/WWIII/Scenes/BioLevel_Age13.unity
+  - Assets/WWIII/Scenes/BioLevel_Age16.unity
+  - Assets/WWIII/Scenes/BioLevel_Age18.unity
+  - Assets/WWIII/Scenes/BioLevel_Age21.unity
+  - Assets/WWIII/Scenes/BioLevel_Age28.unity
+  - Assets/WWIII/Scenes/BioLevel_Age35.unity
+  - Assets/WWIII/Scenes/BioLevel_Age42.unity
+  - Assets/WWIII/Scenes/BioLevel_Age56.unity
+  - Assets/WWIII/Scenes/Yarn Spinner Demo.unity
+
+All assets: 13232
+Used assets: 119
+Candidates to remove (unused): 186
+
+Unused assets (candidates):
+Assets/WWIII/Art
+Assets/Scripts/Save/ProgressionSaveData.cs
+Assets/XR/Resources
+Assets/Editor/Data/DesignImporters
+Assets/WWIII/Settings
+Assets/Editor/Addressables/AddressablesBuildMenu.cs
+Assets/BEZI_PROJECT_RULES_UNITY_AI.md
+Assets/Scripts/Aging
+Assets/Scripts/Design
+Assets/XR
+Assets/XR/UserSimulationSettings
+Assets/Editor/Diagnostics/ErrorEventForwarder.cs
+Assets/Scripts/Integration/Corgi/CorgiHaptics.cs
+Assets/CURSOR_RULES.txt
+Assets/Editor/UI
+Assets/Editor/Data/DesignImporters/LevelsImporter.cs
+Assets/Scripts/Powerups/PowerUpDefinition.cs
+Assets/Editor/Build/WWIIIBuilder.cs
+Assets/Scripts/Integration/Corgi/CorgiSaveBridge.cs
+Assets/Scripts/Level/AgeVariantGroup.cs
+Assets/Editor/Level/BiographicalTilemapBuilder.cs
+Assets/WWIII/Prefabs
+Assets/Scripts/Input/ControllerHapticsService.cs
+Assets/Scripts/UI/PhotoAlbum/PhotoAlbumUIController.cs
+Assets/Tests/PlayMode/ControllerIntegrationTests.cs
+Assets/Scripts/Integration
+Assets/Editor/Flow/CreateControllerSandboxScene.cs
+Assets/Editor/Level/URP2DAssetOptimizer.cs
+Assets/WWIII/Data
+Assets/WWIII_URP_Asset_Renderer.asset
+Assets/Editor/Addressables
+Assets/Scripts/Rendering
+Assets/Scripts/Level
+Assets/WWIII/Scenes/age13_Notes.txt
+Assets/Scripts/Aging/Timeline/AgeTransitionPlayableAsset.cs
+Assets/Scripts/Level/AgeConditionalObject.cs
+Assets/Editor/ArtPipeline
+Assets/Scripts/Level/LevelSpawnSpec.cs
+Assets/Scripts/Level/LevelRegistry.cs
+Assets/Scripts/UI/MainMenu
+Assets/Editor/ArtPipeline/AIGeneratorsBridge.cs
+Assets/WWIII/Scenes
+Assets/Editor/Level/LevelThemeProfileBuilder.cs
+Assets/Scripts/UI/TvOsCanvasScaler.cs
+Assets/Editor/Powerups
+Assets/XR/Settings/ARKitSettings.asset
+Assets/Editor/Data/DesignImporters/SpawnsImporter.cs
+Assets/Scripts/Aging/Timeline/AgeTransitionPlayableBehaviour.cs
+Assets/Tests/PlayMode/PhotoAlbumServicePlayModeTests.cs
+Assets/Editor/Level/GenerateBiographicalLevels.cs
+Assets/Scripts/UI/Achievements
+Assets/Tests
+Assets/Editor/Integration
+Assets/Editor/Level
+Assets/Editor/Bootstrap
+Assets/WWIII/Ages
+Assets/Scripts/Powerups
+Assets/Scripts/Level/Story/AgeStoryEventTrigger.cs
+Assets/Editor/Aging/AgeAssetGenerator.cs
+Assets/Scripts/Interaction/DoorInteractable.cs
+Assets/Scripts/Input
+Assets/Scripts/Integration/Corgi/LandingHaptics.cs
+Assets/Scripts/Player
+Assets/Adaptive Performance/AdaptivePerformanceGeneralSettings.asset
+Assets/Editor/ArtPipeline/AtlasBuilder.cs
+Assets/Editor/Level/AILevelLayoutSampler.cs
+Assets/Scripts/Input/AgeHaptics.cs
+Assets/Scripts/Utils/SessionPerformanceMonitor.cs
+Assets/Editor/Integration/Corgi/CorgiAdapterSetup.cs
+Assets/Scripts/UI/Achievements/AchievementService.cs
+Assets/UniversalRenderPipelineGlobalSettings.asset
+Assets/VSCODE_SETTINGS.json
+Assets/Editor/Level/BiographicalLevelGeneratorWindow.cs
+Assets/Scripts/Integration/Addressables/AgeAddressablesLoader.cs
+Assets/Scripts/Aging/Timeline
+Assets/Scripts/Aging/Timeline/AgeTransitionTrack.cs
+Assets/WWIII/Scenes/age21_Notes.txt
+Assets/Scripts/Collectibles/PhotoAlbumService.cs
+Assets/Scripts/UI/LevelSelect/LevelSelectController.cs
+Assets/Editor/Bootstrap/CreateBootstrapPrefab.cs
+Assets/Editor/ArtPipeline/TimelineSetup.cs
+Assets/Editor/Data
+Assets/Scripts/Utils
+Assets/Tests/PlayMode/HapticsWiringTests.cs
+Assets/Editor/Data/DesignImporters/CollectiblesImporter.cs
+Assets/Scripts/Interaction
+Assets/Scripts/Input/AgeInputProfileSwitcher.cs
+Assets/Scripts/Collectibles
+Assets/Editor/Collectibles/PhotoCollectiblePrefabBuilder.cs
+Assets/Scripts/Integration/Addressables
+Assets/Scripts/Integration/Corgi/AgeCorgiAbilityAdapter.cs
+Assets/WWIII/Scenes/age28_Notes.txt
+Assets/Editor/Level/BiographicalCampaignBuilder.cs
+Assets/Scripts/UI/Achievements/AchievementUIController.cs
+Assets/Editor/Level/PlatformAssetsConfigurator.cs
+Assets/Editor/Build
+Assets/Tests/PlayMode/AgeInputProfileSwitcherTests.cs
+Assets/Editor/Cleanup
+Assets/Editor/Input/InputActionsBuilder.cs
+Assets/Scripts/Level/AgeConditionalSpriteSwapper.cs
+Assets/WWIII/Ages/Profiles
+Assets/WWIII/Scenes/age7_Notes.txt
+Assets/XR/Loaders/SimulationLoader.asset
+Assets/Scripts/Player/JimAgeController.cs
+Assets/Adaptive Performance/Settings
+Assets/Editor/Diagnostics/DiagnosticsMenu.cs
+Assets/WWIII/Scenes/age18_Notes.txt
+Assets/XR/UserSimulationSettings/SimulationEnvironmentAssetsManager.asset
+Assets/Scripts/Utils/MobilePerformanceBootstrap.cs
+Assets/Tests/EditMode/ProgressionSaveServiceTests.cs
+Assets/Scripts/Integration/Corgi/AgeCorgiAbilityBinder.cs
+Assets/Editor/Cleanup/ValidationMenu.cs
+Assets/XR/UserSimulationSettings/Resources
+Assets/XR/Loaders
+Assets/Editor/Integration/Corgi
+Assets/UNITY_AI_GITIGNORE.txt
+Assets/Tests/PlayMode
+Assets/Editor/Data/CSVUtil.cs
+Assets/XR/UserSimulationSettings/Resources/XRSimulationPreferences.asset
+Assets/XR/Resources/XRSimulationRuntimeSettings.asset
+Assets/Scripts/Debug
+Assets/Scripts/Tests
+Assets/Scripts/UI
+Assets/Adaptive Performance/Provider/Simulator Provider Loader.asset
+Assets/XR/Loaders/ARKitLoader.asset
+Assets/Scripts/Level/Story
+Assets/Editor/Level/PhotoCollectiblePlacer.cs
+Assets/WWIII/Scenes/age35_Notes.txt
+Assets/Editor/Diagnostics/EditorLogViewerWindow.cs
+Assets/Editor/ArtPipeline/AIGeneratorConfig.cs
+Assets/Scripts/Powerups/PowerUpPickup.cs
+Assets/Scripts/UI/LevelSelect
+Assets/Scripts/UI/Achievements/AchievementDefinition.cs
+Assets/Scripts/Level/LevelDefinition.cs
+Assets/Editor/Data/DesignImporters/PowerUpsImporter.cs
+Assets/Editor/Diagnostics
+Assets/Scripts/Collectibles/PhotoCollectible.cs
+Assets/Tests/EditMode
+Assets/Scripts/Design/EnemyDefinition.cs
+Assets/Scripts/UI/MainMenu/MainMenuController.cs
+Assets/WWIII/Audio
+Assets/WWIII/Scenes/age16_Notes.txt
+Assets/XR/Settings
+Assets/Scripts/Utils/TextureStreamingConfigurator.cs
+Assets/Adaptive Performance
+Assets/Editor/Addressables/AddressablesGroupsBuilder.cs
+Assets/Adaptive Performance/Provider
+Assets/Scripts/UI/PhotoAlbum
+Assets/WWIII/Scripts
+Assets/Scripts/Level/LevelThemeProfile.cs
+Assets/Editor/Collectibles
+Assets/Editor/ArtPipeline/SortingLayerUtility.cs
+Assets/Editor/Powerups/CreateBasicPowerups.cs
+Assets/Scripts/Integration/YarnAgeBridge.cs
+Assets/Editor/ArtPipeline/AddressablesConfigurator.cs
+Assets/Editor/ArtPipeline/SpriteImportUtility.cs
+Assets/Scripts/Debug/ControllerSandboxHUD.cs
+Assets/XR/XRGeneralSettingsPerBuildTarget.asset
+Assets/Editor/UI/SafeAreaTools.cs
+Assets/Editor/Aging
+Assets/Editor/Build/MobileAssetOptimizationMenu.cs
+Assets/XR/Settings/XRSimulationSettings.asset
+Assets/WWIII/Scenes/age56_Notes.txt
+Assets/WWIII/Scenes/age42_Notes.txt
+Assets/Resources
+Assets/Editor/Data/DesignImporters/EnemiesImporter.cs
+Assets/Scripts/Integration/Corgi/CorgiCameraDirector.cs
+Assets/Scripts
+Assets/Editor/Flow/CreateFlowScenes.cs
+Assets/Scripts/Design/CollectibleDefinition.cs
+Assets/WWIII
+Assets/Scripts/Rendering/SpriteLOD2D.cs
+Assets/Scripts/Save/ProgressionSaveService.cs
+Assets/Scripts/Integration/Corgi
+Assets/Scripts/Aging/PlayerAgeAdapter.cs
+Assets/Scripts/UI/SafeAreaOverlay.cs
+Assets/Scripts/Save
+Assets/Editor/Input
+Assets/Editor/Cleanup/ProjectCleanupTools.cs
+Assets/Editor/ArtPipeline/TestSceneBuilder.cs
+Assets/Editor/ArtPipeline/JimArtPipelineWindow.cs
+Assets/Editor/Flow
+Assets/WWIII_URP_Asset.asset
+Assets/Editor/ArtPipeline/AnimationRigSetup.cs
+Assets/Adaptive Performance/Settings/Simulator Provider Settings.asset
+Assets/Editor
+
+Namespace consistency (non-matching):
+
+Package content validation (suspicious):

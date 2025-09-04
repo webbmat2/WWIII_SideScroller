@@ -1,0 +1,11 @@
+{
+    "asset": "c8fa926c83c3444d088dc22902bfd89b",
+    "fileName": "0198ed35-0f2d-7d4c-9294-7d2fc33efda6.pose.json",
+    "prompt": "16-bit pixel art style idle animation for Bezi character, 4-6 frames of subtle breathing/standing, transparent background, consistent frame sizes, mobile optimized, suitable for Unity 2D Animation.",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 264159023,
+    "w3CTraceId": "0c5ca1bb1cefa9a1ac9fbbd9687249df",
+    "isTrimmed": false
+}

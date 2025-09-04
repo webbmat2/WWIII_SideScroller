@@ -14,3 +14,13 @@
 *.unity filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mov filter=lfs diff=lfs merge=lfs -text
+*.cs text=auto
+*.asmdef text=auto
+*.json text=auto
+*.meta text=auto
+*.unity binary
+*.prefab binary
+*.asset binary
+*.mat binary
+Assets/Plugins/FMOD/**/*.bundle text eol=lf
+Assets/Plugins/FMOD/**/Info.plist text eol=

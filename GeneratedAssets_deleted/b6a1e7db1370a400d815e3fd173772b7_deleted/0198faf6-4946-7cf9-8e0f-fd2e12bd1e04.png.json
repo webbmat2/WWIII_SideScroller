@@ -1,0 +1,20 @@
+{
+    "asset": "b6a1e7db1370a400d815e3fd173772b7",
+    "fileName": "0198faf6-4946-7cf9-8e0f-fd2e12bd1e04.png",
+    "prompt": "Create a 2D enemy sprite for a mayfly swarm suitable for Level 2 (Torch Lake cottage setting) of a nostalgic biographical sidescroller. The mayflies should appear as they naturally do around lakeside streetlights during summer evenings. Art Style: Hybrid pixel art, 32 pixels per unit (32 PPU). Target Platform: Unity 6000.2 with URP 2D Renderer. Format: Transparent background, game-ready sprite. Size: Multiple mayflies in a loose swarm formation. Individual Mayflies: Small, delicate insects with translucent wings. Swarm Formation: 5-8 mayflies in a cloud-like cluster. Color Palette: Muted browns, pale yellows, translucent wing highlights. Lighting Effect: Subtle glow suggesting attraction to streetlights. Nostalgic Tone: Soft, dreamy quality fitting a childhood memory. Movement: Chaotic, fluttering swarm behavior around light sources. Interaction: Non-aggressive obstacle that Jim must navigate through. Setting: Michigan lakeside summer evening atmosphere. Gameplay: Creates temporary vision obstruction and move",
+    "negativePrompt": "",
+    "model": "242b56c1-2224-41c4-8949-2ba760bbfc69",
+    "modelName": "16-bit Pixel",
+    "customSeed": -1,
+    "w3CTraceId": "8f46c8262845894e01d504799e7d2c17",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

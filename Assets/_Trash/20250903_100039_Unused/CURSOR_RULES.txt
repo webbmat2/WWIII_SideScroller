@@ -1,0 +1,50 @@
+# Copy this content to create .cursorrules in your project root directory
+# Unity AI's Recommended Cursor Configuration for Brother Side-Scroller
+
+# Unity-specific file type handling
+[Scripts/*]
+language: csharp
+
+[Scenes/*]
+language: unity
+
+[Data/*]
+language: json
+
+[Editor/*]
+language: csharp
+
+[Prefabs/*]
+language: unity
+
+# Brother Side-Scroller specific rules
+[_Project/Scripts/Core/*]
+language: csharp
+description: Core game mechanics and controllers
+
+[_Project/Scripts/Data/*]
+language: csharp
+description: ScriptableObject definitions and data structures
+
+[_Project/Scripts/Systems/*]
+language: csharp
+description: Game systems like progression, collectibles, etc.
+
+[_Project/Scripts/Integrations/*]
+language: csharp
+description: Third-party package integrations (Corgi, DOTween, etc.)
+
+[_Project/Scripts/Editor/*]
+language: csharp
+description: Editor tools and utilities
+
+# Asset organization
+[Art/*]
+description: Visual assets organized by category and level
+
+[Audio/*]
+description: Music, SFX, and audio assets
+
+[Documentation/*]
+language: markdown
+description: Project documentation and guides

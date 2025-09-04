@@ -1,0 +1,10 @@
+designId,displayName,ageYears,sceneName,photoCount,bossId,musicCue,ambientCue
+age7,Northville: Meadowbrook Park → Home,7,BioLevel_Age7,5,KristenPig,ChildhoodTheme,PlaygroundAmbience
+age13,Torch Lake: Cottage → Party Store,13,BioLevel_Age13,5,,TeenTheme,LakeAmbience
+age16,Farmington High School,16,BioLevel_Age16,5,,HighSchoolTheme,SchoolAmbience
+age18,Notre Dame Campus + Fisher Hall Dorm,18,BioLevel_Age18,5,RA_Patrol,CampusTheme,DormAmbience
+age21,Philadelphia: General Mills,21,BioLevel_Age21,5,,AdultTheme,CityAmbience
+age28,Chicago: 414 W. Dickens,28,BioLevel_Age28,5,,AdultTheme,CityAmbience
+age35,Ironman Gauntlet,35,BioLevel_Age35,5,,IronmanTheme,TrackAmbience
+age45,Chicago: Parson's → Airport,45,BioLevel_Age45,5,,FamilyTheme,CityAmbience
+age50,Costa Rica: Dominical → Casa Lumpusita,50,BioLevel_Age50,5,,ConquerTheme,JungleAmbience
