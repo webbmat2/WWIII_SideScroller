@@ -38,3 +38,22 @@ DOCS_WHITELIST:
 - en.esotericsoftware.com
 - github.com/EsotericSoftware/spine-runtimes
 - developer.apple.com/ios
+PLATFORM_PRIORITY:
+- Primary: tvOS on Apple TV with PS5 DualSense
+- Fallback: iOS on iPhone with Backbone controller
+
+INPUT_REQUIREMENTS:
+- Use Unity Input System 1.14.2 only (Active Input Handling = Both already set)
+- Devices to support: Gamepad (DualSense), iOS Game Controller, Keyboard, Touch
+- Provide exact Input Actions bindings for Move, Jump, Dash, Interact, Pause
+- Map DualSense buttons: Cross=Jump, Square=Attack or Interact, Circle=Dash, Triangle=Secondary, L1/R1=Shoulders, L2/R2=Triggers, Options=Pause, DPad=UI Navigate, LeftStick=Move, RightStick=Look if used
+
+DELIVERABLES_FOR_AUDIT:
+- Unity click paths to enable tvOS build target and controller support
+- Verification checklist for DualSense on tvOS and Backbone on iOS
+- Input Actions diff or full JSON export for the required bindings
+- Player Settings diffs for tvOS and iOS (scripting backend IL2CPP, ARM64, target OS versions, controller support flags)
+- Any scene-level changes to ensure UI works with gamepad navigation
+
+CITATION_RULE:
+- Cite doc URLs from /instructions/stack.manifest.json for Input System and platform settings
