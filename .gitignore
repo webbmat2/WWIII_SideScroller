@@ -21,3 +21,4 @@ UserSettings/
 .vscode/
 .DS_Store
 Assets/StreamingAssets/aa/*/*/catalog_*.json.meta
+fmod_editor.log
