@@ -10,3 +10,14 @@ obj/
 Builds/
 *.apk
 *.ipa
+[Ll]ibrary/
+[Tt]emp/
+[Tt]emp 2/
+[Oo]bj/
+[Bb]uild*/
+[Bb]uilds*/
+[Ll]ogs/
+UserSettings/
+.vscode/
+.DS_Store
+Assets/StreamingAssets/aa/*/*/catalog_*.json.meta
