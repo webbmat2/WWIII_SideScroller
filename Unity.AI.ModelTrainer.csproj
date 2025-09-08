@@ -48,44 +48,44 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.1f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/States/Setting.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/ModelTrainer/ModelTrainer.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/AssemblyInfo.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/States/TrainingImageReference.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Windows/ModelTrainerWindow.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/ModelTrainerStore.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/States/BaseModel.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/States/UserModel.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/TrainingInfo/TrainingInfo.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/States/UserSetting.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/Slices/SessionSlice.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/ModelListView/ModelListView.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/ThumbnailFieldItem/ThumbnailFieldItem.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/Selectors/SessionSelectors.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/LocalSettingsRepository/ModelTrainerLocalSettings.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/States/TrainingStatus.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/Tag/Tag.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/BaseModelSettingsView/BaseModelSettingsView.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/States/Session.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/DetailsView/DetailsView.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/ThumbnailField/ThumbnailField.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Services/Stores/Actions/SessionActions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/TagsView/TagsView.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/States/Setting.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/ModelTrainer/ModelTrainer.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/AssemblyInfo.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/States/TrainingImageReference.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Windows/ModelTrainerWindow.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/ModelTrainerStore.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/States/BaseModel.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/States/UserModel.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/TrainingInfo/TrainingInfo.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/States/UserSetting.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/Slices/SessionSlice.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/ModelListView/ModelListView.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/ThumbnailFieldItem/ThumbnailFieldItem.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/Selectors/SessionSelectors.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/LocalSettingsRepository/ModelTrainerLocalSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/States/TrainingStatus.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/Tag/Tag.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/BaseModelSettingsView/BaseModelSettingsView.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/States/Session.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/DetailsView/DetailsView.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/ThumbnailField/ThumbnailField.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Services/Stores/Actions/SessionActions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/TagsView/TagsView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/ThumbnailFieldItem/ThumbnailFieldItem.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/DetailsView/EmptyDetailsView.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/ModelListItem/ModelListItem.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/ModelTrainer/Styles.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/TrainingInfo/TrainingInfo.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/Tag/Tag.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/ModelListView/ModelListView.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Unity.AI.ModelTrainer.asmdef" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/BaseModelSettingsView/BaseModelSettingsView.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/ThumbnailField/ThumbnailField.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/DetailsView/ModelDetailsView.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/TagsView/TagsView.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.ModelTrainer/Components/ModelTrainer/ModelTrainer.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/ThumbnailFieldItem/ThumbnailFieldItem.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/DetailsView/EmptyDetailsView.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/ModelListItem/ModelListItem.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/ModelTrainer/Styles.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/TrainingInfo/TrainingInfo.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/Tag/Tag.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/ModelListView/ModelListView.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Unity.AI.ModelTrainer.asmdef" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/BaseModelSettingsView/BaseModelSettingsView.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/ThumbnailField/ThumbnailField.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/DetailsView/ModelDetailsView.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/TagsView/TagsView.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.ModelTrainer/Components/ModelTrainer/ModelTrainer.uxml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -596,12 +596,20 @@
       <HintPath>/Applications/Unity/Hub/Editor/6000.2.1f1/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DemiEditor">
+      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpToken">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
@@ -616,16 +624,20 @@
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
+    <Reference Include="DemiLib">
+      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="BeziSidekickInternal">
-      <HintPath>Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll</HintPath>
+    <Reference Include="DOTweenProEditor">
+      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="log4netPlastic">
@@ -640,10 +652,6 @@
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.IO.Hashing">
       <HintPath>Library/PackageCache/com.unity.collections@d49facba0036/Unity.Collections.Tests/System.IO.Hashing/System.IO.Hashing.dll</HintPath>
       <Private>False</Private>
@@ -652,16 +660,24 @@
       <HintPath>Packages/com.bezi.sidekick/Plugins/bezi-websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="SharpToken">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -669,7 +685,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="AiEditorToolsSdk">
-      <HintPath>Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Sdk/Editor/AiEditorToolsSdk.dll</HintPath>
+      <HintPath>Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Sdk/Editor/AiEditorToolsSdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
@@ -680,56 +696,16 @@
       <HintPath>Library/PackageCache/com.unity.nuget.mono-cecil@d78732e851eb/Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.Reflection.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Reflection.Editor.dll</HintPath>
+    <Reference Include="BeziSidekickInternal">
+      <HintPath>Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+    <Reference Include="System.Reflection.Metadata">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Reflection.Metadata.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Utilities">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DemiEditor">
-      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenPro">
-      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DemiLib">
-      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenProEditor">
-      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

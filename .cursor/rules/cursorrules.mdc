@@ -1,0 +1,15 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+INCLUDE: /instructions/stack.manifest.json
+INCLUDE: /instructions/AI_CONTRACT.md
+
+POLICY: Always constrain suggestions to pinned versions in stack.manifest.json.  
+If a feature, API, or menu is not in those versions, reply NOT IN VERSION and cite the manifest doc URL.  
+
+OUTPUT:  
+- For code: unified diff or full file.  
+- For Unity editor changes: exact click path + expected value + verification checklist.  
+- For diagnostics: read /reports/* first and cite which report you used.

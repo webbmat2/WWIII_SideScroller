@@ -48,124 +48,116 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.1f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Slices/GenerationSettingsSlice.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/SessionPersistence/MemoryPersistence.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/AnimationClipRenderingUtils.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Motion/MotionUtilities.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Selectors/AppSelectors.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Actions/Creators/AssetActionCreator.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/AnimationClipDatabaseItem.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Windows/AnimateGeneratorInspectorButton.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/VideoUtilReflected.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Undo/AssetUndoManager.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Motion/MotionResponse.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Actions/DebuggerActions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/ProgressUtils.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/RefinementModeTabView/RefinementModeTabView.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/AnimationClipResultExtensions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/EditorUtilityWrapper.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/AnimationClipLoopUtils.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/PreviewSizeSlider/PreviewSizeSlider.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/States/DebuggerState.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/States/GenerationResults.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/SessionPersistence/AppData.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Selectors/SessionSelectors.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Actions/Backend/Quote.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerationSelector/GenerationSelector.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Actions/GenerationSettingsActions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/AssetTitleCard/AssetTitleCard.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Selectors/GenerationSettingsSelectors.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/AIAnimateStore.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/GenerationRecovery.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/AssetUtils.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/AssetContextExtensions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/ModelTitleCard/ModelTitleCard.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/States/GenerationSettings.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerateVariationsSlider/GenerateVariationsSlider.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/AnimationClipUtilities.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Actions/AppActions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/TextureSkeletonExtensions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/Prompt/Prompt.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/AssetTitleCard/SelectedAssetTitleCard.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/States/GenerationResult.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Windows/AnimateGeneratorObjectPicker.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Slices/GenerationResultsSlice.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerateButton/GenerateButton.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/AssemblyInfo.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerationSelector/GenerationTile.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Actions/Creators/ContextAction.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/SessionPersistence/AnimateGeneratorSettings.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/InputReference/VideoReference.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Actions/SessionActions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/ModelTitleCard/SelectedModelTitleCard.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/SessionPersistence/ObjectPersistence.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Windows/GenerationMetadataWindow/GenerationMetadataContent.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/VideoClipExtensions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/States/Settings.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/AnimationClipDatabaseUtils.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/States/PreviewSettings.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/ModelSelectorButton/ModelSelectorButton.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/FileUtilities.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Windows/GenerationMetadataWindow/GenerationMetadataWindow.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Motion/PoseModel.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Windows/AnimateGeneratorWindow.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Actions/Payloads/Payload.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/AnimateLoop/AnimateLoop.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/LoopPreview/LoopPreview.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/AnimationClipDatabase.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Selectors/DebuggerSelectors.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/WebUtils.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/AssetReferenceExtensions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Actions/Backend/Generation.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Slices/DebuggerSlice.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/States/GenerationSetting.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Motion/Timeline.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/SessionPersistence/SharedStore.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Slices/SessionSlice.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerateDurationSlider/GenerateDurationSlider.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/SplitterExtensions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/States/AnimationClipResult.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/States/Sessions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Actions/GenerationResultsActions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Services/Stores/Selectors/GenerationResultsSelectors.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/GridViewExtensions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Utilities/ImageReferenceExtensions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerationOptions/GenerationOptions.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/AnimateGenerator/AnimateGenerator.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Slices/GenerationSettingsSlice.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/SessionPersistence/MemoryPersistence.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/AnimationClipRenderingUtils.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Motion/MotionUtilities.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Selectors/AppSelectors.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Actions/Creators/AssetActionCreator.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/AnimationClipDatabaseItem.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Windows/AnimateGeneratorInspectorButton.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Undo/AssetUndoManager.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Motion/MotionResponse.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Actions/DebuggerActions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/UnityWebRequestTextureAsync.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/ProgressUtils.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/RefinementModeTabView/RefinementModeTabView.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/AnimationClipResultExtensions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/EditorUtilityWrapper.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/PreviewSizeSlider/PreviewSizeSlider.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/States/DebuggerState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/States/GenerationResults.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/SessionPersistence/AppData.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Selectors/SessionSelectors.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerationSelector/GenerationSelector.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Actions/GenerationSettingsActions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/GenerationRecoveryUtils.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Actions/GenerationResultsSuperProxyActions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/AssetTitleCard/AssetTitleCard.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Selectors/GenerationSettingsSelectors.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/AIAnimateStore.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/AssetUtils.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/AssetContextExtensions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/ModelTitleCard/ModelTitleCard.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/States/GenerationSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerateVariationsSlider/GenerateVariationsSlider.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/AnimationClipUtilities.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Actions/AppActions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/TextureSkeletonExtensions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/Prompt/Prompt.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/AssetTitleCard/SelectedAssetTitleCard.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/States/GenerationResult.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Windows/AnimateGeneratorObjectPicker.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Slices/GenerationResultsSlice.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerateButton/GenerateButton.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/AssemblyInfo.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerationSelector/GenerationTile.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Actions/Creators/ContextAction.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/SessionPersistence/AnimateGeneratorSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/InputReference/VideoReference.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Actions/SessionActions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/ModelTitleCard/SelectedModelTitleCard.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/SessionPersistence/ObjectPersistence.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Windows/GenerationMetadataWindow/GenerationMetadataContent.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/VideoClipExtensions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/States/Settings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/AnimationClipDatabaseUtils.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/States/PreviewSettings.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/ModelSelectorButton/ModelSelectorButton.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/FileUtilities.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Windows/GenerationMetadataWindow/GenerationMetadataWindow.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Motion/PoseModel.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Windows/AnimateGeneratorWindow.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Actions/Payloads/Payload.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/AnimationClipDatabase.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Selectors/DebuggerSelectors.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/WebUtils.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/AssetReferenceExtensions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Slices/DebuggerSlice.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/States/GenerationSetting.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Motion/Timeline.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/SessionPersistence/SharedStore.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Slices/SessionSlice.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerateDurationSlider/GenerateDurationSlider.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/SplitterExtensions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/States/AnimationClipResult.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/States/Sessions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Actions/GenerationResultsActions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Services/Stores/Selectors/GenerationResultsSelectors.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/GridViewExtensions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Utilities/ImageReferenceExtensions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerationOptions/GenerationOptions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/AnimateGenerator/AnimateGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Windows/GenerationMetadataWindow/GenerationMetadataWindow.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerationSelector/GenerationTile.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/ModelTitleCard/ModelTitleCard.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/RefinementModeTabView/RefinementModeTabView.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/AssetTitleCard/AssetTitleCard.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/Prompt/Prompt.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/RefinementModeTabView/RefinementModeTabView.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/AnimateLoop/AnimateLoop.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/AnimateGenerator/AnimateGenerator.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/ModelTitleCard/SelectedModelTitleCard.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/LoopPreview/LoopPreview.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerationSelector/GenerationTile.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/InputReference/VideoReference.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerateButton/GenerateButton.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/InputReference/InputReferenceHeader.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/ModelTitleCard/ModelTitleCard.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/InputReference/InputReferenceHeader.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/AnimateLoop/AnimateLoop.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerateVariationsSlider/GenerateVariationsSlider.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/ModelSelectorButton/ModelSelectorButton.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/InputReference/InputReferenceObjectField.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerationOptions/GenerationOptions.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerationSelector/GenerationSelector.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/AnimateGenerator/AnimateGenerator.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/PreviewSizeSlider/PreviewSizeSlider.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Unity.AI.Animate.asmdef" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerateDurationSlider/GenerateDurationSlider.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/InputReference/VideoReference.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/GenerateButton/GenerateButton.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/InputReference/InputReference.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/InputReference/InputReferenceObjectField.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.generators@49eb4eaccb48/Modules/Unity.AI.Animate/Components/LoopPreview/LoopPreview.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Windows/GenerationMetadataWindow/GenerationMetadataWindow.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerationSelector/GenerationTile.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/ModelTitleCard/ModelTitleCard.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/RefinementModeTabView/RefinementModeTabView.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/AssetTitleCard/AssetTitleCard.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/Prompt/Prompt.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/RefinementModeTabView/RefinementModeTabView.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/AnimateGenerator/AnimateGenerator.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/ModelTitleCard/SelectedModelTitleCard.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerationSelector/GenerationTile.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/InputReference/VideoReference.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerateButton/GenerateButton.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/InputReference/InputReferenceHeader.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/ModelTitleCard/ModelTitleCard.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/InputReference/InputReferenceHeader.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerateVariationsSlider/GenerateVariationsSlider.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/ModelSelectorButton/ModelSelectorButton.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/InputReference/InputReferenceObjectField.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerationOptions/GenerationOptions.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerationSelector/GenerationSelector.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/AnimateGenerator/AnimateGenerator.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/PreviewSizeSlider/PreviewSizeSlider.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Unity.AI.Animate.asmdef" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerateDurationSlider/GenerateDurationSlider.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/InputReference/VideoReference.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/GenerateButton/GenerateButton.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/InputReference/InputReference.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.generators@bf6bfb1a644e/Modules/Unity.AI.Animate/Components/InputReference/InputReferenceObjectField.uxml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -676,12 +668,20 @@
       <HintPath>/Applications/Unity/Hub/Editor/6000.2.1f1/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DemiEditor">
+      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpToken">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
@@ -696,16 +696,20 @@
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
+    <Reference Include="DemiLib">
+      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="BeziSidekickInternal">
-      <HintPath>Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll</HintPath>
+    <Reference Include="DOTweenProEditor">
+      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="log4netPlastic">
@@ -720,10 +724,6 @@
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.IO.Hashing">
       <HintPath>Library/PackageCache/com.unity.collections@d49facba0036/Unity.Collections.Tests/System.IO.Hashing/System.IO.Hashing.dll</HintPath>
       <Private>False</Private>
@@ -732,16 +732,24 @@
       <HintPath>Packages/com.bezi.sidekick/Plugins/bezi-websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="SharpToken">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -749,7 +757,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="AiEditorToolsSdk">
-      <HintPath>Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Sdk/Editor/AiEditorToolsSdk.dll</HintPath>
+      <HintPath>Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Sdk/Editor/AiEditorToolsSdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
@@ -760,56 +768,16 @@
       <HintPath>Library/PackageCache/com.unity.nuget.mono-cecil@d78732e851eb/Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.Reflection.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Reflection.Editor.dll</HintPath>
+    <Reference Include="BeziSidekickInternal">
+      <HintPath>Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+    <Reference Include="System.Reflection.Metadata">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Reflection.Metadata.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Utilities">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DemiEditor">
-      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenPro">
-      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DemiLib">
-      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenProEditor">
-      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

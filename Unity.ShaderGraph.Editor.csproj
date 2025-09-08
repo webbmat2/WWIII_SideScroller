@@ -192,10 +192,10 @@
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Interface/IRequiresData.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Serialization/MultiJsonInternal.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Drawing/Colors/ShaderGraphHeatmapValues.cs" />
+    <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/GeometryNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Math/Matrix/MatrixConstructionNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Interfaces/IMayRequireTime.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Drawing/Controls/TextureArrayControl.cs" />
-    <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/GeometryNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Graphs/PositionMaterialSlot.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Legacy/Edge0.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Drawing/ViewModels/InspectorViewModel.cs" />
@@ -301,8 +301,8 @@
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Generation/Targets/VFXTarget.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Util/StackPool.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Drawing/Inspector/InspectorView.cs" />
-    <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Drawing/Inspector/PropertyDrawers/DropdownPropertyDrawer.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Interfaces/IMayRequireInstanceID.cs" />
+    <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Drawing/Inspector/PropertyDrawers/DropdownPropertyDrawer.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Artistic/Mask/ColorMaskNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Generation/Targets/CustomRenderTexture/CustomTextureSlice.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Generation/Processors/GraphCompilationResult.cs" />
@@ -598,8 +598,8 @@
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Input/Basic/Vector1Node.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Util/Identifier.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Artistic/Normal/NormalFromTextureNode.cs" />
-    <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Utility/PreviewNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Graphs/GradientMaterialSlot.cs" />
+    <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Utility/PreviewNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Input/Texture/SampleTexture2DLODNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Procedural/Noise/GradientNoiseNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Graphs/SamplerStateShaderProperty.cs" />
@@ -680,9 +680,9 @@
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Graphs/BooleanShaderProperty.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Input/Gradient/SampleGradientNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Generation/Targets/Fullscreen/FullscreenMetaData.cs" />
+    <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Util/FunctionRegistry.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Input/Geometry/TangentVectorNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Graphs/TangentMaterialSlot.cs" />
-    <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Util/FunctionRegistry.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Math/Interpolation/InverseLerpNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Attributes/SGPropertyDrawerAttribute.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Channel/AppendVectorNode.cs" />
@@ -734,8 +734,8 @@
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Generation/Processors/MatrixNames.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Math/Trigonometry/CosineNode.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Data/Nodes/Math/Basic/SquareRootNode.cs" />
-    <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Generation/Attributes/GenerateBlocksAttribute.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Drawing/Controls/IControlAttribute.cs" />
+    <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Generation/Attributes/GenerateBlocksAttribute.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Drawing/Inspector/PropertyDrawers/Vector2PropertyDrawer.cs" />
     <Compile Include="Library/PackageCache/com.unity.shadergraph@844e9247af82/Editor/Drawing/Controls/EnumControl.cs" />
   </ItemGroup>
@@ -1371,12 +1371,20 @@
       <HintPath>/Applications/Unity/Hub/Editor/6000.2.1f1/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DemiEditor">
+      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpToken">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
@@ -1391,16 +1399,20 @@
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
+    <Reference Include="DemiLib">
+      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="BeziSidekickInternal">
-      <HintPath>Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll</HintPath>
+    <Reference Include="DOTweenProEditor">
+      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="log4netPlastic">
@@ -1415,10 +1427,6 @@
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.IO.Hashing">
       <HintPath>Library/PackageCache/com.unity.collections@d49facba0036/Unity.Collections.Tests/System.IO.Hashing/System.IO.Hashing.dll</HintPath>
       <Private>False</Private>
@@ -1427,16 +1435,24 @@
       <HintPath>Packages/com.bezi.sidekick/Plugins/bezi-websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="SharpToken">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -1444,7 +1460,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="AiEditorToolsSdk">
-      <HintPath>Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Sdk/Editor/AiEditorToolsSdk.dll</HintPath>
+      <HintPath>Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Sdk/Editor/AiEditorToolsSdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
@@ -1455,56 +1471,16 @@
       <HintPath>Library/PackageCache/com.unity.nuget.mono-cecil@d78732e851eb/Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.Reflection.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Reflection.Editor.dll</HintPath>
+    <Reference Include="BeziSidekickInternal">
+      <HintPath>Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+    <Reference Include="System.Reflection.Metadata">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Reflection.Metadata.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Utilities">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DemiEditor">
-      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenPro">
-      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DemiLib">
-      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenProEditor">
-      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

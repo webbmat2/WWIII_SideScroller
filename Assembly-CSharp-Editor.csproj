@@ -23,7 +23,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <NoWarn>0169;USG0001</NoWarn>
-    <DefineConstants>UNITY_6000_2_1;UNITY_6000_2;UNITY_6000;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;UNITY_2023_3_OR_NEWER;UNITY_6000_0_OR_NEWER;UNITY_6000_1_OR_NEWER;UNITY_6000_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_UNITY_CONSENT;ENABLE_UNITY_CLOUD_IDENTIFIERS;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;TEXTCORE_1_0_OR_NEWER;EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLOUD_SERVICES_ENGINE_DIAGNOSTICS;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_HAS_CUSTOM_MUTEX;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;DOTWEEN;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
+    <DefineConstants>UNITY_6000_2_1;UNITY_6000_2;UNITY_6000;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;UNITY_2023_3_OR_NEWER;UNITY_6000_0_OR_NEWER;UNITY_6000_1_OR_NEWER;UNITY_6000_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_UNITY_CONSENT;ENABLE_UNITY_CLOUD_IDENTIFIERS;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;TEXTCORE_1_0_OR_NEWER;EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLOUD_SERVICES_ENGINE_DIAGNOSTICS;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_HAS_CUSTOM_MUTEX;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;DOTWEEN;APP_UI_EDITOR_ONLY;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,279 +46,16 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.1f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.1f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.1f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
-    <Analyzer Include="/Users/webbmat2/Desktop/WWIII/WWIII_SideScroller/Library/PackageCache/com.unity.ai.inference@4ac711cab9a3/Runtime/Core/SourceGenerator/SourceGenerators.dll" />
-    <Analyzer Include="/Users/webbmat2/Desktop/WWIII/WWIII_SideScroller/Library/PackageCache/com.unity.dt.app-ui@7b87c8225c06/Runtime/SourceGenerators/netstandard2.0/EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/TimeLine/TickStyle.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Geometry/BoundingBox.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Data/Vertex.cs" />
-    <Compile Include="Assets/_Project/Scripts/Editor/FixAllErrorsNow.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Geometry/InputGeometry.cs" />
-    <Compile Include="Assets/_Project/Scripts/Editor/SceneCreator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SerializedCache.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SliceEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/ToolsExtra.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Exporter/Exporter.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/RectHandles.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/TriangleLocator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/IO/FileReader.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Primitives.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/EditorEventHandler.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SpriteMeshAnimationEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/EditorExtra.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexAnimation/SpriteMeshInstanceTracker.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Log/ILog.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/TextureEditorWindow.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Tools/RegionIterator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/IO/IGeometryFormat.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/AnimationBaker.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Tools/AdjacencyMatrix.cs" />
-    <Compile Include="Assets/HeroEditor/Common/Scripts/Editor/FirearmCollectionEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/IkLimb2DEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/EditorGUIExtra.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Data/Osub.cs" />
-    <Compile Include="Assets/_Project/Scripts/Editor/Unity6CompilationFixer.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/ContextMenu.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/IO/DataReader.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/MeshToolEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/OnionSkin/OnionLayer_56.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/IkCCD2DEditor.cs" />
-    <Compile Include="Assets/_Project/Scripts/Editor/RunCleanupNow.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Geometry/Point.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexManipulator/RectManipulator/IRectManipulatorData.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SpriteMeshData.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Geometry/ISegment.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SpriteMeshCache.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/IO/IMeshFormat.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexManipulator/IVertexManipulator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Behavior.cs" />
-    <Compile Include="Assets/_Project/Scripts/Editor/ChapterDataCreator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/OnionSkin/OnionLayer.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Tools/QualityMeasure.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Algorithm/Incremental.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SpriteMeshEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexAnimation/VertexSelection.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Data/BadTriangle.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexManipulator/IVertexManipulable.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/AnimationWindowExtra/AnimationWindowImpl_51_52_53_54_55.cs" />
-    <Compile Include="Assets/HeroEditor/Common/Scripts/Editor/LayerManagerEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/IO/InputTriangle.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/ScriptableObjectUtility.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Mesh.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Geometry/Edge.cs" />
-    <Compile Include="Assets/HeroEditor/Common/Scripts/Editor/PackageUpdater.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/TimeLine/TickHandler.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Data/Segment.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Gizmos.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexManipulator/RectManipulator/RectManipulatorData.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Algorithm/ITriangulator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/CurveUtility.cs" />
-    <Compile Include="Assets/HeroEditor/Common/Scripts/Editor/PackageFeedback.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/BbwPlugin.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Tools/CuthillMcKee.cs" />
-    <Compile Include="Assets/_Project/Scripts/Editor/FixPlayerErrors.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/IndexedEdge.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/AnimationWindowExtra/AnimationWindowImpl_56.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Tools/VoronoiRegion.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/IO/TriangleFormat.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Geometry/EdgeEnumerator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Carver.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Sampler.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SpriteMeshPostprocessor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/AnimationWindowExtra/AnimationWindowImpl_50.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/EditorUpdater.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexManipulator/RectManipulator/RectManipulator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/OnionSkin/OnionLayerManager.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/TimeLine/TimeLine.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Data/Triangle.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Tools/QuadTree.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Edge.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/TimeLine/BlendShapeFrameDopeElement.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Quality.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/AnimationFixer/AnimationFixer.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/AnimationWindowExtra/AnimationWindowExtra.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/IO/FileWriter.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/BoneWeight.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Smoothing/SimpleSmoother.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SpriteMeshEditorWindow.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/AnimationWindowExtra/AnimationWindowImpl_2017_1.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Log/ILogItem.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/BlendShapeFrame.cs" />
-    <Compile Include="Assets/_Project/Editor/MIssingScriptFinder.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/BoneUtils.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/TimeLine/IDopeElement.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Algorithm/SweepLine.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/BlendShape.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Data/BadSubseg.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/IkGroupEditor.cs" />
-    <Compile Include="Assets/BayatGames/Platform Game Assets Ultimate/Scripts/Editor/AnimationHierarchyEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/IO/DebugWriter.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/TimeLine/ZoomableArea.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexManipulator/VertexManipulator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/PoseUtils.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Tools/Voronoi.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/BlendShapeEditor.cs" />
-    <Compile Include="Assets/_Project/Editor/MissingScriptsFinder.cs" />
-    <Compile Include="Assets/_Project/Scripts/Editor/ProjectCleanup.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/InspectorEditor.cs" />
-    <Compile Include="Assets/_Project/Scripts/Editor/IMMEDIATE_FIXES.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/ColorRing.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Hole.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Tools/BoundedVoronoi.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/PoseManagerEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/WeightEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Ik2DEditor.cs" />
-    <Compile Include="Assets/_Project/Scripts/Editor/ImmediatePlatformFix.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/HandlesExtra.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexAnimation/TransformTracker.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Tools/Statistic.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SpriteMeshInstanceEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SpriteMeshUtils.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/OnionSkin/MaterialCache.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/MaskCreator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Log/SimpleLogItem.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Algorithm/Dwyer.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Data/Otri.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/SelectionRectTool.cs" />
-    <Compile Include="Assets/BayatGames/Platform Game Assets Ultimate/Scripts/Editor/WelcomeWindow.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/BlendShapeFrameEditor.cs" />
-    <Compile Include="Assets/_Project/Editor/TileStripPainter.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/BadTriQueue.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Log/SimpleLog.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/OnionSkin/ObjectPool.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Tools/IVoronoi.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/WindowEditorTool.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Smoothing/ISmoother.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/AnimationWindowExtra/IAnimationWindowImpl.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Geometry/ITriangle.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Enums.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/IkUtils.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Node.cs" />
-    <Compile Include="Assets/HeroEditor/Common/Scripts/Editor/IconCollectionEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Bone2DEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/BindInfo.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexManipulator/RectManipulator/RectManipulatorParams.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/Geometry/RegionPointer.cs" />
-    <Compile Include="Assets/_Project/Scripts/Editor/HazardPrefabCreator.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/OnionSkin/OnionSkinWindow.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/TimeLine/TimeArea.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexManipulator/RectManipulator/IRectManipulable.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/Triangle/NewLocation.cs" />
-    <Compile Include="Assets/HeroEditor/Common/Scripts/Editor/SpriteCollectionEditor.cs" />
-    <Compile Include="Assets/BayatGames/Plugin/Anima2D/Scripts/Editor/VertexAnimation/BakedMesh.cs" />
+    <Compile Include="Assets/WWIII/Editor/RB2DConstraintTools.cs" />
+    <Compile Include="Assets/Editor/Build/WWIIIBuilder.cs" />
+    <Compile Include="Assets/Editor/Level/URP2DAssetOptimizer.cs" />
+    <Compile Include="Assets/WWIII/Editor/Rigidbody2DConstraintNormalizer.cs" />
+    <Compile Include="Assets/Editor/Build/MobileAssetOptimizationMenu.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/commontypes.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/workspaceserver.zh-Hant.txt" />
-    <None Include="Assets/HeroEditor/Common/Scripts/Editor/HeroEditor.Common.Editor.dll" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm-help.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/differences.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/common.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/configurehelper.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/basecommands.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/plastic-gui.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/guihelp.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/clientcommon.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/clientcommon.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/guihelp.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/workspaceserver.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/i3.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/basecommands.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/guihelp.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/mergetool.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/clientcommon.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/images.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/differences.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/images.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/mergetool.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/mergetool.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm-help.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/plastic-gui.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/configurehelper.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/mergetool.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/basecommands.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/i3.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/commontypes.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/i3.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm-help.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/semantic.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/commontypes.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/binmergetool.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/binmergetool.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/workspaceserver.en.txt" />
     <None Include="Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/binmergetool.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/workspaceserver.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/mergetool.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/binmergetool.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/log4netPlastic.dll" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/xdiff.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/lz4x64Plastic.dll" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/semantic.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/commontypes.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/xdiff.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/commontypes.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/plastic-gui.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/unityplastic.dll" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/guihelp.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/configurehelper.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/differences.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/differences.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/images.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/semantic.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/images.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/binmergetool.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/xdiff.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/configurehelper.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/i3.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm.es.txt" />
-    <None Include="Library/PackageCache/com.unity.dt.app-ui@7b87c8225c06/PackageResources/Editor/ProjectSettings.uxml" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/FileSystemWatcherLicense.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/configurehelper.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/xdiff.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/plastic-gui.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/basecommands.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/mergetool.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/semantic.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/xdiff.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/common.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/semantic.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/differences.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/basecommands.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/differences.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/guihelp.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/plastic-gui.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/clientcommon.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/i3.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/images.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm-help.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Sdk/Editor/AiEditorToolsSdk.dll" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/commontypes.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/plastic-gui.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/guihelp.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/clientcommon.zh-Hant.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/workspaceserver.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm-help.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/basecommands.zh-Hans.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/images.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/i3.ko.txt" />
-    <None Include="Assets/BayatGames/Plugin/Anima2D/Lib/Editor/x64/Anima2D.dll" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/cm-help.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/semantic.ja.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/configurehelper.ko.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/binmergetool.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/clientcommon.en.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/zlib64Plastic.dll" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/workspaceserver.es.txt" />
-    <None Include="Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Localization/xdiff.zh-Hans.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -833,20 +570,12 @@
       <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="HeroEditor.Common.Editor">
-      <HintPath>Assets/HeroEditor/Common/Scripts/Editor/HeroEditor.Common.Editor.dll</HintPath>
+    <Reference Include="SharpToken">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Reflection.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Reflection.Editor.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
@@ -857,72 +586,20 @@
       <HintPath>Library/PackageCache/com.unity.ext.nunit@031a54704bff/net40/unity-custom/nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="DemiLib">
       <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="BeziSidekickInternal">
-      <HintPath>Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll</HintPath>
+    <Reference Include="DOTweenEditor">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenProEditor">
       <HintPath>Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/log4netPlastic.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="HeroEditor.Common">
-      <HintPath>Assets/HeroEditor/Common/Scripts/EditorScripts/HeroEditor.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/unityplastic.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.IO.Hashing">
       <HintPath>Library/PackageCache/com.unity.collections@d49facba0036/Unity.Collections.Tests/System.IO.Hashing/System.IO.Hashing.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Utilities">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="bezi-websocket-sharp">
@@ -933,40 +610,36 @@
       <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenPro">
       <HintPath>Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="SharpToken">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@74deb55db2a0/Runtime/Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="AiEditorToolsSdk">
-      <HintPath>Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Sdk/Editor/AiEditorToolsSdk.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library/PackageCache/com.unity.nuget.mono-cecil@d78732e851eb/Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BeziSidekickInternal">
+      <HintPath>Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Reflection.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
@@ -1495,119 +1168,55 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp.csproj" />
     <ProjectReference Include="UnityEngine.TestRunner.csproj" />
     <ProjectReference Include="UnityEditor.TestRunner.csproj" />
-    <ProjectReference Include="Unity.2D.Common.Path.Editor.csproj" />
-    <ProjectReference Include="Unity.XR.CoreUtils.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj" />
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj" />
     <ProjectReference Include="Unity.TextMeshPro.csproj" />
-    <ProjectReference Include="PsdPlugin.csproj" />
-    <ProjectReference Include="UnityEngine.SpatialTracking.csproj" />
+    <ProjectReference Include="WWIII.Scripts.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Enhancers.Editor.AIBridge.csproj" />
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj" />
     <ProjectReference Include="Unity.Splines.Editor.csproj" />
     <ProjectReference Include="PPv2URPConverters.csproj" />
-    <ProjectReference Include="Unity.2D.Common.Editor.csproj" />
+    <ProjectReference Include="Unity.Addressables.csproj" />
     <ProjectReference Include="DOTweenPro.Scripts.csproj" />
-    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Shared.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.csproj" />
-    <ProjectReference Include="Unity.InferenceEngine.ONNX.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Aseprite.Common.csproj" />
-    <ProjectReference Include="UnityEditor.SpatialTracking.csproj" />
-    <ProjectReference Include="Unity.2D.PixelPerfect.csproj" />
     <ProjectReference Include="Unity.Rendering.LightTransport.Editor.csproj" />
-    <ProjectReference Include="Unity.AdaptivePerformance.Simulator.Editor.csproj" />
-    <ProjectReference Include="Unity.InferenceEngine.MacBLAS.csproj" />
-    <ProjectReference Include="Unity.AI.Assistant.Bridge.Editor.csproj" />
-    <ProjectReference Include="Unity.AdaptivePerformance.Profiler.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Aseprite.Editor.csproj" />
-    <ProjectReference Include="Unity.InferenceEngine.Editor.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj" />
-    <ProjectReference Include="Unity.Mobile.AndroidLogcat.Editor.csproj" />
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj" />
-    <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj" />
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj" />
-    <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj" />
     <ProjectReference Include="Unity.InputSystem.ForUI.csproj" />
     <ProjectReference Include="Unity.Profiling.Core.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj" />
     <ProjectReference Include="UnityEngine.UI.csproj" />
-    <ProjectReference Include="Unity.AdaptivePerformance.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj" />
-    <ProjectReference Include="Unity.AI.Assistant.AvatarHelper.Editor.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.csproj" />
-    <ProjectReference Include="Unity.AppUI.csproj" />
-    <ProjectReference Include="Unity.2D.Sprite.AIIntegration.Editor.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.Shared.csproj" />
-    <ProjectReference Include="Unity.AdaptivePerformance.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.Enhancers.Editor.csproj" />
     <ProjectReference Include="Unity.InputSystem.csproj" />
-    <ProjectReference Include="Unity.2D.SpriteShape.Editor.csproj" />
     <ProjectReference Include="Unity.Splines.csproj" />
-    <ProjectReference Include="Unity.AppUI.Redux.csproj" />
+    <ProjectReference Include="Unity.Addressables.Editor.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj" />
-    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj" />
-    <ProjectReference Include="Unity.XR.Management.csproj" />
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj" />
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.csproj" />
     <ProjectReference Include="DOTween.Modules.csproj" />
-    <ProjectReference Include="Unity.2D.Animation.Editor.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj" />
-    <ProjectReference Include="Unity.AdaptivePerformance.Simulator.Extension.csproj" />
     <ProjectReference Include="Unity.Timeline.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj" />
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj" />
     <ProjectReference Include="Unity.Searcher.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.PixelPerfect.Editor.csproj" />
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj" />
-    <ProjectReference Include="Unity.XR.CoreUtils.csproj" />
     <ProjectReference Include="Unity.Burst.Editor.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj" />
     <ProjectReference Include="Unity.Mathematics.Editor.csproj" />
     <ProjectReference Include="Unity.Cinemachine.Editor.csproj" />
     <ProjectReference Include="Unity.Cinemachine.csproj" />
-    <ProjectReference Include="Unity.2D.Psdimporter.Editor.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj" />
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.IK.Editor.csproj" />
-    <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj" />
-    <ProjectReference Include="Unity.Notifications.csproj" />
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj" />
-    <ProjectReference Include="Unity.Notifications.Android.csproj" />
+    <ProjectReference Include="Unity.ResourceManager.csproj" />
     <ProjectReference Include="Unity.Collections.csproj" />
-    <ProjectReference Include="Unity.AI.Assistant.Agent.Dynamic.Extension.Editor.csproj" />
     <ProjectReference Include="Unity.Timeline.Editor.csproj" />
-    <ProjectReference Include="Unity.AppUI.Editor.csproj" />
     <ProjectReference Include="Unity.Mathematics.csproj" />
-    <ProjectReference Include="Unity.Serialization.csproj" />
-    <ProjectReference Include="Unity.Multiplayer.Center.Common.csproj" />
     <ProjectReference Include="Unity.Burst.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj" />
-    <ProjectReference Include="Unity.Multiplayer.Center.Editor.csproj" />
-    <ProjectReference Include="Unity.AdaptivePerformance.UI.Editor.csproj" />
-    <ProjectReference Include="Unity.Notifications.Unified.csproj" />
-    <ProjectReference Include="Unity.XR.Management.Editor.csproj" />
     <ProjectReference Include="Unity.Rendering.LightTransport.Runtime.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.State.csproj" />
-    <ProjectReference Include="Unity.AppUI.Navigation.Editor.csproj" />
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj" />
     <ProjectReference Include="Unity.Collections.Editor.csproj" />
-    <ProjectReference Include="Unity.Serialization.Editor.csproj" />
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj" />
-    <ProjectReference Include="Unity.InferenceEngine.iOSBLAS.csproj" />
-    <ProjectReference Include="Unity.Notifications.iOS.csproj" />
     <ProjectReference Include="Unity.Settings.Editor.csproj" />
     <ProjectReference Include="UnityEditor.UI.csproj" />
-    <ProjectReference Include="Unity.InferenceEngine.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

@@ -23,7 +23,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <NoWarn>0169;USG0001</NoWarn>
-    <DefineConstants>UNITY_6000_2_1;UNITY_6000_2;UNITY_6000;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;UNITY_2023_3_OR_NEWER;UNITY_6000_0_OR_NEWER;UNITY_6000_1_OR_NEWER;UNITY_6000_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_UNITY_CONSENT;ENABLE_UNITY_CLOUD_IDENTIFIERS;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;TEXTCORE_1_0_OR_NEWER;EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLOUD_SERVICES_ENGINE_DIAGNOSTICS;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_HAS_CUSTOM_MUTEX;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;DOTWEEN;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_6000_2_1;UNITY_6000_2;UNITY_6000;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;UNITY_2023_3_OR_NEWER;UNITY_6000_0_OR_NEWER;UNITY_6000_1_OR_NEWER;UNITY_6000_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_UNITY_CONSENT;ENABLE_UNITY_CLOUD_IDENTIFIERS;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;TEXTCORE_1_0_OR_NEWER;EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLOUD_SERVICES_ENGINE_DIAGNOSTICS;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_HAS_CUSTOM_MUTEX;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;DOTWEEN;APP_UI_EDITOR_ONLY;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
@@ -50,27 +50,44 @@
     <Analyzer Include="/Users/webbmat2/Desktop/WWIII/WWIII_SideScroller/Library/PackageCache/com.unity.dt.app-ui@7b87c8225c06/Runtime/SourceGenerators/netstandard2.0/EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/_Project/Scripts/Gameplay/Checkpoint.cs" />
-    <Compile Include="Assets/_Project/Scripts/UI/GameOverManager.cs" />
-    <Compile Include="Assets/_Project/Scripts/Data/PlayerData.cs" />
-    <Compile Include="Assets/_Project/Scripts/Audio/AudioManager.cs" />
-    <Compile Include="Assets/_Project/Scripts/Player/PlayerController.cs" />
-    <Compile Include="Assets/_Project/Scripts/Gameplay/CheckpointManager.cs" />
-    <Compile Include="Assets/_Project/Scripts/Core/BootstrapManager.cs" />
-    <Compile Include="Assets/_Project/Scripts/UI/HUDManager.cs" />
-    <Compile Include="Assets/_Project/Scripts/Audio/AudioTrigger.cs" />
-    <Compile Include="Assets/_Project/Scripts/Core/GameManager.cs" />
-    <Compile Include="Assets/_Project/Scripts/Camera/CameraFollowController.cs" />
-    <Compile Include="Assets/_Project/Scripts/Gameplay/Pickup.cs" />
-    <Compile Include="Assets/_Project/Scripts/UI/TouchControls.cs" />
-    <Compile Include="Assets/_Project/Scripts/Gameplay/BasicEnemy.cs" />
-    <Compile Include="Assets/_Project/Scripts/Core/MobileOptimizer.cs" />
-    <Compile Include="Assets/_Project/Scripts/UI/LevelSelectManager.cs" />
-    <Compile Include="Assets/_Project/Scripts/Core/SceneManager.cs" />
-    <Compile Include="Assets/_Project/Scripts/UI/MainMenuManager.cs" />
-    <Compile Include="Assets/_Project/Scripts/Gameplay/Hazard.cs" />
-    <Compile Include="Assets/_Project/Scripts/Core/InputManager.cs" />
-    <Compile Include="Assets/_Project/Scripts/UI/PauseMenuManager.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/RetroAdventure/Scripts/RetroAdventureProgressManager.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/RetroAdventure/Scripts/RetroAdventureLevel.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/RetroAdventure/Scripts/RetroAdventureFinishLevel.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/RetroAdventure/Scripts/RetroStar.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/Retro/Scripts/RetroDoor.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/Corgi2D/Scripts/BackgroundTree.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/LevelSelection/Scripts/LevelMapPathElement.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/Minimal/Scripts/UncheckReverseGravityInput.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/RetroAdventure/Scripts/RetroNextLevel.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/RetroAdventure/Scripts/RetroAdventureGUIManager.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/SuperHipsterBros/Scripts/Mushroom.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/SuperHipsterBros/Scripts/SuperHipsterBrosHealth.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/Retro/Scripts/RetroCopter.cs" />
+    <Compile Include="Assets/WWIII/Reference/CorgiDemos/LevelSelection/Scripts/LevelMapCharacter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets/WWIII/Reports/CleanupReport_20250903_091917.txt" />
+    <None Include="Assets/WWIII/Scenes/age45_Notes.txt" />
+    <None Include="Assets/WWIII/Scenes/age13_Notes.txt" />
+    <None Include="Assets/WWIII/Scenes/age21_Notes.txt" />
+    <None Include="Assets/WWIII/Reports/AssetVerificationReport_20250903_103753.txt" />
+    <None Include="Assets/WWIII/Scenes/age28_Notes.txt" />
+    <None Include="Assets/WWIII/Reports/CleanupReport_20250903_092550.txt" />
+    <None Include="Assets/WWIII/Scenes/age7_Notes.txt" />
+    <None Include="Assets/WWIII/Scenes/age50_Notes.txt" />
+    <None Include="Assets/WWIII/Scenes/age18_Notes.txt" />
+    <None Include="Assets/WWIII/Reference/CorgiDemos/MoreMountains.CorgiEngine.Demos.asmref" />
+    <None Include="Assets/WWIII/Reports/SpawnValidationReport_20250903_100705.txt" />
+    <None Include="Assets/WWIII/Reference/CorgiDemos/Brobro/Spine/Brobro/space-corgi.atlas.txt" />
+    <None Include="Assets/WWIII/Scenes/age35_Notes.txt" />
+    <None Include="Assets/WWIII/Reports/SpawnValidationReport_20250903_101925.txt" />
+    <None Include="Assets/WWIII/Scenes/age16_Notes.txt" />
+    <None Include="Assets/WWIII/Reports/NamespaceReport_20250903_091936.txt" />
+    <None Include="Assets/WWIII/Reference/CorgiDemos/Retro/Shaders/MMSpriteHDR.shader" />
+    <None Include="Assets/WWIII/Reference/CorgiDemos/Corgi2D/Spine/SpaceCorgi/space-corgi.atlas.txt" />
+    <None Include="Assets/WWIII/Reference/CorgiDemos/Corgi2D/Spine/Heavy/heavy-corgi.atlas.txt" />
+    <None Include="Assets/WWIII/Reports/PackageValidation_20250903_091946.txt" />
+    <None Include="Assets/WWIII/Reference/CorgiDemos/Corgi2D/Spine/NativeSpineCorgi/ExportedFromSpine/space-corgi.atlas.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -553,8 +570,12 @@
       <HintPath>/Applications/Unity/Hub/Editor/6000.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    <Reference Include="SharpToken">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
@@ -565,12 +586,8 @@
       <HintPath>Library/PackageCache/com.unity.ext.nunit@031a54704bff/net40/unity-custom/nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
+    <Reference Include="DemiLib">
+      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.IO.Hashing">
@@ -581,16 +598,24 @@
       <HintPath>Packages/com.bezi.sidekick/Plugins/bezi-websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="SharpToken">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -599,46 +624,6 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library/PackageCache/com.unity.nuget.mono-cecil@d78732e851eb/Mono.Cecil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Reflection.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Reflection.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Utilities">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenPro">
-      <HintPath>Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DemiLib">
-      <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
@@ -1174,6 +1159,7 @@
     <ProjectReference Include="Unity.TextMeshPro.csproj" />
     <ProjectReference Include="PsdPlugin.csproj" />
     <ProjectReference Include="UnityEngine.SpatialTracking.csproj" />
+    <ProjectReference Include="WWIII.Scripts.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj" />
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
     <ProjectReference Include="Unity.2D.Enhancers.Editor.AIBridge.csproj" />
@@ -1225,7 +1211,6 @@
     <ProjectReference Include="Unity.Splines.csproj" />
     <ProjectReference Include="Unity.AppUI.Redux.csproj" />
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj" />
-    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj" />
     <ProjectReference Include="Unity.XR.Management.csproj" />
     <ProjectReference Include="Unity.2D.IK.Runtime.csproj" />
     <ProjectReference Include="DOTween.Modules.csproj" />
