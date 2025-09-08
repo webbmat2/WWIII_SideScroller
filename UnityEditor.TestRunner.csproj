@@ -103,8 +103,8 @@
     <Compile Include="Library/PackageCache/com.unity.test-framework@a6f5be5f149c/UnityEditor.TestRunner/GUI/Controls/MultiValueContentProvider.cs" />
     <Compile Include="Library/PackageCache/com.unity.test-framework@a6f5be5f149c/UnityEditor.TestRunner/CommandLineParser/ICommandLineOption.cs" />
     <Compile Include="Library/PackageCache/com.unity.test-framework@a6f5be5f149c/UnityEditor.TestRunner/TestRun/Tasks/CleanupConstructDelegatorTask.cs" />
-    <Compile Include="Library/PackageCache/com.unity.test-framework@a6f5be5f149c/UnityEditor.TestRunner/TestRun/Tasks/SaveUndoIndexTask.cs" />
     <Compile Include="Library/PackageCache/com.unity.test-framework@a6f5be5f149c/UnityEditor.TestRunner/Api/ITestRunnerApi.cs" />
+    <Compile Include="Library/PackageCache/com.unity.test-framework@a6f5be5f149c/UnityEditor.TestRunner/TestRun/Tasks/SaveUndoIndexTask.cs" />
     <Compile Include="Library/PackageCache/com.unity.test-framework@a6f5be5f149c/UnityEditor.TestRunner/TestLaunchers/Helpers/PrebuildSetupAttributeFinder.cs" />
     <Compile Include="Library/PackageCache/com.unity.test-framework@a6f5be5f149c/UnityEditor.TestRunner/TestLaunchers/RemotePlayerLogController.cs" />
     <Compile Include="Library/PackageCache/com.unity.test-framework@a6f5be5f149c/UnityEditor.TestRunner/TestLaunchers/PlatformSetup/IPlatformSetup.cs" />

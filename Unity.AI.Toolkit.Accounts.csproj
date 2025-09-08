@@ -48,89 +48,100 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.1f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Spinner/Spinner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/Content/ConnectToCloudBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/States/ApiAccessibleState.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/States/LegalAgreementState.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/AssemblyInfo.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/AsyncUtils.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Results/Data.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/Content/AIDisabledPackageBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/States/SessionState.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/States/NetworkState.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/AccountApi.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/GeneratorsSessionStatusBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIAssistantMenuItem/AIAssistantMenuItem.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/AccountLinks.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/RichLabel/LabelLink.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/NetworkAvailability.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/States/PointsBalanceState.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/AssistantSessionStatusBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/RichLabel/RichLabel.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/States/CloudConnectedState.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/States/SessionStatusState.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/Content/SignInDelayedBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/Content/SignInBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/Content/ConnectToCloudDelayedBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/AIDropdownController.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/Auth.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/SessionStatusBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/Delegates.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/States/SettingsState.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/Content/AIDisabledLegalBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Manipulators/SessionStatusTracker.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/Content/AIDisabledBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/Content/AccountLoadDelayedBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/LegalAgreement/LegalAgreement.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/States/SignInState.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/AccountController.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/IProxy.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIToolbarButton/AIToolbarButton.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Debugger/Debugger.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdown/AIDropdownCheckUpdates.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/Content/NoNetworkBanner.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/Content/BannerContent.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Connect/UnityConnectUtils.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/Signal.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/Logger.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/DropdownLoading/DropdownLoading.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Connect/AccountBridge.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/AccountPersistence.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Points/PointsBeta.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdown/AIDropdown.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/DropdownExtension.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/RichLabel/LabelUrlLink.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/Proxy.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdown/AIDropdownManageAccount.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Account.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdownContent/AIDropdownContent.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdownRoot/AIDropdownRoot.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Points/Points.cs" />
-    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Services/Core/Extensions.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Spinner/Spinner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/ConnectToCloudBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/GeneratorsUnsupportedBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/PackagesUnsupportedBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/States/ApiAccessibleState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/States/LegalAgreementState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/AssemblyInfo.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/AsyncUtils.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Results/Data.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/SettingsFailedBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/AIDisabledPackageBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/States/SessionState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/States/NetworkState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/AccountApi.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/Environment.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/GeneratorsSessionStatusBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIAssistantMenuItem/AIAssistantMenuItem.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/AccountLinks.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/RichLabel/LabelLink.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/NetworkAvailability.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/States/PointsBalanceState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/AssistantSessionStatusBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/RichLabel/RichLabel.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/States/CloudConnectedState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdown/AIDropdownViewDocumentation.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/States/SessionStatusState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/SignInDelayedBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/SignInBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/ConnectToCloudDelayedBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/AIDropdownController.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/Auth.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/SessionStatusBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/Delegates.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/States/SettingsState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/AIDisabledLegalBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Manipulators/SessionStatusTracker.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/AIDisabledBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/AccountLoadDelayedBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/LegalAgreement/LegalAgreement.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/States/SignInState.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Connect/UnityConnectProvider.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/AccountController.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/IProxy.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Points/PointLoadFailedMessage.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIToolbarButton/AIToolbarButton.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Debugger/Debugger.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdown/AIDropdownCheckUpdates.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/RegionBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/NoNetworkBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/Content/BannerContent.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Connect/UnityConnectUtils.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/Signal.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/Logger.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/DropdownLoading/DropdownLoading.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Connect/AccountBridge.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/AccountPersistence.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Points/PointsBeta.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdown/AIDropdown.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Connect/PreferencesUtils.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/DropdownExtension.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/RichLabel/LabelUrlLink.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/Proxy.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdown/AIDropdownManageAccount.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Account.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdownContent/AIDropdownContent.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdownRoot/AIDropdownRoot.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Points/Points.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/AssistantUnsupportedBanner.cs" />
+    <Compile Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Services/Core/Extensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIToolbarButton/AIToolbarButton.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/DropdownLoading/DropdownLoading.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/RichLabel/RichLabel.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Points/PointsBeta.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Debugger/Debugger.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Points/PointsBeta.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/SessionStatusBanner/SessionStatusBanner.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Unity.AI.Toolkit.Accounts.asmdef" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Spinner/Spinner.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Points/Points.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdown/AIDropdownManageAccount.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Spinner/Spinner.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdown/AIDropdown.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/DropdownLoading/DropdownLoading.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Points/Points.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/LegalAgreement/LegalAgreement.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdown/AIDropdown.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/LegalAgreement/LegalAgreement.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdown/AIDropdownCheckUpdates.uxml" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/Debugger/Debugger.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdownRoot/AIDropdownRoot.uss" />
-    <None Include="Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Accounts/Components/AIDropdownRoot/AIDropdownRoot.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIToolbarButton/AIToolbarButton.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/DropdownLoading/DropdownLoading.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/RichLabel/RichLabel.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Points/PointsBeta.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Debugger/Debugger.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Points/PointsBeta.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/SessionStatusBanner/SessionStatusBanner.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Unity.AI.Toolkit.Accounts.asmdef" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Spinner/Spinner.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Points/Points.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdown/AIDropdownManageAccount.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Spinner/Spinner.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdown/AIDropdown.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/DropdownLoading/DropdownLoading.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Points/Points.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/LegalAgreement/LegalAgreement.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdown/AIDropdownViewDocumentation.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdown/AIDropdown.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/LegalAgreement/LegalAgreement.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdown/AIDropdownCheckUpdates.uxml" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/Debugger/Debugger.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdownRoot/AIDropdownRoot.uss" />
+    <None Include="Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Accounts/Components/AIDropdownRoot/AIDropdownRoot.uxml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -645,16 +656,16 @@
       <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="SharpToken">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.Reflection.Editor">
+      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Reflection.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
@@ -665,6 +676,10 @@
       <HintPath>Library/PackageCache/com.unity.ext.nunit@031a54704bff/net40/unity-custom/nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
@@ -673,12 +688,28 @@
       <HintPath>Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sirenix.Serialization.Config">
+      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.Editor">
+      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DOTweenEditor">
       <HintPath>Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BeziSidekickInternal">
+      <HintPath>Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenProEditor">
@@ -693,12 +724,24 @@
       <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sirenix.OdinInspector.Attributes">
+      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@8f3c30ecd081/Lib/Editor/unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.IO.Hashing">
       <HintPath>Library/PackageCache/com.unity.collections@d49facba0036/Unity.Collections.Tests/System.IO.Hashing/System.IO.Hashing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.Utilities">
+      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="bezi-websocket-sharp">
@@ -709,14 +752,6 @@
       <HintPath>Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Collections.Immutable.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@b4d700247d4b/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
@@ -725,12 +760,24 @@
       <HintPath>Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpToken">
+      <HintPath>Packages/com.bezi.sidekick/Plugins/SharpToken.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sirenix.Utilities.Editor">
+      <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@74deb55db2a0/Runtime/Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AiEditorToolsSdk">
-      <HintPath>Library/PackageCache/com.unity.ai.toolkit@97783faabe3b/Modules/Sdk/Editor/AiEditorToolsSdk.dll</HintPath>
+      <HintPath>Library/PackageCache/com.unity.ai.toolkit@493fe336b8c1/Modules/Sdk/Editor/AiEditorToolsSdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
@@ -739,18 +786,6 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library/PackageCache/com.unity.nuget.mono-cecil@d78732e851eb/Mono.Cecil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="BeziSidekickInternal">
-      <HintPath>Packages/com.bezi.sidekick/Editor/BeziSidekickInternal.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Reflection.Metadata">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/System.Reflection.Metadata.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>Packages/com.bezi.sidekick/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
