@@ -1,0 +1,3 @@
+Level: Torch Lake: Cottage → Party Store
+Age: 13
+ID: age13

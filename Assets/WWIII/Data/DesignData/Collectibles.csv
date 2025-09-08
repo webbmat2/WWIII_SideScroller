@@ -1,0 +1,5 @@
+designId,displayName,prefabKey,points,isPhoto
+photo_shard,Photo Shard,Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab,1,TRUE
+moose_tracks,Moose Tracks,Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab,1,TRUE
+broccoli_supreme,Broccoli Supreme,Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab,1,TRUE
+shamrock,Shamrock,Assets/WWIII/Prefabs/Collectibles/PhotoCollectible.prefab,1,TRUE

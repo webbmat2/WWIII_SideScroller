@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599a266e6e4484851a42af0ab4508bd8, type: 3}
+  m_Name: Jim_AgeSet
+  m_EditorClassIdentifier: Assembly-CSharp::WWIII.SideScroller.Aging.AgeSet
+  ages:
+  - {fileID: 11400000, guid: 12cd9dd163a4148b99dbccd5911143d7, type: 2}
+  - {fileID: 11400000, guid: 11d14ca6b0fd6409fbf83fb0a42c8938, type: 2}
+  - {fileID: 11400000, guid: 8d743d0a42d7b4e7ca770db2f8a5c424, type: 2}
+  - {fileID: 11400000, guid: b28a08f5f534540239a87c1e414ca24c, type: 2}
+  - {fileID: 11400000, guid: f8607b7dc08f24371aa9ba2dfe69a695, type: 2}

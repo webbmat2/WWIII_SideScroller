@@ -1,0 +1,273 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce15f5a64d7948208c3f31e08ec6d89, type: 3}
+  m_Name: LevelThemeProfile
+  m_EditorClassIdentifier: WWIII.SideScroller::WWIII.SideScroller.Level.LevelThemeProfile
+  themes:
+  - ageYears: 7
+    groundTiles:
+    - {fileID: 11400000, guid: d8815770c3fbe4c65896f26f546b529a, type: 2}
+    - {fileID: 11400000, guid: e4e9feec5c8d64400a255a19b12138cc, type: 2}
+    - {fileID: 11400000, guid: fc8b814bd4c274e5db26d23382159a20, type: 2}
+    - {fileID: 11400000, guid: 8787d929f65f5495c91a7a4f4952b906, type: 2}
+    - {fileID: 11400000, guid: c233dbecf5bd34b50a74e63b748adea2, type: 2}
+    - {fileID: 11400000, guid: 206926932fd5e48d4890875a92f1351e, type: 2}
+    - {fileID: 11400000, guid: 0937fd7e2e14d487ea39a491a02a8082, type: 2}
+    - {fileID: 11400000, guid: 772281a53d29241a2ade758800ded877, type: 2}
+    - {fileID: 11400000, guid: 3c15fd8b5e7314b3395778a96cc6b945, type: 2}
+    - {fileID: 11400000, guid: b2e5bc7093c514e42b51f2bc550feed6, type: 2}
+    - {fileID: 11400000, guid: 29e961785631a4d73bc586e92fe1553f, type: 2}
+    - {fileID: 11400000, guid: 638d830ea04c04992b8fc33bbbdde00a, type: 2}
+    - {fileID: 11400000, guid: 878c4b6f7d5a447d5b7063cd560fdd26, type: 2}
+    - {fileID: 11400000, guid: a39b08a5e155048dc8a8a9ff3f59a287, type: 2}
+    - {fileID: 11400000, guid: 2e17bcf6f715144ec8d6462c20169a2a, type: 2}
+    - {fileID: 11400000, guid: c325c0e11db0945ed977b2635bc0cc47, type: 2}
+    - {fileID: 11400000, guid: bc9ce02e3223b4e468b82f1cddc3f666, type: 2}
+    - {fileID: 11400000, guid: 121a29212ae984fa2994d06fc09a9fce, type: 2}
+    - {fileID: 11400000, guid: 1a7e6c2e932dc40a38f75713586de3ad, type: 2}
+    - {fileID: 11400000, guid: 14b96438ff3f44d11a51f62324bc0364, type: 2}
+    - {fileID: 11400000, guid: 0e9f9bda51f7d4190a0087654b4af6b8, type: 2}
+    - {fileID: 11400000, guid: 6fb75d8c858ba48ee86118298c3975e0, type: 2}
+    - {fileID: 11400000, guid: 50a29279e5cb947e3894d801243bd7bb, type: 2}
+    - {fileID: 11400000, guid: 84636a22836f3457e9810f1597011bb3, type: 2}
+    backgroundTiles:
+    - {fileID: 11400000, guid: 30da9688598ba40c4af90fbf3752cf2c, type: 2}
+    - {fileID: 11400000, guid: bd6c8212a447349f28e322bfd8ed4437, type: 2}
+    - {fileID: 11400000, guid: 0ffa876154b394e81ad4b39d7586f393, type: 2}
+    - {fileID: 11400000, guid: b1e17a63959a646e9958ca357c10c546, type: 2}
+    - {fileID: 11400000, guid: 20759126b7a6242c1a3c1d378629ad25, type: 2}
+    - {fileID: 11400000, guid: f8d0319741c7e449d9eb8ebce2f06d2c, type: 2}
+    - {fileID: 11400000, guid: 8132b1fecc8c74404b70dfc88b5085bc, type: 2}
+    - {fileID: 11400000, guid: 0723616ff5c234da5ba064a2bc73b808, type: 2}
+    - {fileID: 11400000, guid: 0a97b8682cc864ed4807f98d0eb10cf8, type: 2}
+    - {fileID: 11400000, guid: d01fbded5b30c4c1cbd0ddc03397e9a1, type: 2}
+    - {fileID: 11400000, guid: 136a77515c2aa4fcc84bce5f4078504c, type: 2}
+    - {fileID: 11400000, guid: c3fde9e02cd2a483abb4bb77891312fc, type: 2}
+    - {fileID: 11400000, guid: e51c02fe17c444b5cbad3efcb3a477b5, type: 2}
+    - {fileID: 11400000, guid: 1ae345ac52b21427397fcb3715e526ab, type: 2}
+    - {fileID: 11400000, guid: d632b4963721c48cd8a4052f17c0c838, type: 2}
+    - {fileID: 11400000, guid: 8313ae97f3e8a47fbbb9d1c987546167, type: 2}
+    foregroundTiles:
+    - {fileID: 11400000, guid: a853ad755a890465bb9144c3cdba2bdc, type: 2}
+    - {fileID: 11400000, guid: ad5ff47e50c0c4492b7beeb37ec29c62, type: 2}
+    - {fileID: 11400000, guid: 31a1d28c5406544e789a56dfe3830f4f, type: 2}
+    - {fileID: 11400000, guid: 5812ca37a04c344909ec5c66099d1708, type: 2}
+    - {fileID: 11400000, guid: 18cbd47929f6c415091d6ce94fabb6d4, type: 2}
+    - {fileID: 11400000, guid: 893a3bb88408343519776f0b43acb6cc, type: 2}
+    - {fileID: 11400000, guid: 331f580b31f5a44eb8bb93f698a62834, type: 2}
+    - {fileID: 11400000, guid: c80a8414becbb4ecfac9e47204906c20, type: 2}
+    platformPrefabs: []
+    propPrefabs:
+    - {fileID: 1379742436009930, guid: a72e7502a94d0c84f85ea8b0d8f68fc8, type: 3}
+    - {fileID: 1749190415442934, guid: 72821dc89f8c8e241bdfdce390257154, type: 3}
+    - {fileID: 2282663123502762496, guid: 7b739a2314c282440bf31a5136fe421b, type: 3}
+    ambientTint: {r: 1, g: 1, b: 1, a: 1}
+  - ageYears: 11
+    groundTiles: []
+    backgroundTiles: []
+    foregroundTiles: []
+    platformPrefabs: []
+    propPrefabs:
+    - {fileID: 1379742436009930, guid: a72e7502a94d0c84f85ea8b0d8f68fc8, type: 3}
+    - {fileID: 1749190415442934, guid: 72821dc89f8c8e241bdfdce390257154, type: 3}
+    - {fileID: 4860458080893265196, guid: d5a3fab619861fe429463ec6bd05a895, type: 3}
+    - {fileID: 3797818786941347634, guid: 3fbab030c21adc74091bdcca309182a6, type: 3}
+    - {fileID: 826435620810586548, guid: fee52dc79bc523747b80c1dc0c4eb329, type: 3}
+    - {fileID: 3907239417993909979, guid: 68edcce418bc09d429706e11488f8da2, type: 3}
+    - {fileID: 5322009355588993718, guid: cca4736775dfb684bb243e1b5caf048f, type: 3}
+    - {fileID: 174739744994045521, guid: d9867a0c7b90d1a41a808b6b7aa065ae, type: 3}
+    - {fileID: 1865420948675540385, guid: ef77b076c70739e43bf05deb04122fc0, type: 3}
+    - {fileID: 1751342439485400, guid: ba6293b79f777d34ab1da3ff149815d8, type: 3}
+    - {fileID: 1795215311702556, guid: 81a9c97cadbc0614593e81bcd07c5755, type: 3}
+    - {fileID: 1052797329940940, guid: 0429aaf2bb0abee4c89efd265af31da2, type: 3}
+    - {fileID: 1005111320355666, guid: d88ab1754b278ba498e25c792bd38e1e, type: 3}
+    - {fileID: 8996308184292871020, guid: 8d6da9e0db7007340a49b99c59c4d356, type: 3}
+    - {fileID: 1048278190918402, guid: 3e70eb84ffb1a824a87fb65d46d35c6b, type: 3}
+    - {fileID: 8973740336410474932, guid: 5b334f6aaadfd95448130f1eb79dfff3, type: 3}
+    - {fileID: 2282663123502762496, guid: 7b739a2314c282440bf31a5136fe421b, type: 3}
+    - {fileID: 640664620196905725, guid: b8fa9b1a1f341484394a49e232ccdff8, type: 3}
+    ambientTint: {r: 0.95, g: 1, b: 1, a: 1}
+  - ageYears: 14
+    groundTiles: []
+    backgroundTiles: []
+    foregroundTiles: []
+    platformPrefabs: []
+    propPrefabs:
+    - {fileID: 1379742436009930, guid: a72e7502a94d0c84f85ea8b0d8f68fc8, type: 3}
+    - {fileID: 1749190415442934, guid: 72821dc89f8c8e241bdfdce390257154, type: 3}
+    - {fileID: 4860458080893265196, guid: d5a3fab619861fe429463ec6bd05a895, type: 3}
+    - {fileID: 3797818786941347634, guid: 3fbab030c21adc74091bdcca309182a6, type: 3}
+    - {fileID: 826435620810586548, guid: fee52dc79bc523747b80c1dc0c4eb329, type: 3}
+    - {fileID: 3907239417993909979, guid: 68edcce418bc09d429706e11488f8da2, type: 3}
+    - {fileID: 5322009355588993718, guid: cca4736775dfb684bb243e1b5caf048f, type: 3}
+    - {fileID: 174739744994045521, guid: d9867a0c7b90d1a41a808b6b7aa065ae, type: 3}
+    - {fileID: 1865420948675540385, guid: ef77b076c70739e43bf05deb04122fc0, type: 3}
+    - {fileID: 1751342439485400, guid: ba6293b79f777d34ab1da3ff149815d8, type: 3}
+    - {fileID: 1795215311702556, guid: 81a9c97cadbc0614593e81bcd07c5755, type: 3}
+    - {fileID: 1052797329940940, guid: 0429aaf2bb0abee4c89efd265af31da2, type: 3}
+    - {fileID: 1005111320355666, guid: d88ab1754b278ba498e25c792bd38e1e, type: 3}
+    - {fileID: 8996308184292871020, guid: 8d6da9e0db7007340a49b99c59c4d356, type: 3}
+    - {fileID: 1048278190918402, guid: 3e70eb84ffb1a824a87fb65d46d35c6b, type: 3}
+    - {fileID: 8973740336410474932, guid: 5b334f6aaadfd95448130f1eb79dfff3, type: 3}
+    - {fileID: 2282663123502762496, guid: 7b739a2314c282440bf31a5136fe421b, type: 3}
+    - {fileID: 640664620196905725, guid: b8fa9b1a1f341484394a49e232ccdff8, type: 3}
+    ambientTint: {r: 0.92, g: 0.98, b: 1, a: 1}
+  - ageYears: 17
+    groundTiles: []
+    backgroundTiles: []
+    foregroundTiles: []
+    platformPrefabs: []
+    propPrefabs:
+    - {fileID: 1379742436009930, guid: a72e7502a94d0c84f85ea8b0d8f68fc8, type: 3}
+    - {fileID: 1749190415442934, guid: 72821dc89f8c8e241bdfdce390257154, type: 3}
+    - {fileID: 4860458080893265196, guid: d5a3fab619861fe429463ec6bd05a895, type: 3}
+    - {fileID: 3797818786941347634, guid: 3fbab030c21adc74091bdcca309182a6, type: 3}
+    - {fileID: 826435620810586548, guid: fee52dc79bc523747b80c1dc0c4eb329, type: 3}
+    - {fileID: 3907239417993909979, guid: 68edcce418bc09d429706e11488f8da2, type: 3}
+    - {fileID: 5322009355588993718, guid: cca4736775dfb684bb243e1b5caf048f, type: 3}
+    - {fileID: 174739744994045521, guid: d9867a0c7b90d1a41a808b6b7aa065ae, type: 3}
+    - {fileID: 1865420948675540385, guid: ef77b076c70739e43bf05deb04122fc0, type: 3}
+    - {fileID: 1751342439485400, guid: ba6293b79f777d34ab1da3ff149815d8, type: 3}
+    - {fileID: 1795215311702556, guid: 81a9c97cadbc0614593e81bcd07c5755, type: 3}
+    - {fileID: 1052797329940940, guid: 0429aaf2bb0abee4c89efd265af31da2, type: 3}
+    - {fileID: 1005111320355666, guid: d88ab1754b278ba498e25c792bd38e1e, type: 3}
+    - {fileID: 8996308184292871020, guid: 8d6da9e0db7007340a49b99c59c4d356, type: 3}
+    - {fileID: 1048278190918402, guid: 3e70eb84ffb1a824a87fb65d46d35c6b, type: 3}
+    - {fileID: 8973740336410474932, guid: 5b334f6aaadfd95448130f1eb79dfff3, type: 3}
+    - {fileID: 2282663123502762496, guid: 7b739a2314c282440bf31a5136fe421b, type: 3}
+    - {fileID: 640664620196905725, guid: b8fa9b1a1f341484394a49e232ccdff8, type: 3}
+    ambientTint: {r: 0.9, g: 0.96, b: 1, a: 1}
+  - ageYears: 21
+    groundTiles: []
+    backgroundTiles: []
+    foregroundTiles: []
+    platformPrefabs: []
+    propPrefabs:
+    - {fileID: 1379742436009930, guid: a72e7502a94d0c84f85ea8b0d8f68fc8, type: 3}
+    - {fileID: 1749190415442934, guid: 72821dc89f8c8e241bdfdce390257154, type: 3}
+    - {fileID: 4860458080893265196, guid: d5a3fab619861fe429463ec6bd05a895, type: 3}
+    - {fileID: 3797818786941347634, guid: 3fbab030c21adc74091bdcca309182a6, type: 3}
+    - {fileID: 826435620810586548, guid: fee52dc79bc523747b80c1dc0c4eb329, type: 3}
+    - {fileID: 3907239417993909979, guid: 68edcce418bc09d429706e11488f8da2, type: 3}
+    - {fileID: 5322009355588993718, guid: cca4736775dfb684bb243e1b5caf048f, type: 3}
+    - {fileID: 174739744994045521, guid: d9867a0c7b90d1a41a808b6b7aa065ae, type: 3}
+    - {fileID: 1865420948675540385, guid: ef77b076c70739e43bf05deb04122fc0, type: 3}
+    - {fileID: 1751342439485400, guid: ba6293b79f777d34ab1da3ff149815d8, type: 3}
+    - {fileID: 1795215311702556, guid: 81a9c97cadbc0614593e81bcd07c5755, type: 3}
+    - {fileID: 1052797329940940, guid: 0429aaf2bb0abee4c89efd265af31da2, type: 3}
+    - {fileID: 1005111320355666, guid: d88ab1754b278ba498e25c792bd38e1e, type: 3}
+    - {fileID: 8996308184292871020, guid: 8d6da9e0db7007340a49b99c59c4d356, type: 3}
+    - {fileID: 1048278190918402, guid: 3e70eb84ffb1a824a87fb65d46d35c6b, type: 3}
+    - {fileID: 8973740336410474932, guid: 5b334f6aaadfd95448130f1eb79dfff3, type: 3}
+    - {fileID: 2282663123502762496, guid: 7b739a2314c282440bf31a5136fe421b, type: 3}
+    - {fileID: 640664620196905725, guid: b8fa9b1a1f341484394a49e232ccdff8, type: 3}
+    ambientTint: {r: 0.88, g: 0.95, b: 1, a: 1}
+  - ageYears: 28
+    groundTiles: []
+    backgroundTiles: []
+    foregroundTiles: []
+    platformPrefabs: []
+    propPrefabs:
+    - {fileID: 1379742436009930, guid: a72e7502a94d0c84f85ea8b0d8f68fc8, type: 3}
+    - {fileID: 1749190415442934, guid: 72821dc89f8c8e241bdfdce390257154, type: 3}
+    - {fileID: 4860458080893265196, guid: d5a3fab619861fe429463ec6bd05a895, type: 3}
+    - {fileID: 3797818786941347634, guid: 3fbab030c21adc74091bdcca309182a6, type: 3}
+    - {fileID: 826435620810586548, guid: fee52dc79bc523747b80c1dc0c4eb329, type: 3}
+    - {fileID: 3907239417993909979, guid: 68edcce418bc09d429706e11488f8da2, type: 3}
+    - {fileID: 5322009355588993718, guid: cca4736775dfb684bb243e1b5caf048f, type: 3}
+    - {fileID: 174739744994045521, guid: d9867a0c7b90d1a41a808b6b7aa065ae, type: 3}
+    - {fileID: 1865420948675540385, guid: ef77b076c70739e43bf05deb04122fc0, type: 3}
+    - {fileID: 1751342439485400, guid: ba6293b79f777d34ab1da3ff149815d8, type: 3}
+    - {fileID: 1795215311702556, guid: 81a9c97cadbc0614593e81bcd07c5755, type: 3}
+    - {fileID: 1052797329940940, guid: 0429aaf2bb0abee4c89efd265af31da2, type: 3}
+    - {fileID: 1005111320355666, guid: d88ab1754b278ba498e25c792bd38e1e, type: 3}
+    - {fileID: 8996308184292871020, guid: 8d6da9e0db7007340a49b99c59c4d356, type: 3}
+    - {fileID: 1048278190918402, guid: 3e70eb84ffb1a824a87fb65d46d35c6b, type: 3}
+    - {fileID: 8973740336410474932, guid: 5b334f6aaadfd95448130f1eb79dfff3, type: 3}
+    - {fileID: 2282663123502762496, guid: 7b739a2314c282440bf31a5136fe421b, type: 3}
+    - {fileID: 640664620196905725, guid: b8fa9b1a1f341484394a49e232ccdff8, type: 3}
+    ambientTint: {r: 0.86, g: 0.94, b: 1, a: 1}
+  - ageYears: 42
+    groundTiles: []
+    backgroundTiles: []
+    foregroundTiles: []
+    platformPrefabs: []
+    propPrefabs:
+    - {fileID: 1379742436009930, guid: a72e7502a94d0c84f85ea8b0d8f68fc8, type: 3}
+    - {fileID: 1749190415442934, guid: 72821dc89f8c8e241bdfdce390257154, type: 3}
+    - {fileID: 4860458080893265196, guid: d5a3fab619861fe429463ec6bd05a895, type: 3}
+    - {fileID: 3797818786941347634, guid: 3fbab030c21adc74091bdcca309182a6, type: 3}
+    - {fileID: 826435620810586548, guid: fee52dc79bc523747b80c1dc0c4eb329, type: 3}
+    - {fileID: 3907239417993909979, guid: 68edcce418bc09d429706e11488f8da2, type: 3}
+    - {fileID: 5322009355588993718, guid: cca4736775dfb684bb243e1b5caf048f, type: 3}
+    - {fileID: 174739744994045521, guid: d9867a0c7b90d1a41a808b6b7aa065ae, type: 3}
+    - {fileID: 1865420948675540385, guid: ef77b076c70739e43bf05deb04122fc0, type: 3}
+    - {fileID: 1751342439485400, guid: ba6293b79f777d34ab1da3ff149815d8, type: 3}
+    - {fileID: 1795215311702556, guid: 81a9c97cadbc0614593e81bcd07c5755, type: 3}
+    - {fileID: 1052797329940940, guid: 0429aaf2bb0abee4c89efd265af31da2, type: 3}
+    - {fileID: 1005111320355666, guid: d88ab1754b278ba498e25c792bd38e1e, type: 3}
+    - {fileID: 8996308184292871020, guid: 8d6da9e0db7007340a49b99c59c4d356, type: 3}
+    - {fileID: 1048278190918402, guid: 3e70eb84ffb1a824a87fb65d46d35c6b, type: 3}
+    - {fileID: 8973740336410474932, guid: 5b334f6aaadfd95448130f1eb79dfff3, type: 3}
+    - {fileID: 2282663123502762496, guid: 7b739a2314c282440bf31a5136fe421b, type: 3}
+    - {fileID: 640664620196905725, guid: b8fa9b1a1f341484394a49e232ccdff8, type: 3}
+    ambientTint: {r: 0.85, g: 0.93, b: 1, a: 1}
+  - ageYears: 56
+    groundTiles: []
+    backgroundTiles: []
+    foregroundTiles: []
+    platformPrefabs: []
+    propPrefabs:
+    - {fileID: 1379742436009930, guid: a72e7502a94d0c84f85ea8b0d8f68fc8, type: 3}
+    - {fileID: 1749190415442934, guid: 72821dc89f8c8e241bdfdce390257154, type: 3}
+    - {fileID: 4860458080893265196, guid: d5a3fab619861fe429463ec6bd05a895, type: 3}
+    - {fileID: 3797818786941347634, guid: 3fbab030c21adc74091bdcca309182a6, type: 3}
+    - {fileID: 826435620810586548, guid: fee52dc79bc523747b80c1dc0c4eb329, type: 3}
+    - {fileID: 3907239417993909979, guid: 68edcce418bc09d429706e11488f8da2, type: 3}
+    - {fileID: 5322009355588993718, guid: cca4736775dfb684bb243e1b5caf048f, type: 3}
+    - {fileID: 174739744994045521, guid: d9867a0c7b90d1a41a808b6b7aa065ae, type: 3}
+    - {fileID: 1865420948675540385, guid: ef77b076c70739e43bf05deb04122fc0, type: 3}
+    - {fileID: 1751342439485400, guid: ba6293b79f777d34ab1da3ff149815d8, type: 3}
+    - {fileID: 1795215311702556, guid: 81a9c97cadbc0614593e81bcd07c5755, type: 3}
+    - {fileID: 1052797329940940, guid: 0429aaf2bb0abee4c89efd265af31da2, type: 3}
+    - {fileID: 1005111320355666, guid: d88ab1754b278ba498e25c792bd38e1e, type: 3}
+    - {fileID: 8996308184292871020, guid: 8d6da9e0db7007340a49b99c59c4d356, type: 3}
+    - {fileID: 1048278190918402, guid: 3e70eb84ffb1a824a87fb65d46d35c6b, type: 3}
+    - {fileID: 8973740336410474932, guid: 5b334f6aaadfd95448130f1eb79dfff3, type: 3}
+    - {fileID: 2282663123502762496, guid: 7b739a2314c282440bf31a5136fe421b, type: 3}
+    - {fileID: 640664620196905725, guid: b8fa9b1a1f341484394a49e232ccdff8, type: 3}
+    ambientTint: {r: 0.84, g: 0.92, b: 1, a: 1}
+  - ageYears: 80
+    groundTiles: []
+    backgroundTiles: []
+    foregroundTiles: []
+    platformPrefabs: []
+    propPrefabs:
+    - {fileID: 1379742436009930, guid: a72e7502a94d0c84f85ea8b0d8f68fc8, type: 3}
+    - {fileID: 1749190415442934, guid: 72821dc89f8c8e241bdfdce390257154, type: 3}
+    - {fileID: 4860458080893265196, guid: d5a3fab619861fe429463ec6bd05a895, type: 3}
+    - {fileID: 3797818786941347634, guid: 3fbab030c21adc74091bdcca309182a6, type: 3}
+    - {fileID: 826435620810586548, guid: fee52dc79bc523747b80c1dc0c4eb329, type: 3}
+    - {fileID: 3907239417993909979, guid: 68edcce418bc09d429706e11488f8da2, type: 3}
+    - {fileID: 5322009355588993718, guid: cca4736775dfb684bb243e1b5caf048f, type: 3}
+    - {fileID: 174739744994045521, guid: d9867a0c7b90d1a41a808b6b7aa065ae, type: 3}
+    - {fileID: 1865420948675540385, guid: ef77b076c70739e43bf05deb04122fc0, type: 3}
+    - {fileID: 1751342439485400, guid: ba6293b79f777d34ab1da3ff149815d8, type: 3}
+    - {fileID: 1795215311702556, guid: 81a9c97cadbc0614593e81bcd07c5755, type: 3}
+    - {fileID: 1052797329940940, guid: 0429aaf2bb0abee4c89efd265af31da2, type: 3}
+    - {fileID: 1005111320355666, guid: d88ab1754b278ba498e25c792bd38e1e, type: 3}
+    - {fileID: 8996308184292871020, guid: 8d6da9e0db7007340a49b99c59c4d356, type: 3}
+    - {fileID: 1048278190918402, guid: 3e70eb84ffb1a824a87fb65d46d35c6b, type: 3}
+    - {fileID: 8973740336410474932, guid: 5b334f6aaadfd95448130f1eb79dfff3, type: 3}
+    - {fileID: 2282663123502762496, guid: 7b739a2314c282440bf31a5136fe421b, type: 3}
+    - {fileID: 640664620196905725, guid: b8fa9b1a1f341484394a49e232ccdff8, type: 3}
+    ambientTint: {r: 0.83, g: 0.91, b: 1, a: 1}

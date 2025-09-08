@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152478f42226b40d7aea08918b83ed60, type: 3}
+  m_Name: Jim_Age17_YoungAdult
+  m_EditorClassIdentifier: Assembly-CSharp::WWIII.SideScroller.Aging.AgeProfile
+  displayName: Young Adult
+  ageYears: 17
+  index: 0
+  playerLayerName: PlayerYoungAdult
+  overrideLayerIndex: -1
+  movement:
+    maxRunSpeed: 6
+    acceleration: 60
+    deceleration: 64
+    jumpForce: 8.6
+    gravityScale: 2.8
+  playerPrefab:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  animatorController:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  spriteAtlas:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  audioLabel:
+    m_LabelString: 
+  transitionCutscene:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  yarnStartNode: Age_17_Intro

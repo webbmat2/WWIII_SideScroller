@@ -1,0 +1,80 @@
+{
+  "name": "Age7InputActions",
+  "maps": [
+    {
+      "name": "Player",
+      "id": "00000000-0000-0000-0000-000000000001",
+      "actions": [
+        {
+          "name": "Move",
+          "type": "Value",
+          "id": "00000000-0000-0000-0000-000000000002",
+          "expectedControlType": "Vector2",
+          "bindings": [
+            {
+              "name": "WASD",
+              "id": "00000000-0000-0000-0000-000000000003",
+              "path": "2DVector",
+              "action": "Move",
+              "isComposite": true
+            },
+            {
+              "name": "up",
+              "id": "00000000-0000-0000-0000-000000000004",
+              "path": "<Keyboard>/w",
+              "action": "Move",
+              "isPartOfComposite": true
+            },
+            {
+              "name": "down",
+              "id": "00000000-0000-0000-0000-000000000005",
+              "path": "<Keyboard>/s",
+              "action": "Move",
+              "isPartOfComposite": true
+            },
+            {
+              "name": "left",
+              "id": "00000000-0000-0000-0000-000000000006",
+              "path": "<Keyboard>/a",
+              "action": "Move",
+              "isPartOfComposite": true
+            },
+            {
+              "name": "right",
+              "id": "00000000-0000-0000-0000-000000000007",
+              "path": "<Keyboard>/d",
+              "action": "Move",
+              "isPartOfComposite": true
+            }
+          ]
+        },
+        {
+          "name": "Jump",
+          "type": "Button",
+          "id": "00000000-0000-0000-0000-000000000008",
+          "expectedControlType": "Button",
+          "bindings": [
+            {
+              "id": "00000000-0000-0000-0000-000000000009",
+              "path": "<Keyboard>/space",
+              "action": "Jump"
+            }
+          ]
+        },
+        {
+          "name": "Run",
+          "type": "Button",
+          "id": "00000000-0000-0000-0000-00000000000a",
+          "expectedControlType": "Button",
+          "bindings": [
+            {
+              "id": "00000000-0000-0000-0000-00000000000b",
+              "path": "<Keyboard>/leftShift",
+              "action": "Run"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

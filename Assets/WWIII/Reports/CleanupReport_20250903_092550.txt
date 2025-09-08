@@ -1,0 +1,42 @@
+WWIII Cleanup Report
+Generated: 9/3/2025 9:25:50 AM
+
+Root scenes considered:
+  - Assets/WWIII/Scenes/BioLevel_Age7.unity
+  - Assets/WWIII/Scenes/BioLevel_Age13.unity
+  - Assets/WWIII/Scenes/BioLevel_Age16.unity
+  - Assets/WWIII/Scenes/BioLevel_Age18.unity
+  - Assets/WWIII/Scenes/BioLevel_Age21.unity
+  - Assets/WWIII/Scenes/BioLevel_Age28.unity
+  - Assets/WWIII/Scenes/BioLevel_Age35.unity
+  - Assets/WWIII/Scenes/BioLevel_Age42.unity
+  - Assets/WWIII/Scenes/BioLevel_Age56.unity
+  - Assets/WWIII/Scenes/Yarn Spinner Demo.unity
+
+All assets: 13236
+Used assets: 119
+Candidates to remove (unused): 18
+
+Unused assets (candidates):
+Assets/BEZI_PROJECT_RULES_UNITY_AI.md
+Assets/CURSOR_RULES.txt
+Assets/WWIII_URP_Asset_Renderer.asset
+Assets/XR/Settings/ARKitSettings.asset
+Assets/Adaptive Performance/AdaptivePerformanceGeneralSettings.asset
+Assets/UniversalRenderPipelineGlobalSettings.asset
+Assets/VSCODE_SETTINGS.json
+Assets/XR/Loaders/SimulationLoader.asset
+Assets/XR/UserSimulationSettings/SimulationEnvironmentAssetsManager.asset
+Assets/UNITY_AI_GITIGNORE.txt
+Assets/XR/UserSimulationSettings/Resources/XRSimulationPreferences.asset
+Assets/XR/Resources/XRSimulationRuntimeSettings.asset
+Assets/Adaptive Performance/Provider/Simulator Provider Loader.asset
+Assets/XR/Loaders/ARKitLoader.asset
+Assets/XR/XRGeneralSettingsPerBuildTarget.asset
+Assets/XR/Settings/XRSimulationSettings.asset
+Assets/WWIII_URP_Asset.asset
+Assets/Adaptive Performance/Settings/Simulator Provider Settings.asset
+
+Namespace consistency (non-matching):
+
+Package content validation (suspicious):
