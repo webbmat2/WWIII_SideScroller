@@ -50,9 +50,20 @@ namespace WWIII.Core
             bool useDynamicBatching = enableDynamicBatching;
             
             #if UNITY_ANDROID || UNITY_IOS
-
-            // Note: PlayerSettings is editor-only; avoid using it at runtime.
-            // Dynamic batching, instancing and skin weights are configured via Quality Settings and renderer settings.
+            
+            if (useGPUInstancing)
+            {
+                PlayerSettings.graphicsJobs = true;
+            }
+            
+            if (useDynamicBatching)
+            {
+                PlayerSettings.graphicsJobs = true;
+                // Dynamic batching is controlled via Quality Settings
+                QualitySettings.skinWeights = SkinWeights.TwoBones;
+            }
+            
+            QualitySettings.blendWeights = BlendWeights.TwoBones;
             QualitySettings.masterTextureLimit = GetTextureLimitBasedOnDevice();
             QualitySettings.lodBias = 1f;
             
