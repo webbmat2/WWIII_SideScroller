@@ -1,30 +1,94 @@
 {
-  "unity": {"version":"6000.2.1f1","doc":"https://docs.unity3d.com/Manual/"},
-  "urp": {"version":"17.2.0","doc":"https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@17.2"},
-  "timeline": {"version":"1.8.9","doc":"https://docs.unity3d.com/Packages/com.unity.timeline@1.8/manual/index.html"},
-  "addressables": {"version":"2.7.2","doc":"https://docs.unity3d.com/Packages/com.unity.addressables@2.7/manual/index.html"},
-  "cinemachine": {"version":"3.1.4","doc":"https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html"},
-  "input_system": {"version":"1.14.2","doc":"https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/index.html"},
-
-  "corgi_engine": {"version":"9.3","doc":"https://corgi-engine-docs.moremountains.com/index.html"},
-  "dotween_core": {"version":"1.7.285","doc":"https://dotween.demigiant.com/documentation.php"},
-  "dotween_pro": {"version":"1.0.380","doc":"https://dotween.demigiant.com/documentation.php#dotweenPro"},
-  "easy_save": {"version":"3.5.24","doc":"https://docs.moodkie.com/easy-save-3/"},
-  "yarn_spinner": {"version":"3.0.3","doc":"https://yarnspinner.dev/docs/"},
-  "odin_inspector": {"version":"3.3.1.13","doc":"https://odininspector.com/patch-notes/3-3-1-13"},
-  "afps_counter": {"version":"1.5.6","doc":"https://codestage.net/uas/afps/"},
-  "texturepacker_importer": {"version":"7.6.0","doc":"https://www.codeandweb.com/texturepacker"},
-  "platform_game_assets_ultimate": {"version":"1.3.1","doc":"(project local) /Docs/PlatformGameAssets/Readme.pdf"},
-
-  "unity_ai_assistant": {"version":"1.0.0-pre.12","doc":"https://docs.unity3d.com/Packages/com.unity.ai.assistant@1.0/manual/index.html"},
-  "unity_ai_generators": {"version":"1.0.0-pre.19","doc":"https://docs.unity3d.com/Packages/com.unity.ai.generators@1.0/changelog/CHANGELOG.html"},
-
-  "feel": {"version":"5.7","doc":"https://feel-docs.moremountains.com/"},
-  "text_animator": {"version":"2.3.1","doc":"https://febucci.com/text-animator/"},
-  "spine_editor": {"version":"4.3.01","doc":"https://esotericsoftware.com/spine-manual"},
-  "spine_unity": {"version":"4.3.x","doc":"https://esotericsoftware.com/spine-unity"},
-
-  "cursor_pro_codex": {"version":"1.5.11","doc":"https://docs.cursor.com/"},
-  "bezi": {"version":"1.9.1","doc":"https://docs.bezi.com/"}
+  "unity": {
+    "version": "6000.2.1f1",
+    "doc": "https://docs.unity3d.com/Manual/"
+  },
+  "urp": {
+    "version": "17.2.0",
+    "doc": "https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@17.2"
+  },
+  "timeline": {
+    "version": "1.8.9",
+    "doc": "https://docs.unity3d.com/Packages/com.unity.timeline@1.8/manual/index.html"
+  },
+  "addressables": {
+    "version": "2.7.2",
+    "doc": "https://docs.unity3d.com/Packages/com.unity.addressables@2.7/manual/index.html"
+  },
+  "cinemachine": {
+    "version": "3.1.4",
+    "doc": "https://docs.unity3d.com/Packages/com.unity.cinemachine@3.1/manual/index.html"
+  },
+  "input_system": {
+    "version": "1.14.2",
+    "doc": "https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/index.html"
+  },
+  "corgi_engine": {
+    "version": "9.3",
+    "doc": "https://corgi-engine-docs.moremountains.com/index.html"
+  },
+  "dotween_core": {
+    "version": "1.7.285",
+    "doc": "https://dotween.demigiant.com/documentation.php"
+  },
+  "dotween_pro": {
+    "version": "1.0.380",
+    "doc": "https://dotween.demigiant.com/documentation.php#dotweenPro"
+  },
+  "easy_save": {
+    "version": "3.5.24",
+    "doc": "https://docs.moodkie.com/easy-save-3/"
+  },
+  "yarn_spinner": {
+    "version": "3.0.3",
+    "doc": "https://yarnspinner.dev/docs/"
+  },
+  "odin_inspector": {
+    "version": "3.3.1.13",
+    "doc": "https://odininspector.com/patch-notes/3-3-1-13"
+  },
+  "afps_counter": {
+    "version": "1.5.6",
+    "doc": "https://codestage.net/uas/afps/"
+  },
+  "texturepacker_importer": {
+    "version": "7.6.0",
+    "doc": "https://www.codeandweb.com/texturepacker"
+  },
+  "platform_game_assets_ultimate": {
+    "version": "1.3.1",
+    "doc": "(project local) /Docs/PlatformGameAssets/Readme.pdf"
+  },
+  "unity_ai_assistant": {
+    "version": "1.0.0-pre.12",
+    "doc": "https://docs.unity3d.com/Packages/com.unity.ai.assistant@1.0/manual/index.html"
+  },
+  "unity_ai_generators": {
+    "version": "1.0.0-pre.19",
+    "doc": "https://docs.unity3d.com/Packages/com.unity.ai.generators@1.0/changelog/CHANGELOG.html"
+  },
+  "feel": {
+    "version": "5.7",
+    "doc": "https://feel-docs.moremountains.com/"
+  },
+  "text_animator": {
+    "version": "2.3.1",
+    "doc": "https://febucci.com/text-animator/"
+  },
+  "spine_editor": {
+    "version": "4.3.01",
+    "doc": "https://esotericsoftware.com/spine-manual"
+  },
+  "spine_unity": {
+    "version": "4.3.01",
+    "doc": "https://esotericsoftware.com/spine-unity"
+  },
+  "cursor_pro_codex": {
+    "version": "1.5.11",
+    "doc": "https://docs.cursor.com/"
+  },
+  "bezi": {
+    "version": "1.9.1",
+    "doc": "https://docs.bezi.com/"
+  }
 }
-
