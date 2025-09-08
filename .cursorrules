@@ -1,0 +1,4 @@
+INCLUDE: /instructions/stack.manifest.json
+INCLUDE: /instructions/AI_CONTRACT.md
+POLICY: Constrain to pinned versions. If a feature/menu isn’t in those docs, reply NOT IN VERSION and cite the manifest URL.
+OUTPUT: Diffs or exact Unity click paths with a verification checklist.
