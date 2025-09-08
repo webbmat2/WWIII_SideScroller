@@ -57,3 +57,22 @@ DELIVERABLES_FOR_AUDIT:
 
 CITATION_RULE:
 - Cite doc URLs from /instructions/stack.manifest.json for Input System and platform settings
+
+AUTO_ROUTING
+Codex must choose the best executor for each task:
+- If task needs in-Editor inspector steps, menu navigation, camera or Canvas wiring, package UI changes, or per-object fixes, generate a Unity AI Assistant PROMPT and stop.
+- If task needs repo-wide audits, multi-file edits, diffs, asmdefs, Addressables groups, or shell operations, generate a Codex APPLY PROMPT and stop.
+- If task needs scene validation inside the editor, generate a Bezi PROMPT and stop.
+- When handing off, include only the minimal context, respect the VERSION GATE, and cite doc URLs from /instructions/stack.manifest.json.
+
+UNITY_AI_ASSISTANT_PROMPT_TEMPLATE
+Use /instructions/stack.manifest.json and /instructions/AI_CONTRACT.md as ground truth.
+Target: Unity 6000.2.1f1 • URP 17.2.0 • Corgi 9.3 • Input System 1.14.2.
+If a menu or API is not available in these versions, reply NOT IN VERSION and cite the manifest URL.
+Output exact click paths and a verification checklist.
+Task: [insert precise inspector task]
+
+BEZI_PROMPT_TEMPLATE
+Generate a REPORT MODE plan and in-Editor checklist to validate scene setup and per-object configuration.
+Use the VERSION GATE and cite the manifest for any package-specific guidance.
+Task: [insert validation or scene wiring task]
