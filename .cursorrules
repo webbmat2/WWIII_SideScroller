@@ -2,3 +2,39 @@ INCLUDE: /instructions/stack.manifest.json
 INCLUDE: /instructions/AI_CONTRACT.md
 POLICY: Constrain to pinned versions. If a feature/menu isn’t in those docs, reply NOT IN VERSION and cite the manifest URL.
 OUTPUT: Diffs or exact Unity click paths with a verification checklist.
+DOCS_WHITELIST:
+- docs.unity3d.com
+- docs.unity3d.com/Packages
+- unity.com
+- developer.unity.com/mobile
+- api.unity.com
+- github.com/unity-technologies
+- corgi-engine-docs.moremountains.com
+- more-mountains.com
+- dotween.demigiant.com
+- yarnspinner.dev
+- moodkie.com
+- odininspector.com
+- codeandweb.com
+- esotericsoftware.com
+- en.esotericsoftware.com
+- github.com/EsotericSoftware/spine-runtimes
+- developer.apple.com/ios
+DOCS_WHITELIST:
+- docs.unity3d.com
+- docs.unity3d.com/Packages
+- unity.com
+- developer.unity.com/mobile
+- api.unity.com
+- github.com/unity-technologies
+- corgi-engine-docs.moremountains.com
+- more-mountains.com
+- dotween.demigiant.com
+- yarnspinner.dev
+- moodkie.com
+- odininspector.com
+- codeandweb.com
+- esotericsoftware.com
+- en.esotericsoftware.com
+- github.com/EsotericSoftware/spine-runtimes
+- developer.apple.com/ios

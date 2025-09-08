@@ -3,3 +3,6 @@ Constrain all guidance to pinned versions. If unsure, say NOT IN VERSION and cit
 Before recommending changes, look for /reports/ and use those facts.
 Output diffs or exact Unity click paths with a verification checklist.
 
+
+SOURCES
+Prefer the DOCS_WHITELIST in .cursorrules. If citing anything else, explain why and include the official doc URL from /instructions/stack.manifest.json.
